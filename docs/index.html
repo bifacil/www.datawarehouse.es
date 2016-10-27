@@ -88,7 +88,7 @@
 				<div class="row espacio-articles">
 					<div class="col-md-4">
 						<div>
-							<a class="boton-last-articles" href="single-post.html">
+							<a class="boton-last-articles" href=".\article.html">
 								<h3 class="subencabezado-last-articles">Consejos de diseño #107. Utilizar la orden SQl MERGE</h3>
 								<p class="ultimos-articulos"><span class="span-last-articles">17 de Octubre de 2016</span></p>
 							</a>
@@ -96,14 +96,14 @@
 					</div>
 					<div class="col-md-4">
 						<div>
-							<a class="boton-last-articles" href="single-post.html">
+							<a class="boton-last-articles" href=".\article.html">
 								<h3 class="subencabezado-last-articles">Consejos de diseño #107. Utilizar la orden SQl MERGE</h3><p class="ultimos-articulos"><span class="span-last-articles">17 de Octubre de 2016</span></p>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div>
-							<a class="boton-last-articles" href="single-post.html">	
+							<a class="boton-last-articles" href=".\article.html">	
 								<h3 class="subencabezado-last-articles">Consejos de diseño #107. Utilizar la orden SQl MERGE</h3><p class="ultimos-articulos"><span class="span-last-articles">17 de Octubre de 2016</span></p>
 							</a>
 						</div>
@@ -112,7 +112,7 @@
 				<div class="row espacio-articles">
 					<div class="col-md-4">
 						<div>
-							<a class="boton-last-articles" href="single-post.html">
+							<a class="boton-last-articles" href=".\article.html">
 								<h3 class="subencabezado-last-articles">Consejos de diseño #107. Utilizar la orden SQl MERGE</h3>
 								<p class="ultimos-articulos"><span class="span-last-articles">17 de Octubre de 2016</span></p>
 							</a>
@@ -120,7 +120,7 @@
 					</div>
 					<div class="col-md-4">
 						<div>
-							<a class="boton-last-articles" href="single-post.html">
+							<a class="boton-last-articles" href=".\article.html">
 								<h3 class="subencabezado-last-articles">Consejos de diseño #107. Utilizar la orden SQl MERGE</h3>
 								<p class="ultimos-articulos">
 									<span class="span-last-articles">17 de Octubre de 2016</span>
@@ -179,7 +179,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- Esto debe moverse al footer -->
 			<p class="p-nota">Ni Ralp Kimball ni Kimball Group tienen ninguna relación directa con esta página ni con Crono.</p>
 		</div>
 		
@@ -225,28 +224,22 @@
 				</div>
 			</div>
 		</footer>
-		<!-- Bootstrap core JavaScript
-		================================================== -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 		<script src="js/bootstrap.min.js"></script>
-		<!-- Smooth scroll script -->
+				
 		<script>
 			$(document).ready(function(){
 				$(".scroll").click(function(event){
-			
-								//bloqueamos la función del anchor original
-								event.preventDefault();
-			
-								//dirigimos de manera animada al id del anchor
-								$('html,body').animate({
-														//le indicamos al scroll vertical que se dirija al objeto con el id
-														//guardado en el anchor a su posición top.
-														scrollTop:$(this.hash).offset().top
-														},1000);
-			
+					//bloqueamos la función del anchor original
+					event.preventDefault();
+					//dirigimos de manera animada al id del anchor
+					$('html,body').animate({
+						//le indicamos al scroll vertical que se dirija al objeto con el id
+						//guardado en el anchor a su posición top.
+						scrollTop:$(this.hash).offset().top
+					},1000);
 				});
-			
 			});
 		</script>
 	</body>

@@ -7,7 +7,12 @@ Description: "Estos libros de Ralph Kimball forman el estándar de facto sobre e
 <html lang="en">
 	@Include("layouts/head.cshtml")
 	<body>
-		@Include("layouts/header.cshtml")
+		@Include("layouts/navigation.cshtml")
+		<div class="cabecera">
+			<div class="container">
+				<h1>@Page.Title</h1>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row after-content">
 				<div class="col-md-12">
