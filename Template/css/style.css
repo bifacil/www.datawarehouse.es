@@ -167,15 +167,6 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: center;
 }
 
-.fecha {
-    color: #fff;
-    display: block;
-    font-size: 12px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    text-align: center;
-    text-transform: uppercase;
-}
 .btn-group-lg > .btn, .btn-lg {
     border-radius: 4px;
     font-size: 18px;
@@ -192,8 +183,16 @@ p.ultimos-articulos {margin-bottom:10px;}
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {margin-left: 0;}
 .cabecera {background: url(img/banner-datawarehouse.jpg);background-size:cover;}
 .cabecera-home {background: url(img/datawarehouse-home-header.jpg);background-size:cover;min-height:900px;}
-.header-links {color:#fff;}
-.header-links:hover {color:#ccc;text-decoration: none;}
+.article-details{
+	color: #fff;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.article-details a {color:#fff;display:block;}
+.article-details a:hover {color:#ccc;text-decoration: none;}
 .navbar-default .navbar-nav>li>a {color: #006db0;}
 .navbar-default .navbar-nav>li>a:hover {color: #ccc;}
 .indice {
