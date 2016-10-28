@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="xxx">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid header-pages">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop iphone-bug">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<a class="header-divider" href="..\index.html"><img src="images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+						<a class="indice-others" href="..\kimball-archive.html">Índice Artículos</a>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg boton-others-nav" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Dos ideas potentes</h2>
+				<span class="fecha">Martes 1 de Diciembre de 2015. <a class="header-links" href="#">Fundamentos del Modelo Dimensional</a></span>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Hay dos ideas potentes en la creación de los data warehouses de más éxito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos.</p>
+					<p>En mi columna previa, describí un completo espectro de restricciones de diseño y realidades inevitables a las que debía enfrentarse un diseñador de data warehouse. Era una lista de grandes proporciones de la que me preocupaba que os hiciera coger la puerta y os fuerais. Pero, tal vez, lo que hizo seguir leyendo fue mi promesa de salir de la ciénaga. Aquí es donde entran las dos potentes ideas.</p>
+					<p>La última vez, indiqué que las restricciones no negociables del diseño de un data warehouse eran el entendimiento por parte del usuario final y la velocidad en la ejecución de la consulta. Un almacén de datos complejo y lento es un fracaso sin importar como de elegante pueda ser el resto del diseño porque la gente para el que fue destinado no querrá utilizarlo.</p>
+					<p>El resto de restricciones implicaban el reconocimiento de que el diseño del DWH es extremadamente complejo. La fuente de datos, las tecnologías de la base de datos y los entornos empresariales con los que tratamos son increíblemente complicados. Así que, como buenos ingenieros, para buscar nuestro camino hacia fuera de la ciénaga, debemos descomponer el problema en partes separadas manejables y poner énfasis en las técnicas que son predecibles, reutilizables y robustas.</p>
+					<h3>Separa tus sistemas</h3>
+					<p>El primer paso crucial en el diseño de un almacén de datos en una empresa es separar tus sistemas lógica, física y administrativamente.</p>
+					<p>Encuentro muy útil pensar en el proyecto como cuatro sistemas distintos y diferentes, de los cuáles el administrador del DWH será el responsable de solo dos. No agobiaré con el típico bloque de diagramas porque estas cuestiones son más simples que eso.</p>
+					<p>Los cuatro sistemas son:</p>
+					<ul>
+					<li>Sistema transaccional de producción (ERP origen).</li>
+					<li>Sistema data warehouse de almacenamiento</li>
+					<li>Sistemas de presentación del DWH, incluyendo las herramientas de query, reporting y análisis, ya sean soluciones cliente/servidor o web.</li>
+					<li>Opcionalmente, herramientas analíticas  de alta gama para la minería de datos, forecasting, valoración o asignación.</li>
+					</ul>
+					<p>Como administrador del DWH no debes ser responsable de los sistemas origen que captan y procesan transacciones. Ese es el trabajo de otro. No tienes que verte involucrado en soportar las funciones de auditoría legal y financiera o las funciones de retroceso y recuperación de estos sistemas. Son los sistemas de cajas registradoras de la compañía, y sus prioridades son diferentes que las del data warehouse.</p>
+					<p>El primer sistema del cuál es responsable el diseñador del DWH es el área de almacenamiento de datos, donde los datos de producción de los distintos orígenes  es traído, limpiado, conformado, combinado y en última instancia entregado  a los sistemas de presentación del almacén de datos. </p>
+					<p>Mucho se ha escrito sobre el crucial paso extraer-transformar-cargar (ETL) en el DWH, pero  alejándonos de este detalle, el principal requerimiento del área de almacenamiento es que está fuera de los límites para todos los clientes finales del almacén de datos. El área de almacenamiento es exactamente como la cocina en un restaurante. La cocina es un lugar concurrido, incluso peligroso, lleno de cuchillos afilados y líquidos calientes. Los cocineros están ocupados, centrados en la tarea de preparar la comida. No es apropiado permitir a los comensales entrar en una cocina profesional o permitir que los cocineros se distraigan con las cuestiones separadas de la experiencia culinaria. En términos de almacén de base de datos, prohibiendo el acceso de todos clientes del almacén de datos desde el área de almacenamiento, conseguimos:</p>
+					<ol>
+					<li>Garantizar óptimos niveles de servicio para consultar o informar.</li>
+					<li>Cumplir con el nivel de seguridad del cliente.</li>
+					<li>Posibilidad de  construir índices y agregaciones  para el rendimiento de las consultas.</li>
+					<li>Manejar conflictos lógicos y físicos entre los pasos de consulta y limpieza de datos.</li>
+					<li>Garantizar la consistencia entre las distintas fuentes de datos</li>
+					</ol>
+					<p>Las dos estructuras de datos dominantes para el almacenamiento de datos son el archivo de texto plano y el esquema entidad/relación, que son extraídos  directamente del sistema de producción. Casi todo el procesamiento en el área de almacenamiento (DWH) es clasificación o procesamiento secuencial simple.</p>
+					<hr />
+					<p>El Segundo sistema más grande bajo el control específico del almacén de datos es el sistema de presentación. Por supuesto, este sistema es análogo al área del comedor de un buen restaurante. El área de comedor está diseñado para ofrecer confort a los comensales. La comida se sirve rápido y de la forma más atractiva, y los problemas y distracciones se evitan tanto como es posible. De la misma manera, el sistema de presentación del almacén de datos está construido con el propósito de mejorar la experiencia de consultar e informar. El sistema de presentación necesita ser simple y rápido y ofrecer los datos correctos que correspondan a las necesidades de análisis de los usuarios finales. También, en el sistema de presentación, podemos manejar con facilidad la lista enumerada con anterioridad sobre los requerimientos que habíamos excluido del área de almacenamiento.</p>
+					<p>Las estructuras de datos dominantes en el área de presentación son el esquema relacional de estrella y el cubo de datos de procesamiento analítico online (OLAP). El procesamiento en el área de presentación debe responder a una tormenta de grandes y pequeñas consultas procedentes de cualquier ángulo de los datos. A lo largo del tiempo, no habrá un patrón predecible a estas consultas. Algunos diseñadores le llaman el ataque ad hoc.</p>
+					<p>El cuarto sistema en nuestra lista es una capa opcional de herramientas analíticas específicas de alta gama que normalmente consume datos del almacén de datos en grandes lotes. Frecuentemente estas herramientas de extracción, predicción, valoración y distribución de datos utilizan algoritmos especializados fuera de la experiencia normal de un diseñador de almacén de datos.</p>
+					<p>Y, honestamente, muchos de estos procesos tienen un componente interpretativo o político que es sabiamente segregado del almacén de datos. Por ejemplo, la extracción de datos como disciplina es una tarea interpretativa compleja que involucra una completa colección de potentes técnicas analíticas, muchas de las cuales no son entendidas o creídas del todo por la comunidad de usuarios. La extracción propia de datos requiere un profesional experto en extracción de datos cualificado para utilizar las herramientas de manera efectiva y presentar los resultados de la extracción de datos a la comunidad.</p>
+					<p>Además, como he mencionado frecuentemente, hay un desajuste fundamental en la impedancia entre la extracción de datos y el almacén de datos. La extracción de datos frecuentemente necesita  examinar miles o millones de observaciones una y otra vez, a velocidades extremas de datos. No es fácil de sostener directamente desde el almacén. Es mejor manejar el set de observación desde un equipo de extracción de datos, sólo una vez.</p>
+					<p>Otro ejemplo de herramienta analítica de alta gama que el almacén de datos debe evitar es el sistema de  distribución para asignar costes a las distintas líneas de negocios en tu organización para calcular la rentabilidad global. No sólo puede ser un paso complejo de procesar fuera de las posibilidades de la mayoría de las herramientas de consulta e informe, también es un asunto delicado en política. Dejemos que el departamento financiero haga las asignaciones, y tu (el almacén de datos) estarás encantado de almacenar los resultados.</p>
+					<p>Estrellas y cubos simétricos </p>
+					<p>La mayor parte de las áreas de representación hoy en día están dominadas por esquemas relacionales de esquemas de estrella y cubos de datos multidimensionales OLAP. Estas estructuras de datos han probado durante los  últimos 30 años ser las que entienden los usuarios finales. Recordad que el entendimiento es una de las dos restricciones no negociables en el diseño.</p>
+					<p>La simplicidad de los esquemas de estrella y cubos OLAP ha permitido a los brillantes diseñadores de software centrarse en los algoritmos más potentes para ofrecer un rendimiento rápido en las consultas. Recordad que la velocidad es la otra restricción no negociable en el diseño.</p>
+					<p>La simetría de ambas, el esquema de estrella y el cubo OLAP también permiten:</p>
+					<p>•	Interfaz de usuario predictiva que puede “aprender” qué hacer en el momento de la consulta.</p>
+					<p>•	Escenarios administrativos predictivos en el área de almacenamiento porque toda la estructura de datos tienen aspecto y sensación parecidos.</p>
+					<p>•	Respuestas de implementación predecibles cuando nuevos tipos de datos están disponibles.</p>
+					<p>Por supuesto, el esquema de estrella y el cubo OLAP están estrechamente relacionados. Los esquemas de estrellas son los más apropiados para los conjuntos grandes de datos, con muchos millones o billones de mediciones numéricas o muchos millones de miembros en una entidad de cliente o de producto.</p>
+					<p>Los cubos OLAP son los más apropiados para conjuntos de datos más pequeños donde las herramientas analíticas pueden realizar comparaciones de datos complejas y cálculos. En casi todos los entornos de cubos OLAP, se recomienda que introduzcas originalmente los datos en un esquema de estructura de estrella, y después utilices asistentes para transformar los datos en el cubo de OLAP. De esa manera, toda las complejas herramientas ETL del área de almacenamiento que tratan con los archivos planos y esquemas entidades/relaciones pueden ser parte de las fuentes de información de datos OLAP.  Y, por supuesto, el sistema de esquema híbrido estrella-OLAP permite que los grandes conjuntos de datos en formato de esquema estrella sean fácilmente desglosados en cubos de datos OLAP , todos bajo una única interfaz de usuario.</p>
+					<p>La gran recompensa</p>
+					<p>La gran recompensa final por construir  el sistema de representación en el almacén de datos sobre esquemas simétricos de estrella y cubos OLAP es el conjunto predecible de puntos comunes para encajar juntos datos desde toda la empresa.</p>
+					<p>En mi próxima columna, pondré al descubierto las técnicas de conformar las definiciones de las dimensiones y hechos en todas las dispares fuentes de datos de tu gran empresa.  Estas dimensiones conformadas y hechos serán la base de un almacén de datos de aquitectura de bus--- un conjunto de puntos de conexiones estándar que proporcionan poder a todas las líneas de transmisiones, y justo como el bus en tu ordenador proporciona datos a todos los periféricos. </p>
+					<p>¿Qué hemos realizado?</p>
+					<p>Hasta ahora hemos implementado dos ideas potentes. Primero, hemos separado lógicamente, físicamente y administrativamente los sistemas de nuestro entorno en 4 distritos distintos. Realmente necesitas 4 sistemas informáticos diferentes, pero ¡eres responsable solo de dos de ellos! Nuestros dos sistemas de almacenes de datos también nos permiten separar las responsabilidades incompatibles del almacenamiento de datos y las consultas de los usuarios finales. Segundo, hemos llenado nuestra área de presentación del almacén de datos con esquemas de estrellas y cubos de datos OLAP, las únicas estructuras entendibles, y que pueden soportar el ataque ad hoc.</p>
+					<p>Aunque claramente, no hemos direccionado todas las  complejas restricciones de diseño y realidades inevitables, hemos neutralizado en gran parte el desafío global, solamente impulsando estas dos potentes ideas. Vuelve a mi columna previa y revisa la lista. Hemos dirigido grandes partes comprensibilidad, rapidez en las consultas, los tres costes mencionados en esa columna, los riesgos de la centralización inapropiada, la necesidad de desarrollo incremental, manejar continuos cambios consistentes en pequeñas y grandes sorpresas y como pensar en el papel de los data marts. Quizá hay esperanza.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image" src="images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="sm-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-md-pull-0 col-sm-12 col-sm-pull-1 col-xs-12 col-xs-pull-3 ipad-air-chica">
+						<div class="col-md-6 col-xs-6 col-news">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="col-md-6 col-xs-6">
+							<img src="../images/subscribe-datawarehouse.png" width="220" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="js/bootstrap.min.js"></script>
+				
+	</body>
+</html>

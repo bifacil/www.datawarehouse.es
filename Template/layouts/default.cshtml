@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	@Include("layouts/head.cshtml")
+	<body>
+		@Include("layouts/navigation.cshtml")
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>@Page.Title</h2>
+				<span class="fecha">Martes 1 de Diciembre de 2015. <a class="header-links" href="#">Fundamentos del Modelo Dimensional</a></span>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					@RenderBody()
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image" src="images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		@Include("layouts/footer.cshtml")
+		@Include("layouts/scripts.cshtml")
+	</body>
+</html>

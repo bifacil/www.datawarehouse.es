@@ -8,5 +8,6 @@
   Categories=(),
   Authors=(),
   Links=(),
-  SocialLinks=()
+  SocialLinks=(),
+  DefaultSection='Artículos'
 )
