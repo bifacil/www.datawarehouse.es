@@ -1,3 +1,5 @@
+
+	
 /*** GLOBAL ***/
 /* Move down content because we have a fixed navbar that is 50px tall */
 
@@ -8,17 +10,18 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 220px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 }
 footer {
 }
 .container {padding-bottom:0px;}
-p {font-size: 17px;font-weight: 300;margin-bottom: 5px; font-family: "Ubuntu", sans-serif;margin-top: 15px;margin-bottom:30px;}
+p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
+p {/*font-size: 17px;font-weight: 300;margin-bottom: 5px;*/ /*font-family: "Ubuntu", sans-serif;*/margin-top: 15px;margin-bottom:30px;}
 .book-title {font-size:19px;}
 .books-row {padding-top:35px;padding-bottom:30px;}
 .books-row-last {padding-top: 35px;padding-bottom: 70px;}
-h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
-.h1,.h2,.h3,.h4,.h5,.h6 {font-family: "Ubuntu", sans-serif;}
+/*h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
+.h1,.h2,.h3,.h4,.h5,.h6 {font-family: "Ubuntu", sans-serif;}*/
 .h5, h5 {font-size: 15px;}
 .header-pages {min-height:60px;}
 .blog-main {padding-bottom: 60px;}
@@ -212,6 +215,7 @@ p.ultimos-articulos {margin-bottom:10px;}
     position: relative;
     top: 12px;
 	margin-left: 10px;
+	text-decoration: none !important;
     /*left: -20px;*/
 }
 .cabecera-home .indice {color: #fff;/*padding-left:0px;position:relative;top: 12px; margin-left: 10px;left:-20px;*/}
@@ -245,7 +249,7 @@ p.ultimos-articulos {margin-bottom:10px;}
 /** HOME **/
 .row-menu-home {padding-top:400px;}
 .nav-pills {padding-left:0 !important;border: 1px solid #fff;text-transform: uppercase;max-width: 750px;text-align: center;display: block;margin-left: auto;margin-right: auto;}
-.nav-pills>li a {font-weight:100;color:#f7f7f7;}
+.nav-pills>li a {font-size: 14px;font-weight:100;color:#f7f7f7;}
 .nav-pills>li a:hover {color: #ccc;background-color: transparent;}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {font-weight:bold;color: #fff;background-color: transparent;}
 .nav > li > a:hover, .nav > li > a:focus {text-decoration: none;background-color: transparent;color:#ccc;}
@@ -268,7 +272,7 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: center;
     font-size: 34px;
 	font-weight: 300;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-presentacion {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 .espacio {
@@ -291,7 +295,7 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: left;
     font-size: 34px;
 	font-weight: bold;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-suscribete {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;}
 /*.parrafo-suscribete {
@@ -320,7 +324,7 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: center;
     font-size: 34px;
 	font-weight: 300;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-last-articles {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;text-align:center;}
 a.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:15px 20px;font-size: 18px;display:block;}
@@ -353,7 +357,7 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: center;
     font-size: 34px;
 	font-weight: 400;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .p-kimball {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
@@ -374,7 +378,7 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: left;
     font-size: 34px;
 	font-weight: 300;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .encabezado-crono {
@@ -382,7 +386,7 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: right;
     font-size: 34px;
 	font-weight: 300;
-	font-family: "Ubuntu", sans-serif;
+	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .col-crono {
