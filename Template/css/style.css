@@ -193,7 +193,7 @@ p.ultimos-articulos {margin-bottom:10px;}
 .cabecera {background: url(img/banner-datawarehouse.jpg);background-size:cover;}
 .cabecera-home {background: url(img/datawarehouse-home-header.jpg);background-size:cover;min-height:900px;}
 .header-links {color:#fff;}
-.header-links:hover {color:#000;text-decoration: none;}
+.header-links:hover {color:#ccc;text-decoration: none;}
 .navbar-default .navbar-nav>li>a {color: #006db0;}
 .navbar-default .navbar-nav>li>a:hover {color: #ccc;}
 .indice {
