@@ -75,12 +75,8 @@ p.ultimos-articulos {margin-bottom:10px;}
     color: #fff;
     text-decoration: none;
 }
-.col-news {
-    left: 50px;
-    top: -10px;
-	z-index:9999;
-}
-.col-chica {top:10px;}
+.subscribe-text{margin-right: 180px;float:right;}
+.subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;}
 
 /** PRE-FOOTER **/
 .pre-footer {
@@ -481,13 +477,11 @@ ul.list-entradas-blog li {
 
 @media screen and (max-width: 1024px) {
 .book-title {font-size: 17px;margin-top:0px;}
-.ipad-air-chica {left: -60px}
 .boton-amazon-ipad {margin-left:-20px;}
 }
 
 @media screen and (max-width: 800px) {	
 .author-image {margin-left:0;}
-.ipad-air-chica {left: none;}
 .navbar-header {display: block;margin: 0 auto !important;}
 .cabecera .h1, .cabecera h1 {position: relative;}
 .libro-img {margin-left: auto;margin-right: auto;display: block;}
@@ -741,7 +735,6 @@ text-align:center;
 .indice {width:250px;font-size: 22px;padding: 5px 20px;}
 .cabecera-home .indice {width:250px;font-size: 22px;}
 .btn-header {width:250px;}
-.ipad-air-chica {left: -85px}
 
 
 }
