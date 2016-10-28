@@ -50,13 +50,13 @@ p.ultimos-articulos {margin-bottom:10px;}
     font-size: 16px;
 }
 .encabezados-footer {font-weight: bold;color: #79bae4;text-transform: uppercase;margin-bottom: -12px;}
-.sm-footer {display:block;margin: 5px auto; width:70%;}
-.sm-footer a{font-family:'Roboto';color:#006db0;float:left;margin:10px;font-weight:300;background-color:#fefefe;padding:10px 20px;}
-.sm-footer a:hover{color:#fefefe;background-color:#e31e25;text-decoration:none;transition:all 0.5s ease 0s;}
-.icon-facebook {padding: 10px 25px !important;}
-.icon-twitter:before{content:"\f099";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
-.icon-facebook:before{content:"\f09a";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
-.icon-linkedin:before{content:"\f0e1";font-family:'FontAwesome';font-size:26px;margin:0 0px;}
+
+.social-media-footer {text-align:center;font-weight:300;font-family:'FontAwesome';font-size:26px;margin: 5px auto;}
+.social-media-footer a{width:65px;display:inline-block;color:#006db0;margin:10px;background-color:#fefefe;padding:10px 20px;}
+.social-media-footer a:hover{background-color:#e31e25;text-decoration:none;}
+.icon-twitter:before{content:"\f099";margin:0 0px;}
+.icon-facebook:before{content:"\f09a";margin:0 0px;}
+.icon-linkedin:before{content:"\f0e1";margin:0 0px;}
 .sm-text {clear:both;font-size:18px;font-weight:300;color:#fff;text-align:center;}
 .copyright-text {color:#fff;text-align:center;margin-bottom:-20px;bottom:20px;position:relative;font-weight: 100;}
 .foot {margin-top:30px;}
@@ -481,7 +481,6 @@ ul.list-entradas-blog li {
 
 @media screen and (max-width: 1024px) {
 .book-title {font-size: 17px;margin-top:0px;}
-.sm-footer {width:84%;}
 .ipad-air-chica {left: -60px}
 .boton-amazon-ipad {margin-left:-20px;}
 }
@@ -500,12 +499,10 @@ ul.list-entradas-blog li {
     background-color: #006db0;
     left: 0;
 }
-.sm-footer {
-    display: block;
+.social-media-footer {
     margin-left: auto;
-    width: 73%;
     margin-right: auto;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 .sm-text {
 	margin-bottom: 30px;
@@ -646,8 +643,6 @@ text-align:center;
 }
 
 @media screen and (max-width: 600px) {
-	
-.sm-footer {width:45%;}
 .sm-text {margin-left:-5px;}
 .boton-last-articles {margin-bottom:30px;}
 }
@@ -668,28 +663,14 @@ text-align:center;
     padding-left: 5px;
     padding-right: 5px;
 }
-.sm-footer {
-    display: block;
+.social-media-footer {
     margin-left: auto;
-    width: 60%;
     margin-right: auto;
-    padding-bottom: 10px;
-	padding-top: 20px;
+    margin-bottom: 10px;
+	margin-top: 20px;
 }
-.sm-footer a {
-    font-family: 'Roboto';
-    color: #006db0;
-    float: none;
+.social-media-footer a {
     margin: 5px;
-    font-weight: 300;
-    background-color: #fefefe;
-    padding: 20px;
-    width: 50px;
-    height: 50px !important;
-    text-align: center;
-}
-.icon-facebook {
-    padding: 20px 25px !important;
 }
 .sm-text {margin-left:-5px !important;}
 .col-news {
@@ -752,7 +733,6 @@ text-align:center;
 @media screen and (max-width: 380px) {
 	
 .col-news {left: 75px;}
-.sm-footer {width:70%;}
 }
 
 @media screen and (max-width: 320px) {
@@ -761,7 +741,6 @@ text-align:center;
 .indice {width:250px;font-size: 22px;padding: 5px 20px;}
 .cabecera-home .indice {width:250px;font-size: 22px;}
 .btn-header {width:250px;}
-.sm-footer {width:84%;}
 .ipad-air-chica {left: -85px}
 
 
