@@ -3,7 +3,7 @@
   BaseUri=URI 'https://datawarehouse.es/',
   DestinationPath='docs\',
   ImagesDirectory='Template\images\',
-  SiteTemplate='C:\GitHub\www.datawarehouse.es\Template',
+  SiteTemplate='D:\GitHub\www.datawarehouse.es\Template',
   VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Image', 'Author', 'Categories', 'Layout', 'KeyWords', 'CommentIdentifier'),
   Categories=(),
   Authors=(),
