@@ -16,12 +16,10 @@ footer {
 }
 .container {padding-bottom:0px;}
 p, ul, li {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
-p {/*font-size: 17px;font-weight: 300;margin-bottom: 5px;*/ /*font-family: "Ubuntu", sans-serif;*/margin-top: 15px;margin-bottom:30px;}
+p {margin-top: 15px;margin-bottom:30px;}
 .book-title {font-size:19px;}
 .books-row {padding-top:35px;padding-bottom:30px;}
 .books-row-last {padding-top: 35px;padding-bottom: 70px;}
-/*h1,h2,h3,h4,h5,h6 {font-family: "Ubuntu", sans-serif;}
-.h1,.h2,.h3,.h4,.h5,.h6 {font-family: "Ubuntu", sans-serif;}*/
 .h5, h5 {font-size: 15px;}
 .header-pages {min-height:60px;}
 .blog-main {padding-bottom: 60px;}
@@ -216,9 +214,8 @@ p.ultimos-articulos {margin-bottom:10px;}
     top: 12px;
 	margin-left: 10px;
 	text-decoration: none !important;
-    /*left: -20px;*/
 }
-.cabecera-home .indice {color: #fff;/*padding-left:0px;position:relative;top: 12px; margin-left: 10px;left:-20px;*/}
+.cabecera-home .indice {color: #fff;}
 
 .cabecera-home .indice-home:hover {color: #ccc;}
 .navbar-default {
@@ -236,9 +233,6 @@ p.ultimos-articulos {margin-bottom:10px;}
     color: #006db0 !important;
     background-color: #fff;
     border-color: #fff !important;
-	/*float:right;
-	margin-top: 12px;
-    margin-right: 5px;*/
 }
 .cabecera-home .boton-nav:hover {
     color: #fff !important;
@@ -272,7 +266,6 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: center;
     font-size: 34px;
 	font-weight: 300;
-	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-presentacion {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
 .espacio {
@@ -295,12 +288,9 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: left;
     font-size: 34px;
 	font-weight: bold;
-	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-suscribete {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;}
-/*.parrafo-suscribete {
-    padding-left: 0;
-}*/
+
 .buzon {
     margin-bottom: -30px;
     margin-top: -10px;
@@ -324,7 +314,6 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-align: center;
     font-size: 34px;
 	font-weight: 300;
-	/*font-family: "Ubuntu", sans-serif;*/
 }
 .p-last-articles {font-size: 17px;font-weight: 300;margin-bottom: 5px;padding-left:0;text-align:center;}
 a.boton-last-articles {border:1px solid #066198;background-color:transparent;text-align:center;padding:15px 20px;font-size: 18px;display:block;}
@@ -357,7 +346,6 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: center;
     font-size: 34px;
 	font-weight: 400;
-	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .p-kimball {font-size: 17px;font-weight: 300;margin-bottom: 5px;}
@@ -378,7 +366,6 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: left;
     font-size: 34px;
 	font-weight: 300;
-	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .encabezado-crono {
@@ -386,7 +373,6 @@ a.boton-last-articles:hover {border:1px solid #066198;background-color:#066198;t
     text-align: right;
     font-size: 34px;
 	font-weight: 300;
-	/*font-family: "Ubuntu", sans-serif;*/
 	margin-bottom:40px;
 }
 .col-crono {
@@ -504,128 +490,16 @@ ul.list-entradas-blog li {
 @media screen and (max-width: 1920px) {
 .cabecera-home {min-height:1080;}
 .nav-pills {max-width: 750px !important;}
-/*.indice-home {left:10px !important;}*/
-/*.indice-others {left:10px !important;}*/
-}
-
-/*@media screen and (max-width: 1600px) {
-.nav {
-}
-.header-divider {left:5px;}
-
-}*/
-
-@media screen and (max-width: 1440px) {
-.nav {
-}
-/*.header-divider {left:5px;}*/
-/*.indice-home {left:10px !important;}*/
-/*.indice-others {left:10px !important;}*/
-
-
-}
-@media screen and (max-width: 1366px) {
-.nav {
-}
-/*.header-divider {left:-25px;}*/
-/*.indice-home {left:-15px !important;}*/
-/*.indice-others {left:-15px !important;}*/
-
-}
-
-
-/*@media (min-width: 1440px) {
-
-.logo-desktop {left: -40px !important;}
-.boton-desktop {right: -20px !important;}
-.nav-pills {max-width: 710px;}
-}*/
-
-
-/*@media (min-width: 1200px) {
-
-.logo-desktop {left: -20px;}
-.boton-desktop {right: 0px;}
-.indice-others {left: -15px;}
-.indice-home {left: -15px;}
-
-}*/
-
-/*@media (max-width: 1200px) {
-.indice-others {
-    left: -15px !important;
-}
-.indice-home {
-    left: -15px !important;
-}
-
-}*/
-
-@media screen and (max-width: 1280px) {
-.nav {
-}
-/*.indice-others {left: -15px !important;}*/
-/*.indice-home {left: -15px !important;}*/
-/*.header-divider-home {border-right: 1px solid #fff !important;}*/
-
 }
 
 @media screen and (max-width: 1024px) {
-.nav {
-}
-/*.indice-home {
-    color: #006db0 !important;
-    background-color: #fff;
-    position: relative;
-    top: 10px;
-    padding: 5px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-	width:275px;
-	font-size:24px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	text-transform:uppercase;
-	left: 0;
-}
-.indice-others {
-    color: #fff !important;
-    background-color: #006db0;
-    position: relative;
-    top: 10px;
-    padding: 5px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-	width:275px;
-	font-size:24px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	text-transform:uppercase;
-	left: 0;
-}*/
 .book-title {font-size: 17px;margin-top:0px;}
 .sm-footer {width:84%;}
 .ipad-air-chica {left: -60px}
-/*.author-image {margin-left:-20px;}*/
 .boton-amazon-ipad {margin-left:-20px;}
-/*.indice-others {left: -20px !important;}*/
-/*.indice-home {left: -20px !important;}*/
-
 }
 
-@media (min-width: 1024px) {
-	
-}
-
-
-@media screen and (max-width: 800px) {
-	
+@media screen and (max-width: 800px) {	
 .author-image {margin-left:0;}
 .ipad-air-chica {left: none;}
 .btn-primary {display:block !important;}
@@ -661,15 +535,10 @@ ul.list-entradas-blog li {
     color: #006db0;
     padding-left: 0px;
     position: relative;
-    /*left: -20px !important;*/
     top: 12px;
 }
 .cabecera-home .indice {
     color: #fff;
-    /*padding-left: 0px;
-    position: relative;
-    left: -20px !important;
-    top: 12px;*/
 }
 
 .book-title {margin-top:20px;text-align:center;}
@@ -710,49 +579,10 @@ ul.list-entradas-blog li {
     text-align: center;
     margin-left: 10px;
 }
-/*.indice-others {
-    color: #006db0 !important;
-    padding-left: 0px;
-    position: relative;
-    left: -50px;
-    top: 12px;
-}*/
 
 }
 
-/*@media screen and (min-width: 800px) {
-	
-.indice-others {
-    left: -20px;
-}
-.indice-home {
-    left: -20px;
-}
 
-}*/
-
-
-/*@media screen and (min-width: 737px) {
-	
-.indice-others {
-    left: -15px;
-}
-.indice-home {
-    left: -15px;
-}
-
-}*/
-
-/*@media screen and (max-width: 768px) {
-
-.indice-others {
-    left: 0px !important;
-}
-.indice-home {
-    left: 0px !important;
-}
-
-}*/
 
 @media screen and (max-width: 767px) {
 .indice {
@@ -776,25 +606,10 @@ ul.list-entradas-blog li {
 .cabecera-home .indice {
     color: #006db0 !important;
     background-color: #fff;
-    /*position: relative;
-    top: 10px;
-    padding: 5px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-	width:275px;
-	font-size:24px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	text-transform:uppercase;
-	left: 0;*/
 }
 
 .boton-nav {
 	position: relative;
-	/*top: 10px;*/
 	padding:10px 20px;
 	border-radius: 5px;
 	left:0;
@@ -812,21 +627,6 @@ ul.list-entradas-blog li {
     color: #006db0 !important;
     background-color: #fff;
 	margin-bottom: 20px;
-    /*position: relative;
-    top: 10px;
-    padding: 10px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-	width:275px;
-	font-size:24px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	text-transform:uppercase;
-	left: 0;
-	float:none;*/
 }
 .header-divider {
 border-right: none !important;
@@ -837,7 +637,6 @@ display:block;
 margin-left:auto;
 margin-right:auto;
 max-width: 275px;
-/*padding-left: 30px;*/
 text-align:center;
 }
 .nav>li>a {
@@ -851,7 +650,7 @@ text-align:center;
     max-width: 350px !important;
 	margin-top: -70px;
 }
-.cabecera {/*padding-top: 230px !important;*/padding-bottom: 50px;}
+.cabecera {padding-bottom: 50px;}
 .book-title {margin-top:20px;text-align:center;}
 .amazon-responsive {margin-bottom:30px;}
 .ajuste-libros {left:0;}
@@ -869,14 +668,6 @@ text-align:center;
 
 @media screen and (max-width: 414px) {
 
-/*.header-divider {
-    border-right: none !important;
-    position: relative;
-    height: 30px;
-    top: 10px;
-    padding-right: 10px;
-    max-width: 260px;
-}*/
 .boton-nav {
     margin-top: 20px;
     width: 275px;
@@ -886,18 +677,7 @@ text-align:center;
     margin-left: auto;
     font-size: 24px;
 	text-transform:uppercase;
-	/*margin-bottom: 30px;*/
 }
-/*.boton-home-nav {
-    margin-top: 20px;
-    width: 275px;
-    display: block !important;
-    float: none;
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 24px;
-	text-transform:uppercase;
-}*/
 .nav {
     padding-left: 5px;
     padding-right: 5px;
@@ -945,45 +725,7 @@ text-align:center;
 .header-divider {
     border-right: none !important;
 }
-/*.header-divider-home {
-    border-right: none !important;
-}*/
-/*.indice-home {
-    color: #006db0 !important;
-    background-color: #fff;
-    position: relative;
-    top: 10px;
-    padding: 5px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-	width:275px;
-	font-size:24px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	text-transform:uppercase;
-	left: 0;
-}*/
-/*.indice-others {
-    color: #fff !important;
-    background-color: #006db0;
-    position: relative;
-    top: 10px;
-    padding: 5px 20px;
-    display: block;
-    border-radius: 5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 275px;
-    font-size: 24px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    text-transform: uppercase;
-    left: 0;
-}*/
+
 .navbar-fixed-bottom, .navbar-fixed-top {
     position: absolute;
     right: 0;
@@ -1006,7 +748,6 @@ text-align:center;
 .p-ralph {margin-top:10px;}
 .sm-text {margin-left: 25px;}
 .cabecera {
-    /*padding-top: 230px !important;*/
     padding-bottom: 50px;
 }
 .sidebar-module {
@@ -1031,12 +772,9 @@ text-align:center;
 @media screen and (max-width: 320px) {
 
 .col-news {left: 60px;}
-.indice {width:250px;/*left: -5px;*/font-size: 22px;padding: 5px 20px;}
-.cabecera-home .indice {width:250px;font-size: 22px;/*left: -5px;font-size: 22px;padding: 5px 20px;*/}
+.indice {width:250px;font-size: 22px;padding: 5px 20px;}
+.cabecera-home .indice {width:250px;font-size: 22px;}
 .boton-nav {width:250px;}
-/*.boton-others-nav {width:250px;}*/
-/*.header-divider {margin-left: -5px;}*/
-/*.iphone-bug {margin-left:-10px;}*/
 .sm-footer {width:84%;}
 .ipad-air-chica {left: -85px}
 
