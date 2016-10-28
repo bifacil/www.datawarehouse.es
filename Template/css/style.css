@@ -182,17 +182,6 @@ p.ultimos-articulos {margin-bottom:10px;}
     padding: 5px 20px !important;
 	text-transform:uppercase;
 }
-.btn-primary {
-    background-color: #e31e25;
-    color: #fff !important;
-	border-color:#e31e25 !important;
-	margin-top:5px;
-}
-.btn-primary:hover {
-    background-color: #f5d730 !important;
-	border-color:#f5d730 !important;
-    color: #fff !important;
-}
 
 
 .navbar-inverse {background-color: #fefefe;}
@@ -227,16 +216,15 @@ p.ultimos-articulos {margin-bottom:10px;}
     border-color: transparent !important;
 }
 .logo-desktop {margin-top:10px;}
-.boton-nav {float:right; margin-top: 12px;margin-right:5px;}
-.boton-nav:hover {color:#000 !important;}
-.cabecera-home .boton-nav {
+.btn-header {float:right; margin-top: 12px;margin-right:5px;}
+.btn-header:hover {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+}
+.cabecera-home .btn-header {
     color: #006db0 !important;
     background-color: #fff;
-    border-color: #fff !important;
-}
-.cabecera-home .boton-nav:hover {
-    color: #fff !important;
-    background-color: #e31e25 !important;
     border-color: #fff !important;
 }
 
@@ -502,7 +490,6 @@ ul.list-entradas-blog li {
 @media screen and (max-width: 800px) {	
 .author-image {margin-left:0;}
 .ipad-air-chica {left: none;}
-.btn-primary {display:block !important;}
 .navbar-header {display: block;margin: 0 auto !important;}
 .cabecera .h1, .cabecera h1 {position: relative;}
 .libro-img {margin-left: auto;margin-right: auto;display: block;}
@@ -608,7 +595,7 @@ ul.list-entradas-blog li {
     background-color: #fff;
 }
 
-.boton-nav {
+.btn-header {
 	position: relative;
 	padding:10px 20px;
 	border-radius: 5px;
@@ -623,7 +610,7 @@ ul.list-entradas-blog li {
 	text-transform:uppercase;
 	margin-bottom: 30px;
 }
-.cabecera-home .boton-nav {
+.cabecera-home .btn-header {
     color: #006db0 !important;
     background-color: #fff;
 	margin-bottom: 20px;
@@ -668,7 +655,7 @@ text-align:center;
 
 @media screen and (max-width: 414px) {
 
-.boton-nav {
+.btn-header {
     margin-top: 20px;
     width: 275px;
     display: block;
@@ -774,7 +761,7 @@ text-align:center;
 .col-news {left: 60px;}
 .indice {width:250px;font-size: 22px;padding: 5px 20px;}
 .cabecera-home .indice {width:250px;font-size: 22px;}
-.boton-nav {width:250px;}
+.btn-header {width:250px;}
 .sm-footer {width:84%;}
 .ipad-air-chica {left: -85px}
 
