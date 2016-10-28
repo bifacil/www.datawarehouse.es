@@ -76,8 +76,8 @@ p.ultimos-articulos {margin-bottom:10px;}
     text-decoration: none;
 }
 .footer-subscribe-container{position:absolute;right:0;bottom:0;}
-.subscribe-text{margin-right: 180px;float:right;}
-.subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;}
+.subscribe-text{margin-right: 180px;float:right;position:relative;z-index:100}
+.subscribe-girl {display:inline-block;float:right;margin-top:-65px;clear:both;position:relative;z-index:0}
 
 /** PRE-FOOTER **/
 .pre-footer {
