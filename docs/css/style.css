@@ -200,7 +200,7 @@ p.ultimos-articulos {margin-bottom:10px;}
 .header-divider {border-right:1px solid #006db0;position:relative;height:30px;top:10px;padding:10px;}
 .cabecera-home .header-divider {border-right: 1px solid #fff;padding: 10px;}
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {margin-left: 0;}
-.cabecera {background: url(img/Banner-Datawarehouse.jpg);background-size:cover;}
+.cabecera {background: url(img/banner-datawarehouse.jpg);background-size:cover;}
 .cabecera-home {background: url(img/datawarehouse-home-header.jpg);background-size:cover;min-height:900px;}
 .header-links {color:#fff;}
 .header-links:hover {color:#000;text-decoration: none;}
