@@ -3,10 +3,12 @@
   BaseUri=URI 'https://datawarehouse.es/',
   DestinationPath='docs\',
   ImagesDirectory='Template\images\',
-  SiteTemplate='D:\GitHub\www.datawarehouse.es\Template',
-  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Image', 'Author', 'Categories', 'Layout', 'KeyWords', 'CommentIdentifier'),
+  SiteTemplate='Template',
+  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Author', 'Categories'),
   Categories=(),
-  Authors=(),
+  Authors=(
+    Author (Name='Ralph Kimball', Description='Ralph Kimball')
+  ),
   Links=(),
   SocialLinks=(),
   DefaultSection='Artículos'

@@ -19,6 +19,15 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blog-main">
 					<div class="blog-post">
+						<div class="col-md-12 scroll">
+							<h2 class="blog-post-category">Archivos</h2>
+							<ul class="list-styled-blog">
+								@foreach(var page in @Site.Pages){
+								<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>
+								}
+							</ul>
+							<hr />
+						</div>
 						<div id="first" class="col-md-12 scroll">
 							<h2 class="blog-post-category">Before Diving In</h2>
 							<ul class="list-styled-blog">
