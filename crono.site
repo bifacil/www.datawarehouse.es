@@ -7,7 +7,8 @@
   VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Author', 'Categories'),
   Categories=(),
   Authors=(
-    Author (Name='Ralph Kimball', Description='Ralph Kimball')
+    Author (Name='Ralph Kimball', Description='Ralph Kimball'),
+    Author (Name='Margy Ross', Title='Margy Ross', Description='Margy Ross')
   ),
   Links=(),
   SocialLinks=(),

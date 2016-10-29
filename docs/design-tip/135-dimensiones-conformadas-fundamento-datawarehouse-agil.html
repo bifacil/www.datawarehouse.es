@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href=".\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href=".\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href=".\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #135. Las dimensiones conformadas como fundamento de un data warehouse &#225;gil</h2>
+				<div class="article-details">
+					<span>01/06/2011 0:00:00</span>
+					<a href="#">Fundamentos del Modelo Dimensional</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<h2>Consejo de diseño #135.</h2>
+					<p>Algunos clientes y estudiantes lamentan que cuando quieren entregar y compartir dimensiones maestras definidas consistentemente en el entorno DWH/BI, simplemente, &quot;no se puede&quot;. Explican que lo harían si pudiesen, pero con una alta dirección centrada en utilizar técnicas de desarrollo ágil para ofrecer soluciones DW/BI, es &quot;imposible&quot; tener tiempo para llegar a un acuerdo en toda la organización sobre dimensiones conformadas. Quiero llevar a cabo este argumento al revés afirmando que <strong>las dimensiones conformadas permiten el desarrollo ágil de DW/BI  y agiliza la toma de decisiones</strong>.</p>
+					<p>Seáis o no un especialista Kimball, muchos de vosotros estáis familiarizados con las dimensiones conformadas. Una dimensión conformada es un dato maestro descriptivo que está referenciado en múltiples modelos dimensionales. Las dimensiones conformadas son fundamentales dentro del enfoque Kimball. Las dimensiones conformadas permiten a  los usuarios del DW/BI cortar y fragmentar constantemente las métricas de rendimiento de los procesos de fuentes de datos procedentes de múltiples empresas. Las dimensiones conformadas permiten que datos de diferentes fuentes sean integrados basándose en atributos de dimensiones comunes y unificados. Finalmente, las dimensiones conformadas permiten construir y mantener una tabla de datos una sola vez en lugar de recrear versiones ligeramente diferentes durante cada ciclo de desarrollo.</p>
+					<p>Reutilizando dimensiones conformadas entre proyectos es  donde se obtiene un impulso para obtener más agilidad en el desarrollo  DW/BI. A medida que desarrollas tu portfolio de dimensiones maestras conformadas, la manivela de desarrollo del proyecto empieza a girar más rápido.</p>
+					<p>El <em>time-to-market</em> de una nueva fuente de datos empresarial se reduce a medida que los desarrolladores reutilizan dimensiones conformadas existentes. Finalmente, los nuevos desarrollos ETL se centrarán casi exclusivamente en entregar más tablas de hechos a medida que las tablas de dimensiones asociadas preparadas en su estantería listas para ser utilizadas.</p>
+					<p><strong>Definir una dimensión conformada requiere un consenso organizacional y compromiso en la organización.</strong> No es necesario que todos estén de acuerdo con cada atributo en cada tabla dimensional. Como mínimo, deberías identificar un subconjunto de atributos que tenga significado en la empresa. Estas características descriptivas comunes son el punto de partida de los atributos conformados.</p>
+					<p>A lo largo del tiempo, puedes expandir este sencillo punto de partida de manera iterativa. Ninguno de los atributos dimensionales especiales procedentes de un solo proceso empresarial no deben ser descartados durante el proceso de conformación (asumimos muy pocos compromisos definitivos). Y finalmente, si tu organización ya ha implementado la capacidad de <em>master data managment</em> (MDM) para apoyar el sistema de fuente transaccional, el trabajo de crear dimensiones conformadas para el almacén de datos de la empresa, será más sencillo.</p>
+					<p><strong>Si fallas en concentrarte en las dimensiones conformadas porque estás bajo presión de entregar alguna cosa, los distintos departamentos analíticos de silos de datos probablemente tendrán categorías y etiquetas inconsistentes</strong>. O peor: Los conjuntos de datos ofrecerán la apariencia de poder ser comparados y integrados debido a la similitud de sus etiquetas, pero las reglas empresariales subyacentes serán ligeramente diferentes. Los usuarios de negocio malgastarán cantidades exageradas de tiempo intentando componer y resolver estas inconsistencias en los datos que influirán negativamente en su agilidad para la toma de decisiones.</p>
+					<p>Los altos directivos de IT que demandan desarrollo de sistemas ágiles, si están interesados en conseguir eficiencia en el desarrollo a largo plazo y quieren una toma de decisiones efectiva en la empresa a largo plazo, deberán ejercer incluso una mayor presión a la organización para definir dimensiones conformadas consistentes .</p>
+					<p>Artículo original: <a href="http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/">http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 footer-subscribe-container">
+						<div class="subscribe-text">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+				
+	</body>
+</html>
