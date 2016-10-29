@@ -8,7 +8,8 @@
   Categories=(),
   Authors=(
     Author (Name='Ralph Kimball', Description='Ralph Kimball'),
-    Author (Name='Margy Ross', Title='Margy Ross', Description='Margy Ross')
+    Author (Name='Margy Ross', Description='Margy Ross'),
+    Author (Name='Joy Mundy', Description='Joy Mundy')
   ),
   Links=(),
   SocialLinks=(),
