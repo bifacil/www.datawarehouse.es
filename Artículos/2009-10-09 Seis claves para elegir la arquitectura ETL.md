@@ -83,3 +83,15 @@ Hay que tener cuidado: Preguntar a los usuarios de negocio si quieren la entrega
 En este artículo hemos discutido unas cuentas claves que deben ser evaluadas durante la creación de la arquitectura ETL para mantener DWH dimensional.
 
 Pocas veces hay una sola elección correcta para cualquiera de estas decisiones. Como siempre, la decisión correcta dependerá de las necesidades y características de tu empresa.
+
+
+
+Artículo original: [http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/][1]
+
+
+
+
+
+
+
+[1]: http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/
