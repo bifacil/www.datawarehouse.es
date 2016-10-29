@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan los modelos.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #176 Modelado dimensional; L&#243;gica o F&#237;sica</h2>
+				<div class="article-details">
+					<span>28/07/2015 23:42:15</span>
+					<a href="#">Fundamentos del Modelo Dimensional</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original <em>Data Cube</em> entre Dartmouth y General Mills a finales de 1960. La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos.</p>
+					<p>Los modelos dimensionales tienen dos expresiones diferentes, lógica y física. La expresión puramente lógica queda plasmada en el siguiente diagrama.</p>
+					<p><mark>IMAGEN</mark></p>
+					<p>La caja del centro siempre representa mediciones de sucesos (&quot;líneas de pedido&quot; en el ejemplo). Llamamos a estos hechos. Las cajas de alrededor representan las dimensiones naturales asociadas con las mediciones del suceso. Hay poco contenido técnico de la base de datos en el diagrama del modelo lógico; pero mucho contenido de negocios. Una vez que la fuente de las mediciones de suceso ha sido identificada, el modelo lógico es el lugar donde empezar el diseño de forma seria.</p>
+					<p>Una vez aceptado, el diagrama del modelo lógico se transformará con bastante rapidez a un diseño técnico más específico repleto de nombres de tablas, nombres de campos, y declaraciones de claves primarias y foráneas. Esto es lo que piensan la mayoría de la gente IT de un modelo dimensional. Hmmm... esto parece muy físico. Cuando este diseño físico ha sido declarado, parece que el único paso que queda es escribir el DDL explícito creando las tablas objetivo, y después entrar en materia de  implementar las conexiones ETL para rellenar los datos de estas tablas físicas.</p>
+					<p>Espera. ¡No tan rápido! Para ser honestos sobre este atractivo modelo físico dimensional, tenemos que admitir que en el nivel real de almacenamiento físico, nuestro modelo dimensional sería implementado de manera muy diferente.  Los dos grandes &quot;elefantes en la sala&quot; son las bases de datos columnares y la virtualización de datos:</p>
+					<ul>
+					<li>Las bases de datos columnares reorganizan radicalmente los datos en columnas comprimidas y ordenadas mientras crean la ilusión modelo dimensional original.</li>
+					<li>La virtualización de datos transforma los datos físicos actuales de casi cualquier forma original en el mismo momento de la consulta mientras crea una ilusión de la apariencia exterior del modelo dimensional original. Las formas extremas de virtualización de datos populares en el mundo Hadoop a veces son denominadas “vinculación diferida” (<em>deferred binding</em>) o “esquema en lectura” (<em>schema on read</em>). Pero en todos los casos el resultado final es el familiar modelo dimensional.</li>
+					</ul>
+					<p>En lugar de atascarnos en argumentos religiosos sobre modelos lógicos versus físicos, debemos simplemente reconocer que un modelo dimensional es actualmente una interfaz de programación de aplicaciones (API) de data warehouse. El poder de esta API reside en la interfaz consistente y uniforme que ven todos los observadores, ambos usuarios y aplicaciones BI. Vemos que no importa donde están almacenados los bits o como se entregan cuando se lanza una solicitud desde la API.</p>
+					<p>El modelo dimensional API es muy específico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicación BI solicitante no puede y no debe ocuparse de cómo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.</p>
+					<p>Artículo original:  <a href="http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/">http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 footer-subscribe-container">
+						<div class="subscribe-text">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+				
+	</body>
+</html>

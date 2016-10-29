@@ -8,13 +8,13 @@ Description: "Este artículo describe seis decisiones clave que deben incluirse 
 Author: Bob Becker
 
 ---
-Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global. 
+Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global.
 
 ## 1. ¿Debemos utilizar una herramienta ETL?
 
 Una de las primeras y más fundamentales decisiones que debes tomar es si codificar tu proceso ETL a mano desde cero, o si debes utilizar un software específico de un proveedor. Dejando de lado  las cuestiones técnicas y los costes de licencia, no debes adoptar un método que a tus empleados y directores no les sea familiar sin considerar seriamente las implicaciones a largo plazo de estas decisiones. Esta decisión tendrá un mayor impacto en el contexto del ETL, guiando decisiones respecto al personal, diseñando enfoques, estrategias de metadatos, y implementando cronologías a largo plazo.
 
-En el contexto actual, la mayoría de organizaciones deben usar un software suministrado por un proveedor. Sin embargo, esta decisión debe tomarse en base a los recursos disponibles para construir y dirigir el sistema. Las herramientas ETL construyen entornos que usan iconos, flechas y propiedades en lugar de escribir código para construir la solución ETL. Ten cuidado: Si tu equipo de desarrollo del ETL está integrado por cierto número de programadores de la vieja escuela, es posible que no se adapten bien a una herramienta ETL. Sólo por esta razón, algunas organizaciones piensan que un ETL personalizado es una solución razonable.
+**En el contexto actual, la mayoría de organizaciones deben usar un software suministrado por un proveedor.** Sin embargo, esta decisión debe tomarse en base a los recursos disponibles para construir y dirigir el sistema. Las herramientas ETL construyen entornos que usan iconos, flechas y propiedades en lugar de escribir código para construir la solución ETL. Ten cuidado: Si tu equipo de desarrollo del ETL está integrado por cierto número de programadores de la vieja escuela, es posible que no se adapten bien a una herramienta ETL. Sólo por esta razón, algunas organizaciones piensan que un ETL personalizado es una solución razonable.
 
 Si decides utilizar una herramienta ETL, no esperes una gran amortización en tu primera iteración. Las ventajas aparecerán a medida que realices iteraciones adicionales y empieces a aprovechar las ventajas de utilizar la herramienta en las siguientes implementaciones. También experimentarás los beneficios en la capacidad de mantenimiento, documentación más completa y soporte mejorado para los metadatos.
 
@@ -49,9 +49,9 @@ Sin embargo, a pesar de las ventajas de rendimiento, este puede no ser el mejor 
 
 ## 5. ¿Dónde debemos corregir los datos?
 
-Los usuarios de negocios son conscientes de que la calidad de los datos es un problema serio y caro. Por este motivo, a la mayoría de organizaciones les gusta apoyar iniciativas para mejorar la calidad de los datos. Pero la mayoría de los usuarios probablemente no tienen ni idea de dónde se originan los problemas de calidad de los datos o que se debe hacer para mejorar la calidad de los datos. Deben pensar que la calidad de los datos es un simple problema de ejecución del equipo ETL. En este entorno, el equipo ETL necesita ser ágil y proactivo: 
+Los usuarios de negocios son conscientes de que la calidad de los datos es un problema serio y caro. Por este motivo, a la mayoría de organizaciones les gusta apoyar iniciativas para mejorar la calidad de los datos. Pero la mayoría de los usuarios probablemente no tienen ni idea de dónde se originan los problemas de calidad de los datos o que se debe hacer para mejorar la calidad de los datos. Deben pensar que la calidad de los datos es un simple problema de ejecución del equipo ETL. En este entorno, el equipo ETL necesita ser ágil y proactivo:
 
-1. **La calidad de los datos no puede ser mejorada solamente por el ETL.** 
+1. **La calidad de los datos no puede ser mejorada solamente por el ETL.**
 2. **La clave está en que el equipo de ETL colabore con la empresa y los equipos de soporte del sistema fuente del IT.**
 
 La decisión clave es dónde corregir los datos. Claramente, la mejor solución es recopilar correctamente los datos en el momento que se generan. Por supuesto, este no es siempre el caso, pero **en la mayoría de casos los datos deben ser corregidos en sistema fuente.**

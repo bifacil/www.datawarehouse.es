@@ -1,7 +1,7 @@
 ﻿---
 UniqueId: ydnEMkcNWC
 Title: "Consejo de diseño #168. Que hay en un nombre"
-Url: design-tip/que-hay-en-un-nombre.html
+Url: 2014/que-hay-en-un-nombre.html
 Section: "Artículos"
 Date: 2014-06-21T00:00:00.0000000+02:00
 Description: "Aunque parezca una cosa sin importancia, los nombres son importantes. Nombrar correctamente tablas y columnas es particularmente importante para los usuarios ad hoc del sistema DW/BI para que puedan encontrar lo que buscan. Los nombres de los objetos deben estar orientados a los usuarios de negocios, no al personal técnico."
@@ -74,11 +74,7 @@ Nuestra primera recomendación es siempre nombrar a las tablas y columnas físic
 
 La necia coherencia es el duende de las mentes pequeñas. La coherencia en la nomenclatura es sumamente valiosa para sus usuarios.
 
-
-
 Artículo original: [http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/][1]
-
-
 
 
 
