@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: ydnEMkcNWC
-Title: "Consejo de diseño #168. Qué hay en un nombre"
+Title: "Consejo de diseño #168. Que hay en un nombre"
 Url: design-tip/que-hay-en-un-nombre.html
 Section: "Artículos"
 Date: 2014-06-21T00:00:00.0000000+02:00
