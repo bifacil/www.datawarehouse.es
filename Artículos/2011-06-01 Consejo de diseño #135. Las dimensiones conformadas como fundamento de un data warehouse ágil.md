@@ -1,7 +1,7 @@
 ﻿---
 UniqueId: mneNSHknqU
 Title: "Consejo de diseño #135. Las dimensiones conformadas como fundamento de un data warehouse ágil"
-Url: design-tip/135-dimensiones-conformadas-fundamento-datawarehouse-agil.html
+Url: 2011/135-dimensiones-conformadas-fundamento-datawarehouse-agil.html
 Section: "Artículos"
 Date: 2011-06-01T00:00:00.0000000+02:00
 Author: Margy Ross
