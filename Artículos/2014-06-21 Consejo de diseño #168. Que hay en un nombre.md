@@ -73,3 +73,15 @@ Nuestra primera recomendación es siempre nombrar a las tablas y columnas físic
 ### 10. ¡Se constante!
 
 La necia coherencia es el duende de las mentes pequeñas. La coherencia en la nomenclatura es sumamente valiosa para sus usuarios.
+
+
+
+Artículo original: [http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/][1]
+
+
+
+
+
+
+
+[1]: http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/
