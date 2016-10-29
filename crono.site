@@ -9,7 +9,8 @@
   Authors=(
     Author (Name='Ralph Kimball', Description='Ralph Kimball'),
     Author (Name='Margy Ross', Description='Margy Ross'),
-    Author (Name='Joy Mundy', Description='Joy Mundy')
+    Author (Name='Joy Mundy', Description='Joy Mundy'),
+    Author (Name='Bob Becker', Title='Bob Becker', Description='Bob Becker')
   ),
   Links=(),
   SocialLinks=(),
