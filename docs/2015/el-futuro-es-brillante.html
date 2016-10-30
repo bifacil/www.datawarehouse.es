@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="En mi &#250;ltimo consejo de dise&#241;o en el Grupo Kimball describir&#233; como creo que est&#225;n cambiando los componentes m&#225;s importantes del almacenamiento de datos y como cambiar&#225;n en el futuro cercano. &#161;Es un momento emocionante y desafiante para ser un profesional del data warehouse!">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #180, El Futuro es brillante</h2>
+				<div class="article-details">
+					<span>01/12/2015 22:52:19</span>
+					<a href="#">Fundamentos del Modelo Dimensional</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>El <em>datawarehousing</em> nunca ha sido tan valioso e interesante como es ahora. Tomar decisiones basadas en los datos es tan fundamental y obvio que la generación actual de usuarios de negocio y diseñadores/implementadores de data warehouses no podrían imaginar un mundo sin acceso a los datos. Me resistiré al impulso de contar historias sobre como era antes de 1980.</p>
+					<p>Pero este es un momento de cambio en la práctica del datawarehousing. Es esencial que el &quot;data warehousing&quot; siempre recopile las necesidades del negocio y enumere todos los activos de datos de una organización en el sentido más amplio posible. Si el DWH se relega simplemente a informar sobre datos de  textos y métricas obtenidos a partir de los registros transaccionales, entonces grandes oportunidades se perderán.</p>
+					<p>El data warehousing ha definido una arquitectura para la <em>publicación de los datos correctos</em> útil para aquellos que toman las decisiones, y esa arquitectura recibe nombres: modelado dimensional, tablas de hechos, tablas dimensionales, claves subrogadas, dimensiones de variación lenta, dimensiones conformadas y muchas más.</p>
+					<p>Actualmente, están teniendo lugar grandes cambios en mundo empresarial, con nuevos torrentes de datos procedentes de las redes sociales, texto libre, sensores y medidores, dispositivos de geoposicionamiento, satélites, cámaras y otros dispositivos de grabación. Los usuarios de negocio esperan tomar decisiones basadas en estas otras fuentes de datos.</p>
+					<p>Marketing, el líder tradicional del DWH, compite ahora con los procesos de producción y la investigación. Muchos de estos departamentos nuevos en el análisis de datos construyen sus propios sistemas, normalmente de buena fe, pero ignorando el profundo legado y las habilidades arquitectónicas acumuladas del data warehousing. Es obligatorio para la comunidad DWH conocer a estos nuevos usuarios de negocio, no sólo para ofrecer nuestras útiles perspectivas, sino también para aprender nosotros sobre estas nuevas áreas de negocio.</p>
+					<p>En este, mi último consejo de diseño en el Grupo Kimball, describiré como creo que están cambiando los componentes más importantes del data warehousing y como cambiarán en el futuro cercano. ¡Es un momento emocionante y desafiante para ser un profesional del data warehouse!</p>
+					<h2>El futuro del  ETL</h2>
+					<p>Si el DWH va a abarcar todos los activos de datos de una organización, entonces tendrá que tratar con enormes torrentes de datos nuevos provenientes de datos estructurados de manera heterogénea. Diversos cambios importantes tendrán lugar en el entorno ETL: </p>
+					<ul>
+					<li>Primero, los datos que se alimentan de fuentes originales deben soportar enormes anchos de banda, por lo menos gigabytes por segundo. Aprende sobre Sqoop cargando datos en Hadoop. Si estas palabras no significan nada para ti, ¡tienes lecturas que hacer! Empieza con la Wikipedia.</li>
+					<li>Segundo, muchos de los clientes analíticos de estas nuevas corrientes de datos insisten en que no deben aplicar transformaciones  a los datos entrantes. En otras palabras, la zona inicial  del ETL debe ser capaz de almacenar archivos consistentes en bits no interpretados y sin suposiciones sobre cómo será almacenado o analizado en la base de datos.</li>
+					<li>Tercero, la arquitectura de almacenamiento debe ser abierta para que múltiples herramientas de soporte de decisión y clientes analíticos puedan acceder a estos datos a través de una capa de metadatos universal.</li>
+					<li>Y cuarto, la descripción de metadatos de los archivos de datos de todo tipo debe ser más extensible, adaptable y fuerte ya que nuevas fuentes de datos más complejas estarán ahora disponibles. Hemos estado demasiado tiempo con archivos RDBMS simples de texto y números donde los metadatos contenidos en sistemas RDBMS tienen poca o ninguna semántica.  
+					</li>
+					</ul>
+					<p>Los proveedores de RDBMS tienen el reto de diferenciar las capas de almacenamiento, de matadatos, y de consultas. Esto ya sucede en el entorno abierto Hadoop bajo el sistema de distribución de archivos (HDFS). Esto significa que el procesamiento ETL en algunas ocasiones puede ser retrasado hasta cierto punto en el tiempo después de que los datos hayan sido cargados en archivos accesibles. Las herramientas de consulta y análisis, a través de los metadatos, deberán ser capaces de seleccionar el esquema objetivo en el momento de consulta (como una forma potente de virtualización en el momento de la consulta, no en el momento de la carga). Tan inusual como suena un <em>&quot;schema on read&quot;</em>, no es más que otra forma de virtualización de datos como las que hemos estado utilizando desde más de una década.</p>
+					<p>La desventaja de todas estas formas de virtualización se encuentra en sustituir el cálculo en la fase de ETL, lo que tiene una penalización significativa en el rendimiento. En algún punto posterior a la fase exploratoria, el diseñador normalmente volverá atrás y realizará un proceso normal ETL para preparar estructuras de archivos con más prestaciones.</p>
+					<h2>El futuro de la tecnología de base de datos</h2>
+					<p>Las bases de datos relacionales son y serán los fundamentos del data warehousing. Pero el RDBMS nunca se extenderá de una forma nativa a procesar todos los nuevos tipos de datos. Muchas de las herramientas analíticas especializadas compiten ente ellas para analizar los datos, y gratamente coexisten con bases de datos RDBMS. Las bases de datos relacionales seleccionaran aquellos partes de los flujos de datos entrantes que puedan soportar.</p>
+					<p>Otra cuestión relacionada: Archivar nunca será lo mismo. El almacenamiento en disco ha ganado la batalla como opción para el almacenamiento a largo plazo por diversas razones, pero el factor más significativo es el increíble bajo coste por petabyte. Además el almacenamiento en disco siempre está en línea, así los datos archivados permanecen activos y accesibles, esperando a nuevos modos de análisis, y nuevas preguntas retrospectivas. A esto se llama archivado activo.</p>
+					<h2>El futuro del modelado dimensional</h2>
+					<p>Incluso en el desafiante nuevo mundo de extraños tipos de datos y procesamiento no relacional, el modelado dimensional es enormemente relevante. Incluso los tipos de datos más extraños pueden ser tomados como un conjunto de observaciones recopilados en el mundo real. Estas observaciones siempre tienen contexto: fecha, hora, localización, cliente/persona/paciente, acción, etc. Estas, por supuesto, son nuestras dimensiones familiares. Cuando nos damos cuenta de ello, de repente toda la maquinaria dimensional que nos es familiar nos golpea. Podemos incluir cuidadas dimensiones de alta calidad desde nuestra fuente de datos EDW. Abrid vuestras mentes: Esta inclusión no tiene que realizarse mediante la unión de una base de datos relacional convencional, porque la correspondencia se puede hacer de otras formas.</p>
+					<p>Las dimensiones, por supuesto, son el alma del data warehousing. Los hechos son meras observaciones que siempre existen en un contexto dimensional. Para ir más lejos, podemos esperar que las dimensiones lleguen a ser más importantes para poder apoyar un comportamiento más sofisticado de las consultas de base y los análisis predictivos. Ya ha habido propuestas para generalizar el esquema de la estrella, a un esquema supernova. En el esquema de una supernova, los atributos dimensionales llegan a ser objetos complejos y no un simple texto. Las dimensiones Supernova también pasan a ser más maleables y extensibles de una análisis a otro. Compara el análisis de la dimensión del cliente tradicional con la dimensión cliente supernova en la Figura 1. Date cuenta de que la mayoría de esto no son castillos en el aire.  Hoy puedes generalizar una simple dimensión de un atributo en un ARRAY de STRUCTS. Hora de leer el manual de referencia SQL.</p>
+					<p><mark>IMAGEN</mark> </p>
+					<p>Figura 1: Dimensiones de cliente tradicional y supernova.</p>
+					<h2>El futuro de las herramientas BI</h2>
+					<p>El lugar de las herramientas BI aumentará para incluir más tipos de análisis no SQL. Por supuesto ya ha sucedido, especialmente en el entorno abierto Hadoop, y nosotros siempre nos hemos basado en herramientas potentes no SQL como SAS. De algún modo, tocará definir de nuevo que es una herramienta BI. Comento este punto principalmente para empujar a los equipos de data warehousing a expandir su alcance y que no queden excluídos de las nuevas fuentes de datos y nuevos tipos de análisis.</p>
+					<h2>El futuro de los profesionales del data warehousing</h2>
+					<p>He resaltado muchas veces que un profesional con éxito del data warehouse debe interesarse en tres cosas: el negocio, la tecnología y los usuarios de negocio. Esto siempre será verdad en el futuro. Si quieres pasar el tiempo codificando y sin dirigirte a los usuarios de negocio, es genial pero no perteneces al equipo de data warehouse.</p>
+					<p>Una vez dicho esto, los profesionales del DWH que quieran ir más allá necesitan tener habilidades en Unix y Java como mínimo, y estar familiarizado con algunos de los principales entornos analíticos no SQL como Spark, MongoDB y HBase, así como herramientas de transferencia de datos como Sqoop.</p>
+					<p>Creo que el reto más emocionante es la expansión de la descripción del trabajo del profesional del DWH. De repente aparecen nuevos departamentos que intentan luchar con torrentes de datos y que probablemente están reinventando la rueda del data warehouse. Encuentra cuáles son estos departamentos y edúcalos en la importancia de las dimensiones conformadas y las claves subrogadas. Ofréceles adjuntar tu dimensiones EDW de alta calidad a sus datos.</p>
+					<p>Y como dice Margy: sal adelante y sé dimensional</p>
+					<p>Artículo original: <a href="http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/">http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 footer-subscribe-container">
+						<div class="subscribe-text">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+				
+	</body>
+</html>
