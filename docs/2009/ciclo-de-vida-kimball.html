@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Nuestro enfoque para el dise&#241;o, desarrollando una y otra vez soluciones DW/BI, est&#225; probado y verificado. Ha sido utilizados por miles de equipos de proyectos virtualmente en todas las industrias, en el &#225;rea de aplicaci&#243;n, en las funciones de negocio y en las plataformas de negocio. Una y otra vez se ha comprobado que el enfoque del Lifecylce Kimball funciona.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #115. El ciclo de vida Kimball resumido.</h2>
+				<div class="article-details">
+					<span>04/08/2009 1:30:41</span>
+					<a href="#">Fundamentos del Modelo Dimensional</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Recientemente, en una clase sobre el Lifecycle del Data Warehouse un estudiante me preguntó a cerca de una visión resumida del enfoque Kimball para compartirlo con su director. Estaba contento de que me preguntara porque asumía que habíamos publicado un resumen ejecutivo sobre esto. Para mi sorpresa, nuestra única publicación sobre la visión del ciclo de vida era un capítulo en un libro de  herramientas de ayuda. Este consejo de diseño incluye el vacío de contenido inesperado en nuestros archivos.</p>
+					<p>El enfoque Kimball sobre el ciclo de vida lleva décadas siendo utilizado. Los conceptos fueron inicialmente establecidos en 1980 por miembros de Kimball Group y diversos colegas de <em>Metaphor Computer Systems</em>. Cuando publicamos la metodología por primera vez en The Data Warehouse Lifecycle Toolkit en 1998, lo  llamamos <em>&quot;Business Dimensional Lifecycle&quot;</em> porque este título reforzaba tres conceptos fundamentales:</p>
+					<ul>
+					<li>Se centraba en añadir valor empresarial en la organización</li>
+					<li>Estructuraba  dimensionalmente los datos proporcionados a Negocio vía reportes y consultas.</li>
+					<li>Desarrollaba iterativamente la solución en incrementos manejables antes que facilitar un Big Bang que se pudiese entregar.</li>
+					</ul>
+					<p>Rebobinando a 1990, nuestra metodología fue una de las pocas que recalcaban este conjunto de principios centrales, por tanto el título El “Business Dimensional Lifecycle” diferenciaba nuestro enfoque de otros existentes en la industria. </p>
+					<p>En un avance rápido hacia 2008 cuando publicamos la segunda edición de “<em>The Data Warehouse Lifecycle Toolkit</em>”, todavía creemos absolutamente en estos conceptos, pero la industria ha evolucionado. Nuestros principios habían llegado a ser la corriente principal en las mejores prácticas ofrecidas por muchos, así que reducimos el nombre oficial de la metodología a simplemente &quot;<em>Kimball Lifecylce</em>&quot;.</p>
+					<p>A pesar de  los avances dramáticos en tecnología y entendimiento durante las dos últimas décadas, las construcciones básicas del ciclo de vida de Kimball han permanecido sorprendentemente constantes.</p>
+					<p>Nuestro enfoque para el diseño, desarrollando una y otra vez soluciones DW/BI, está probado y verificado. Ha sido utilizados por miles de equipos de proyectos virtualmente en todas las industrias, en el área de aplicación, en las funciones de negocio y en las plataformas de negocio. Una y otra vez se ha comprobado que el enfoque del <em>Lifecylce Kimball</em> funciona.</p>
+					<p>El enfoque Kimball del Ciclo de vida se ilustra en la Figura 1. Una implementación exitosa del DW/BI depende de una combinación apropiada de numerosas tareas y componentes.  No es suficiente tener un modelo de datos perfecto o la mejor tecnología desarrollada. El diagrama del ciclo de vida es la hoja de ruta general que describe las tareas requeridas para un diseño efectivo, desarrollo y despliegue.</p>
+					<p><mark>IMAGEN</mark></p>
+					<p>Figura 1. El diagrama del Ciclo de vida Kimball.</p>
+					<h3>Dirección y planificación del programa/proyecto</h3>
+					<p>El primer recuadro en la ruta se centra en conseguir lanzar el programa/proyecto, incluyendo la determinación del alcance, la justificación y la dotación de personal. A lo largo del ciclo de vida, la planificación y la dirección de las tareas del proyecto mantiene las actividades en marcha.</p>
+					<h3>Requisitos del negocio</h3>
+					<p>Identificar las necesidades del negocio es una tarea clave en el ciclo de vida Kimball ya que estos descubrimientos dirigen la mayoría de decisiones ascendentes y descendentes. Las necesidades se recogen para determinar los factores clave que repercuten en el negocio centrándose en lo que los usuarios de negocio hacen hoy (o lo que quieren hacer en el futuro) en lugar de preguntar “¿Qué quieres almacenar en el almacén de datos?”, se identifican las oportunidades más significativas en la empresa, basándose en el valor del negocio y su viabilidad. Posteriormente las necesidades detalladas son recopiladas en la primera iteración del sistema de desarrollo DW/BI. Tres rutas paralelas del ciclo de vida siguen la definición de las necesidades.</p>
+					<h3>Ruta de tecnología</h3>
+					<p>Los entornos DW/BI se encargan de la integración de numerosas tecnologías, almacenes de datos y metadatos asociados. La ruta de la tecnología empieza con el diseño del sistema de arquitectura para establecer una lista de la compra de las capacidades necesarias, seguidas de la selección e instalación de productos que satisfagan esas necesidades de la arquitectura.</p>
+					<h3>Ruta de datos</h3>
+					<p>La ruta de datos empieza con el diseño de un modelo dimensional como objetivo para enfrentarse a los requisitos del negocio, mientras consideramos las realidades de datos subyacentes. El mundo Kimball es sinónimo del modelo dimensional donde los datos se dividen en medidas o dimensiones descriptivas. Los modelos dimensionales pueden estar instanciados en bases de datos relacionales, referidas como esquemas de estrella, o bases de datos multidimensionales, conocidas como los cubos OLAP. Independientemente de la plataforma, los modelos dimensionales intentar dirigirse a dos objetivos simultáneos: facilidad de uso desde la perspectiva de los usuarios y rápidez en la realización de la consulta. </p>
+					<p>La matriz empresarial (EDW Bus Matrix) es un entregable clave ya que representa  el núcleo de los procesos empresariales de la organización y las dimensiones conformadas comunes asociadas. Es el prototipo de datos para asegurar la integración de la empresa de arriba abajo con un intercambio manejable desde abajo hacia arriba centrándose en un único proceso de negocio a la vez. La matriz en bus  es tremendamente importante porque sirve simultáneamente como una guía técnica, una guía para gestionar, y un fórum para comunicarse con ejecutivos.</p>
+					<p>El modelo dimensional se convierte en un diseño físico donde las estrategias de optimización del rendimiento son tomadas en cuenta. De esta manera, se aborda el diseño del sistema ETL y los desafíos para el desarrollo. El ciclo de vida describe 34 subsistemas del proceso de extracción transformación y carga (ETL). Estos subsistemas  se agrupan en 4 operaciones mayores: (1) extraer los datos de la fuente, (2) llevar a cabo la limpieza y el ajuste de las transformaciones; (3) proporcionar los datos en la capa de presentación y (4) dirigir el proceso ETL de mantenimiento y entorno.</p>
+					<h3>Ruta de la inteligencia de negocios</h3>
+					<p>Mientras que algunos miembros de proyectos están inmersos en la tecnología y los datos, otros se centran en identificar y construir un amplio rango de  aplicaciones BI, incluyendo informes estandarizados, consultas parametrizadas, tableros, cuadros de mando, modelos analíticos, aplicaciones de extracción de datos junto con las interfaces de navegación asociadas.</p>
+					<h3>Implementación, mantenimiento y crecimiento:</h3>
+					<p>Las tres rutas de ciclos de vida convergen en la implementación, reuniendo la tecnología, los datos y las aplicaciones BI. La implementación iterada entra en fase de mantenimiento, mientras que el crecimiento vuelve atrás hacia la planificación del proyecto para la próxima iteración del sistema DW/BI. Recuerda que el sistema DW/BI es un proceso a largo plazo, ¡no un proyecto que se hace una sola vez!.</p>
+					<p>A lo largo del ciclo de vida Kimball, hay un tema recurrente reconociendo que los profesionales del DW/BI deben combinar los requerimientos de los usuarios de negocio con las realidades subyacentes de los datos fuente, tecnología y recursos relacionados. Los equipos de proyecto que se centran exclusivamente en las necesidades (o realidades) de un modo aislado, inevitablemente tendrán que hacer frente a riesgos en forma de retrasos en las entregas y/o adopción por parte de los usuarios. </p>
+					<p>Finalmente, como hemos dicho en otras ocasiones, y seguro que repetiremos en el  futuro: Independientemente de los objetivos específicos DW/BI de tu organización, creemos que tu objetivo general debe ser la aceptación por parte de los usuarios de negocio del DW/BI para el apoyar la toma de decisiones. Este objetivo debe permanecer en el ojo del huracán durante el diseño, desarrollo e implementación del ciclo de vida de cualquier sistema data warehouse o business intelligence.</p>
+					<p>Artículo original: <a href="http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/">http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 footer-subscribe-container">
+						<div class="subscribe-text">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+				
+	</body>
+</html>
