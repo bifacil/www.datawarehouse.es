@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: vQSJbZiWGv
-Title: Las 10 reglas esenciales del modelado dimensional.
+Title: Las 10 reglas esenciales del modelado dimensional
 Url: 2009/los-10-mandamientos-de-kimball.html
 Section: "Artículos"
 Date: 2009-05-29T00:07:50.7234435+02:00
