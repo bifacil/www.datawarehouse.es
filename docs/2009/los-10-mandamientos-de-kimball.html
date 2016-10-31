@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Los 10 mandamientos de Kimball. Estas reglas incluyen recomendaciones que se deben seguir necesariamente junto a otras buenas pr&#225;cticas que conviene tener en cuenta.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Las 10 reglas esenciales del modelado dimensional.</h2>
+				<div class="article-details">
+					<span>29/05/2009 0:07:50</span>
+					<a href="#">Fundamentos del Modelo Dimensional</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Un estudiante que asistió recientemente a una de las clases de modelado dimensional de <em>Kimball Gruop</em> me pidió una lista de &quot;10 Mandamientos de Kimball&quot; para el modelado dimensional. Nos abstendremos de utilizar la terminología religiosa, pero debemos decir que estas reglas incluyen recomendaciones que se deben seguir necesariamente junto a otras buenas prácticas que conviene tener en cuenta.</p>
+					<h3>Regla #1: Cargar los datos atómicos en estructuras dimensionales</h3>
+					<p>Los modelos dimensionales deben estar cargados con el máximo detalle para poder dar respuesta a los filtros impredecibles y agrupaciones requeridas en las consultas de los usuarios de negocio. Normalmente los usuarios no necesitan ver un único registro cada vez, pero no puedes predecir de que manera arbitraria querrán visualizar y consultar estos detalles.</p>
+					<p>Si sólo están disponibles los datos agregados, habrás hecho conjeturas sobre el patrón de utilización de la base de datos que ocasionará que los usuarios se den contra una pared cuando intenten indagar en profundidad en los detalles Por supuesto, los detalles atómicos se pueden completar con resúmenes de los modelos dimensionales que proporcionan ventajas en el rendimiento de consultas comunes, pero los usuarios de negocio no pueden trabajar sólo con resúmenes de datos; necesitan los detalles específicos para responder sus preguntas cambiantes.</p>
+					<h3>Regla #2: Estructura de los modelos dimensionales en función de los procesos de negocio</h3>
+					<p>Los procesos empresariales son las actividades llevadas a cabo por tu organización; representan sucesos, como tomar un pedido o facturar a un cliente.</p>
+					<p>Normalmente, los procesos empresariales recopilan o generan una única métrica asociada con cada suceso. Estas métricas se traducen en hechos, con cada proceso empresarial representado por un única tabla atómica de hechos. Además del proceso único de tablas de hechos, las tablas de hechos consolidadas se crean a veces para combinar métricas de múltiples procesos en una tabla de hechos con un mismo nivel de detalles. De nuevo, las tablas de hecho consolidadas son un complemento a los detalles, no un sustituto de ellas.</p>
+					<h3>Regla #3: Asegurarse de que cada tabla de hechos tiene una tabla de dimensión tiempo asociada</h3>
+					<p>Los sucesos de medición descritos en la <em>Regla #2</em> siempre tienen una fecha asociada, tanto si es un balance mensual o una transferencia bancaria capturada en una centésima de segundo. Cada tabla de hechos debería tener al menos una clave externa asociada a la tabla de dimensión de tiempo (con granularidad de día) con atributos para calendario y con características no estándar sobre la fecha, tales como el mes fiscal o el indicador de las vacaciones corporativas. A veces, una tabla de hechos contiene varias claves foráneas de fecha.</p>
+					<h3>Regla #4: Asegurarse de que todos los hechos de la tabla de hechos tienen el mismo nivel de detalle</h3>
+					<p>Hay tres tipos fundamentales para categorizar todas las tablas de hecho: transacciones, capturas periódicas o capturas acumuladas. Independientemente del tipo de tabla de hechos, cada medición dentro de una tabla de hechos debe presentar el mismo nivel de detalle. Cuando mezclamos hechos que presentan diferentes niveles de detalle (granularidad) en la misma tabla de hechos, estamos creando confusiones para el usuario de negocio y haremos que la aplicación BI sea vulnerable a ofrecer resultados erróneos.</p>
+					<h3>Regla #5: Resolver correspondencias muchos a muchos en tablas de hechos</h3>
+					<p>Partiendo de que una tabla de hechos recopila los resultados de un proceso empresarial, naturalmente hay una relación muchos a muchos (M:M) entre sus claves foráneas (múltiples productos vendidos en múltiples tiendas en múltiples días). Estas claves foráneas nunca serán nulas. A veces las dimensiones pueden tomar múltiples valores para una sola medición, como los múltiples diagnósticos asociados en una consulta de salud o múltiples clientes con una cuenta bancaria. En estos casos, no es razonable resolver estas dimensiones multivalor en la misma tabla de hechos, ya que esto alteraría la granularidad del suceso de medición. Por lo tanto, deberemos utilizar una tabla puente many-to-many entre la tabla de hechos y la dimensión.</p>
+					<h3>Rule #6: Resolver correspondencias muchos a muchos en tablas de dimensiones</h3>
+					<p>Las jerarquías, o relaciones muchos a uno (M:1),  entre atributos son normalmente desnormalizadas en una tabla de dimensión plana. Si te has pasado la mayor parte de tu carrera diseñando modelos entidad-relación para sistemas de procesamiento de transacciones, tendrás que resistirte a tu propia tendencia a normalizar o fragmentar la relación M:1 en subdimensiones más pequeñas. La desnormalización de dimensiones es la regla del modelado dimensional.</p>
+					<p>Es relativamente común tener múltiples relaciones M:1  representadas en una tabla dimensional. Las relaciones uno-a-uno, como descripción única de un producto asociado con un código de producto, también están contenidos en una tabla dimensional. Ocasionalmente, las relaciones muchos-a-uno se resuelven en la tabla de hechos, como en el caso de que la tabla dimensional detallada tenga millones de filas y sus atributos estén cambiando frecuentemente. Sin embargo, utilizar la tabla de hechos para resolver relaciones M:1 debe hacerse con moderación.</p>
+					<h3>Regla #7: Almacenar las descripciones en las tablas de dimensión</h3>
+					<p>Los códigos y, más importante, las decodificaciones asociadas y las descripciones usadas para filtrar las consultas deben incluirse en las tablas dimensionales. Evitaremos almacenar campos de códigos crípticos o campos descriptivos voluminosos en la misma tabla de hechos. Dicho de otro modo: No sólo guardaremos el código en la tabla de dimensión asumiendo que los usuarios no necesitan decodificaciones descriptivas o que estas decodificaciones serán llevadas a cabo por la aplicación de inteligencia de negocios (BI). Si es un título de fila o columna o si aparece en un menú desplegable, entonces debe ser considerado como un atributo dimensional.</p>
+					<p>Aunque en la <em>Regla #5</em> establecimos que la tabla de hechos de las claves foráneas no debía ser nunca nula, es también recomendable evitar tener nulidades en los campos de atributo de las tablas dimensionales. Para ello, sustituiremos el valor nulo por “NA” (no aplicable) u otro valor por defecto, determinado por el administrador de datos, para reducir las confusiones en la medida de lo posible.</p>
+					<h3>Regla #8: Asegurarse de que las tablas dimensionales usan claves subrogadas</h3>
+					<p>Asignar claves subrogadas secuencialmente, claves sin sentido de negocio, proporciona ciertas ventajas operacionales  (excepto para la dimensión fecha donde se asignan cronológicamente). Algunas de estas ventajas son: claves más pequeñas, lo que implica en tablas de hecho menores, menores índices y mejor rendimiento general.</p>
+					<p>Las claves subrogadas son totalmente necesarias si estás haciendo un seguimiento de los cambios en un atributo dimensional (con un nuevo registro para cada cambio en la descripción...). Incluso si los usuarios de tu empresa no visualizan inicialmente el valor de poder seguir los cambios en los atributos, utilizar claves subrogadas hará que una política de cambios posterior sea menos costosa.</p>
+					<p>Las claves subrogadas también nos permiten relacionar múltiples claves operacionales distintas en un perfil común. Además nos protege de actividades operacionales inesperadas, como el reciclado de un número obsoleto de producto o la adquisición de otra empresa con sus propios esquemas de código.</p>
+					<h3>Regla #9: Crear dimensiones conformadas para integrar los datos de toda la empresa</h3>
+					<p>Las dimensiones conformadas (también conocidas como comunes, maestros, estándar o dimensiones de referencia) son esenciales para el data warehouse en la empresa. Se gestiona una vez en el sistema ETL y se reutiliza posteriormente en múltiples tablas de hechos. Las dimensiones conformadas proporcionan atributos descriptivos consistentes sobre modelos dimensionales y facilitan la habilidad para navegar y integrar datos desde múltiples procesos empresariales. La matriz empresarial (Enterprise Bus Matrix) es el modelo clave para representar los procesos centrales del negocio y su  dimensionalidad asociada.</p>
+					<p>Reutilizar las dimensiones conformadas reduce el tiempo de comercialización eliminando el diseño redundante y los esfuerzos de desarrollo. Sin embargo, las dimensiones conformadas requieren esfuerzo y inversión en la administración y dirección de datos, incluso si no necesitas que todo el mundo esté de acuerdo en cuanto a todos los atributos de dimensiones para impulsar la conformidad.</p>
+					<h3>Regla #10: Valora constantemente los requerimientos y las realidades para proporcionar una solución DW/BI que sea aceptada por los usuarios de negocios y que apoye su proceso de decisiones</h3>
+					<p>Los modeladores dimensionales constantemente deben combinar las demandas de los usuarios de negocio con las realidades subyacentes de las fuentes de datos asociadas para proporcionar un diseño que pueda ser implementado y, más importante, exista una posibilidad razonable de ser aceptado por el negocio.</p>
+					<p>La confrontación <em>requerimientos-vs-realidad</em> es parte del día a día de los profesionales DW/BI, tanto si se centran en el modelo dimensional, en la estrategia de proyecto, en la parte técnica ETL/BI, o en la planificación de la arquitectura de implementación o mantenimiento.</p>
+					<p>Si has leído regularmente nuestro Kit de artículos, o los consejos de diseño, estas reglas no deberían ser nuevas para ti. En todo caso, aquí las hemos refundido en un simple artículo de reglas que puedes consultar cuando tengas que diseñar o revisar tus modelos.</p>
+					<p>¡Buena suerte!</p>
+					<p>Artículo original: <a href="http://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/">http://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/foto.jpg" width="250" height="318" alt="" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="#"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet">
+						<div class="encabezados-footer"><h5>Mapa del Sitio</h5></div>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<div class="encabezados-footer"><h5>Blogs Amigos</h5></div>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-facebook" href="#"></a>
+							<a class="icon-twitter" href="#"></a>
+							<a class="icon-linkedin" href="#"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 footer-subscribe-container">
+						<div class="subscribe-text">
+							<h4 class="suscribir">Suscríbase a nuestra Newsletter</h4>
+							<a class="boton-newsletter" href="http://businessintelligence.us14.list-manage.com/subscribe?u=44515b3d91fba1a993d0dcc81&id=c76888fae1">IR</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+				
+	</body>
+</html>
