@@ -1,0 +1,38 @@
+---
+Url: rss.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+ <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+ <channel>
+   <title>@Site.Name</title>
+   <atom:link href="@Site.BaseUrl/rss.xml" rel="self" type="application/rss+xml" />
+   <link>@Site.BaseUrl</link>
+   <description>@Site.GetValue("Description")</description>
+
+@{
+
+	var Posts= (from p in Site.Pages orderby p.Date descending select p).ToList();
+	var Ultimos=Posts.Take(10);
+	
+foreach(var post in Ultimos){
+
+ <item>
+      <guid isPermaLink="true">@Site.BaseUrl/@post.Url</guid>
+      @Raw("<link>")@Site.BaseUrl/@post.Url@Raw("</link>")
+      <title>@post.Title</title>
+      <pubDate>@post.RfcDate</pubDate>
+      <atom:updated>@post.IsoDate</atom:updated>
+      <description>
+	  @("<div style=\"width:700px\"><img class=\"w100p\" src=\"")@Site.BaseUrl/blog/images/@post.Image@("\" />")
+	  @post.Content
+	   
+	  
+	  @("</div>")</description>
+</item>
+	
+
+}}
+
+   
+</channel>
+</rss>

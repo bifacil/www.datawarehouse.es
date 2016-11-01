@@ -10,47 +10,22 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 		@Include("layouts/navigation.cshtml")
 		<div class="cabecera">
 			<div class="container">
-				<h1 class="titulo-categories">@Page.Title</h1>
-				<span class="subtitulo-categories">Artículos de Kimball Group sobre recomendaciones y buenas prácticas datawarehousing.</span>
+				<h1>@Page.Title</h1>
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container contenido">
 			<div class="row">
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blog-main">
 					<div class="blog-post">
-						<div class="col-md-12 scroll">
-							<h2 class="blog-post-category">Archivos</h2>
+						@foreach(var item in Site.Sections){
+							<h2>@item.Title</h2>
 							<ul class="list-styled-blog">
 								@foreach(var page in @Site.Pages){
 								<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>
 								}
 							</ul>
-							<hr />
-						</div>
-						<div id="first" class="col-md-12 scroll">
-							<h2 class="blog-post-category">Before Diving In</h2>
-							<ul class="list-styled-blog">
-								<li><a href="@Root\article.html">Design Tip #174 Does Your Organization Need an Analytic Sandbox?</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">Design Tip #172 Leverage Your Dimensional Model for Predictive Analytics</a> <span class="year">2015</span></li>
-								<li><a href="@Root\article.html">Design Tip #162 Leverage Data Visualization Tools, But Avoid Anarchy</a> <span class="year">2014</span></li>
-								<li><a href="@Root\article.html">Design Tip #158 Making Sense of the Semantic Layer</a> <span class="year">2014</span></li>
-								<li><a href="@Root\article.html">Design Tip #156 An Excel Macro for Drilling Across</a> <span class="year">2013</span></li>
-							</ul>
-							<hr />
-						</div>
-						<div id="two" class="col-md-12 scroll">
-							<h2 class="blog-post-category">Project/Programm Planning</h2>
-							<ul class="list-styled-blog">
-								<li><a href="@Root\article.html">Zapatero a tus zapatos.</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">El enorme potencial de una mente abierta.</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">Same thinking, same results.</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">Datos como manzanas.</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">Lo bueno si breve...</a> <span class="year">2016</span></li>
-								<li><a href="@Root\article.html">Principio de parsimonia.</a> <span class="year">2016</span></li>
-							</ul>
-							<hr />
-						</div>
+						}
 					</div>
 				</div>
 			</div>
