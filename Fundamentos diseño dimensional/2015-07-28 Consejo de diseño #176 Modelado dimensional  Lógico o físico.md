@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: CZzUAhZOqN
-Title: "Consejo de diseño #176 Modelado dimensional; Lógica o Física"
+Title: "Consejo de diseño #176 Modelado dimensional: ¿Lógico o físico?"
 Url: 2015/modelado-dimensional-logico-o-fisico.html
 Section: "Fundamentos diseño dimensional"
 Date: 2015-07-28T23:42:15.4156255+02:00
