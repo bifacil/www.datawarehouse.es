@@ -101,10 +101,6 @@ Description: "Estos libros de Ralph Kimball forman el estándar de facto sobre e
 			</div>
 		</div>
 		@Include("layouts/footer.cshtml")
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-		<script src="@Root/js/bootstrap.min.js"></script>
-		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<script src="js/ie10-viewport-bug-workaround.js"></script>
+		@Include("layouts/scripts.cshtml")
 	</body>
 </html>
