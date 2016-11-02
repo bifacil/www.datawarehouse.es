@@ -32,7 +32,7 @@ Las abreviaciones y acrónimos son endémicas en el mundo corporativo, y en el m
 
 Algunos ejemplos incluirían:
 
-<mark>IMAGEN</mark>
+![Imagen 1](https://datawarehouse.es/images/abreviaturas.png)
 
 Para la mayoría de organizaciones, una lista razonable tiene docenas de abreviaciones aceptadas, no cientos.
 

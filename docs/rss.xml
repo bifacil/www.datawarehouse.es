@@ -98,7 +98,7 @@
 &lt;h3&gt;4. No se recomiendan abreviaciones y acr&#243;nimos.&lt;/h3&gt;
 &lt;p&gt;Las abreviaciones y acr&#243;nimos son end&#233;micas en el mundo corporativo, y en el mundo no corporativo es incluso peor. Mucha informaci&#243;n se puede codificar en un acr&#243;nimo pero para los novatos supone una enorme carga. El enfoque m&#225;s efectivo es mantener una lista de abreviaciones aprobadas, e intentar no ampliar sin una buena raz&#243;n. Deber&#237;as incluso documentar esa raz&#243;n en la lista.&lt;/p&gt;
 &lt;p&gt;Algunos ejemplos incluir&#237;an:&lt;/p&gt;
-&lt;p&gt;&lt;mark&gt;IMAGEN&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://datawarehouse.es/images/abreviaturas.png&quot; alt=&quot;Imagen 1&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Para la mayor&#237;a de organizaciones, una lista razonable tiene docenas de abreviaciones aceptadas, no cientos.&lt;/p&gt;
 &lt;h3&gt;5. Los nombres de los objetos son atractivos.&lt;/h3&gt;
 &lt;p&gt;Recuerda que los nombres de los objetos se convierten en encabezados en informes y an&#225;lisis. Aunque el atractivo est&#225; en el ojo del que lee, para m&#237; son molestas todas las may&#250;sculas. Los nombres de objetos deben contener una pista visual sobre d&#243;nde terminan las palabras.&lt;/p&gt;
