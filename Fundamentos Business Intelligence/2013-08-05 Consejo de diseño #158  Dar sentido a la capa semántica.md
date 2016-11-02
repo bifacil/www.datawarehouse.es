@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: yCgqODiWRH
-Title: "Consejo de diseño #158, Dar sentido a la capa semántica"
+Title: "Consejo de diseño #158: Dar sentido a la capa semántica"
 Url: 2013/dar-sentido-capa-semnatica.html
 Section: Fundamentos Business Intelligence
 Date: 2013-08-05T00:32:55.3152795+02:00
