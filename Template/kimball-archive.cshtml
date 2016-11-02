@@ -19,7 +19,7 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blog-main">
 					<div class="blog-post">
 						@foreach(var item in Site.Sections){
-							<h2>@item.Title</h2>
+							<h2 id="@item.Code">@item.Title</h2>
 							<ul class="list-styled-blog">
 								@foreach(var page in @Site.Pages){
 								<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>

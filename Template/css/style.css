@@ -10,6 +10,11 @@ body {
   margin-bottom: 220px;
   font-family: "Ubuntu", sans-serif;
 }
+
+.home{
+		overflow-x:hidden;
+}
+
 footer {
 }
 .container {padding-bottom:0px;}
@@ -154,7 +159,7 @@ mark {
 
 /** HEADER **/
 .navbar-fixed-bottom, .navbar-fixed-top {position: absolute;}
-.cabecera .h1, .cabecera h1 {
+.cabecera h1 {
     color: #fff;
     font-size: 50px;
     font-weight: 100;
@@ -162,7 +167,7 @@ mark {
     text-align: center;
 	margin-top:50px;
 }
-.cabecera .h2, .cabecera h2 {
+.cabecera h2 {
     color: #fff;
     font-size: 50px;
     font-weight: 100;
@@ -170,7 +175,7 @@ mark {
     text-align: center;
 	margin-bottom:60px;
 }
-.cabecera-home .h1, .cabecera-home h1 {
+.cabecera-home h1 {
     color: #fff;
     font-size: 50px;
     font-weight: 100;
@@ -178,12 +183,19 @@ mark {
     text-align: center;
 	margin-top:50px;
 }
-.cabecera-home .h2, .cabecera-home h2 {
+.cabecera-home h2 {
     color: #fff;
     font-size: 50px;
     font-weight: 100;
     letter-spacing: 2px;
     text-align: center;
+}
+
+.cabecera-home h4 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 .cabecera-home .header-divider {border-right: 1px solid #fff;padding: 10px;}
@@ -283,11 +295,12 @@ mark {
 }
 
 
-.recientes p {text-align: left;}
+.recientes p {text-align: left; font-size:14px; letter-spacing: 2px;}
+.recientes a { font-size:14px;}
 
 
 /** HOME **/
-.row-menu-home {padding-top:300px;}
+.row-menu-home {padding-top:200px;}
 .nav-pills {padding-left:0 !important;border: 1px solid #fff;text-transform: uppercase;max-width: 750px;text-align: center;display: block;margin-left: auto;margin-right: auto;margin-bottom:40px;}
 .nav-pills>li a {font-size: 14px;font-weight:100;color:#f7f7f7;}
 .nav-pills>li a:hover {color: #ccc;background-color: transparent;}
@@ -488,10 +501,10 @@ ul.list-entradas-blog li {
 .boton-amazon-ipad {margin-left:-20px;}
 }
 
-@media screen and (max-width: 800px) {	
+@media screen and (max-width: 800px) {
 .author-image {margin-left:0;}
 .navbar-header {display: block;margin: 0 auto !important;}
-.cabecera .h1, .cabecera h1 {position: relative;}
+.cabecera h1 {position: relative;}
 .libro-img {margin-left: auto;margin-right: auto;display: block;}
 .footer {
     position: absolute;
@@ -529,9 +542,9 @@ ul.list-entradas-blog li {
 .ajuste-footer-tablet {margin-bottom: 30px;}
 
 
-}
 
-@media screen and (max-width: 780px) {
+.recientes {display:none;}
+
 .header-divider {
     border-right: 1px solid #006db0;
     position: relative;

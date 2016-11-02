@@ -7,10 +7,10 @@
   VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Author', 'Categories'),
   Categories=(),
   Authors=(
-    Author (Name='Ralph Kimball', Description='Ralph Kimball'),
-    Author (Name='Margy Ross', Description='Margy Ross'),
-    Author (Name='Joy Mundy', Description='Joy Mundy'),
-    Author (Name='Bob Becker', Description='Bob Becker')
+    Author (Name='Ralph Kimball', Description='Ralph Kimball', Image='ralph-kimball.jpg'),
+    Author (Name='Margy Ross', Description='Margy Ross', Image='margy.ross.jpg'),
+    Author (Name='Joy Mundy', Description='Joy Mundy', Image='joy-mundy.jpg'),
+    Author (Name='Bob Becker', Description='Bob Becker', Image='bob-becker-jpg')
   ),
   Links=(),
   SocialLinks=(),

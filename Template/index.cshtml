@@ -32,9 +32,9 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 					</ul>
 					<div class="recientes">
 						<div>
-							<p><strong>Últimos artículos:</strong></p>
+							<h4>ÚLTIMOS ARTÍCULOS</h4>
 							@foreach(var article in ultimos.Take(3)){
-								<p><a href="@Root/article.Url">@article.Title</a></p>
+								<p><a href="@Root/@article.Url">@article.Title</a></p>
 							}						
 						</div>
 					</div>
