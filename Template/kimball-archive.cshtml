@@ -15,16 +15,30 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 		</div>
 
 		<div class="container contenido">
-			<div class="row">
-				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 blog-main">
-					<div class="blog-post">
-						@foreach(var item in Site.Sections){
-							<h2 id="@item.Code">@item.Title</h2>
-							<ul class="list-styled-blog">
-								@foreach(var page in @Site.Pages){
-								<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>
-								}
-							</ul>
+
+		<div class="row">
+			<div class="col-md-3">
+				<img class="img-responsive center-block" src="images/toolkit-classics.jpg" width="182" height="200" alt="" />
+			</div>
+			<div class="col-md-9">
+				<p>En esta web encontrarás los <strong>artículos de Kimball Group</strong> traducidos al español. Se trata de artículos excepcionales sobre el diseño y buenas prácticas en entornos <strong>Datawarehouse</strong>. Todos los artículos son de sus respectivos autores. Los artículos originales, en inglés, puedes consultarlos en la web de <a href="http://www.kimballgroup.com/" style="text-decoration:underline;">Kimball Group.</a></p>
+				<p>Pretendemos ayudar a la divulgación de estas buenas prácticas para mejorar el diseño, construcción y mantenimiento de los datawarehouse en nuestras organizaciones. También te animamos a comprar los libros de Ralph Kimball y de todo su equipo. No te arrepentirás.</a></p>
+				<p>Las traducciones son propias. Para facilitar la lectura, hemos intentado utilizar expresiones y construcciones propias del español, respetando siempre el sentido original. A veces, destacamos con <strong>negritas</strong> o <em>itálicas</em> frases o expresiones con el objetivo de facilitar la lectura o para resaltar algún aspecto que, personalmente, nos parece especialmente relevante. Nos disculpamos de antemano por cualquier inexactitud que hayamos podido cometer. </a></p>
+			</div>
+		</div>
+			
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<div>
+						@foreach(var item in Site.Sections.OrderBy(p=>p.Image)){
+							<div class="seccion">
+								<h2 id="@item.Code">@item.Title</h2>
+								<ul>
+									@foreach(var page in item.Pages){
+									<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>
+									}
+								</ul>
+							</div>
 						}
 					</div>
 				</div>
@@ -43,7 +57,7 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 							<a href="https://www.amazon.com/gp/product/1119216311?ie=UTF8&tag=decworks-20&lin%20kCode=xm2&camp=1789&creativeASIN=1119216311"><img src="@Root/images/boton-amazon.png" width="180" height="42" alt="" /></a>
 						</div>
 						<div class="col-md-9">
-							<p class="libro-p-categories">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p class="libro-p-categories">A lo largo de los últimos 20 años, los miembros de Kimball Group han escrito cerca de 300 artículos, recomendaciones y white papers. The Kimball Group Reader, Remastered Collection constituye la mejor recopilación de todo este contenido, totalmente actualizado para mostrar su pensamiento actualizado, junto a las mejores recomendaciones y prácticas a partir de su amplísima experiencia.</p>
 						</div>
 					</div>
 				</div>

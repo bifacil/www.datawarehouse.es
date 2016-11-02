@@ -13,6 +13,5 @@
     Author (Name='Bob Becker', Description='Bob es miembro de Kimball Group. Ha trabajado junto a responsables de negocio y profesionales IT para priorizar, justificar e implementar sistemas data warehouse para el soporte a la toma de decisiones desde 1990. Es experto en identificar requerimientos de negocio, gestionar proyectos, y diseñar modelos dimensionales para todo tipo de industrias.', Image='bob-becker.jpg')
   ),
   Links=(),
-  SocialLinks=(),
-  DefaultSection='Artículos'
+  SocialLinks=()
 )
