@@ -1,1 +1,1 @@
-﻿Section (Name='Artículos', Title='Artículos', Description='Artículos', Code='Los articulos', DefaultLayout='layouts\default.cshtml')
+﻿Section (Name='Artículos', Title='Artículos', Description='Artículos', Code='Artículos', DefaultLayout='layouts\default.cshtml')
