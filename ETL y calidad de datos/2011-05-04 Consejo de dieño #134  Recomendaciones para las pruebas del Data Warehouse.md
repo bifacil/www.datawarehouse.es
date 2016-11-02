@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: SllVObxbVe
-Title: "Consejo de dieño #134. Recomendaciones para las pruebas del Data Warehouse"
+Title: "Consejo de dieño #134: Recomendaciones para las pruebas del Data Warehouse"
 Url: 2011/recomendaciones-testing-datawarehouse.html
 Section: ETL y calidad de datos
 Date: 2011-05-04T00:03:27.9860753+02:00

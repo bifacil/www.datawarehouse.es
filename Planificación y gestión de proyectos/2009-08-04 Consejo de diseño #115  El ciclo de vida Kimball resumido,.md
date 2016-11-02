@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: KahpyQlsoo
-Title: "Consejo de diseño #115. El ciclo de vida Kimball resumido."
+Title: "Consejo de diseño #115: El ciclo de vida Kimball resumido."
 Url: 2009/ciclo-de-vida-kimball.html
 Section: "Planificación y gestión de proyectos"
 Date: 2009-08-04T01:30:41.6438575+02:00
