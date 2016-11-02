@@ -2,7 +2,7 @@
 UniqueId: yCgqODiWRH
 Title: "Consejo de diseño #158, Dar sentido a la capa semántica"
 Url: 2013/dar-sentido-capa-semnatica.html
-Section: "Artículos"
+Section: Fundamentos Business Intelligence
 Date: 2013-08-05T00:32:55.3152795+02:00
 Author: Joy Mundy
 
@@ -31,8 +31,6 @@ Otro escenario seria conocer los informes de requerimientos operacionales median
 No creo que haya visto alguna vez que una organización sobre-invirtiese en una capa semántica, pero he visto muchos data warehouses fallar debido a la falta de inversión. Adquiere una herramienta BI decente (hay docenas), e invierte tiempo desarrollando la capa semántica. De lo contrario estarás subestimando tu sustancial inversión en diseño y desarrollo de un data warehouse técnicamente solido.
 
 Artículo original:  [http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-the-semantic-layer/][1]
-
-
 
 
 

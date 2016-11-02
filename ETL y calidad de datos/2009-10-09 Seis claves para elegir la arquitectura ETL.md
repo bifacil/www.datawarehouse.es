@@ -2,7 +2,7 @@
 UniqueId: GYCVZOyZzN
 Title: Seis claves para elegir la arquitectura ETL
 Url: 2009/seis-claves-para-elegir-arquitectura-etl.html
-Section: "Artículos"
+Section: ETL y calidad de datos
 Date: 2009-10-09T22:08:14.0717305+02:00
 Description: "Este artículo describe seis decisiones clave que deben incluirse durante la elaboración de la arquitectura ETL para un DWH dimensional. Estas decisiones tienen un impacto importante en el coste inicial y coste corriente y en la complejidad de la solución ETL y, finalmente, en el éxito de toda la solución BI/DW en global."
 Author: Bob Becker
@@ -84,11 +84,7 @@ En este artículo hemos discutido unas cuentas claves que deben ser evaluadas du
 
 Pocas veces hay una sola elección correcta para cualquiera de estas decisiones. Como siempre, la decisión correcta dependerá de las necesidades y características de tu empresa.
 
-
-
 Artículo original: [http://www.kimballgroup.com/2009/10/six-key-decisions-for-etl-architectures/][1]
-
-
 
 
 

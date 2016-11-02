@@ -2,7 +2,7 @@
 UniqueId: KahpyQlsoo
 Title: "Consejo de diseño #115. El ciclo de vida Kimball resumido."
 Url: 2009/ciclo-de-vida-kimball.html
-Section: "Artículos"
+Section: "Planificación y gestión de proyectos"
 Date: 2009-08-04T01:30:41.6438575+02:00
 Description: "Nuestro enfoque para el diseño, desarrollando una y otra vez soluciones DW/BI, está probado y verificado. Ha sido utilizados por miles de equipos de proyectos virtualmente en todas las industrias, en el área de aplicación, en las funciones de negocio y en las plataformas de negocio. Una y otra vez se ha comprobado que el enfoque del Lifecylce Kimball funciona."
 Author: Margy Ross

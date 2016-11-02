@@ -2,7 +2,7 @@
 UniqueId: SllVObxbVe
 Title: "Consejo de dieño #134. Recomendaciones para las pruebas del Data Warehouse"
 Url: 2011/recomendaciones-testing-datawarehouse.html
-Section: "Artículos"
+Section: ETL y calidad de datos
 Date: 2011-05-04T00:03:27.9860753+02:00
 Description: "Aquí están mis 5 recomendaciones principales para construir y ejecutar un test en el entorno de tu proyecto DW/BI."
 Author: Joy Mundy
@@ -22,8 +22,6 @@ La prueba unitaria asegura que el código desarrollado funciona tal y como se ha
 
 Hay una "fase de test" oficial antes de la puesta en funcionamiento del DWH. Esta fase de tests es para llevar a cabo las pruebas y reconocer problemas, no para identificar como deberían ser los tests y como llevarlos a cabo. **Se debe  empezar a probar el sistema al inicio del proceso de desarrollo**, de esta manera todos los detalles se resuelven mucho antes de empezar con la "fase de test" oficial, que supone mayor presión para el funcionamiento correcto del sistema.
 
-
-
 ## 3. Utilizar herramientas de prueba y automatizar el entorno de prueba.
 
 La recomendación de hacer el test pronto y regularmente es práctica solamente si automatizas el proceso. Ningún desarrollador va a utilizar hasta la última de su día de trabajo haciendo de niñera de la prueba unitaria. Y pocos equipos pueden permitirse un controlador a tiempo completo para hacer ese trabajo en lugar del desarrollador. Para automatizar la prueba, necesitas herramientas. Muchas organizaciones ya disponen “in situ” de herramientas para comprobar la calidad de las pruebas. Si tu no las tienes, o estás convencido de que las herramientas de las que dispones no responden a las necesidades de control del sistema DW/BI, intenta buscar en google “herramientas de software para asegurar la calidad” para disponer de una inmensa lista de productos y metodologías disponibles a una extensa gama de precios.
@@ -40,13 +38,9 @@ Después de ejecutar y registrar los tests, termina con un *script* de limpieza,
 
 La metodología de prueba estándar cambia una cosa, ejecuta un test y registra los resultados. En el mundo del DW/BI, debes agrupar juntos muchos tests en un grupo de tests. Incluso con una base de datos pequeña, no tienes que ejecutar tu código ETL para cada una de los centenares de unidades que deberían estar funcionando.
 
-
-
 ## 4. Haz una lista de los usuarios de negocios para definir los tests del sistema.
 
 Necesitamos la experiencia de los usuarios para definir buenos tests para el sistema. ¿Cómo sabemos que los datos son correctos? ¿Cómo sabemos que el rendimiento de las consultas cumple sus expectativas? Hacer una lista de los usuarios de negocios durante el proceso de especifiación del test asegurará una mejor prueba que si simplemente el equipo DW/BI construye tests basados en lo que creen que es interesante. Contar con los usuarios de negocios clave en el proceso de aseguramiento de la calidad también proporciona un impulso enorme en la credibilidad.
-
-
 
 ## 5. El test del entorno debe ser tan similar como sea posible al entorno de producción.
 
@@ -59,11 +53,7 @@ Es de vital importancia que el entorno de test sea similar al de producción. Se
 
 **Si sigues estas sugerencias, especialmente la sugerencia de probar continuamente, probablemente tengas una fase de test agradable y sin crisis y cumplirás el hito de pase a producción en  la fecha programada.**  Si no, estás corriendo un serio riesgo de retrasar interminablemente un fabuloso proyecto en el infierno QA, con los usuarios de negocios y la dirección llamando a tu puerta.
 
-
-
 Artículo original: [http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/][1]
-
-
 
 
 

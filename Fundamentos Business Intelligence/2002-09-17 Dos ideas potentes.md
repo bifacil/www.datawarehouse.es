@@ -2,7 +2,7 @@
 UniqueId: dvYbjoFOOP
 Title: Dos ideas potentes
 Url: 2002/dos-ideas-potentes.html
-Section: "Artículos"
+Section: Fundamentos Business Intelligence
 Date: 2002-09-17T00:00:00.0000000+02:00
 Description: "Hay dos ideas potentes en la creación de los data warehouses de más éxito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos."
 Author: Ralph Kimball
