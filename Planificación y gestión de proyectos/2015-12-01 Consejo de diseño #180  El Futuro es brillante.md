@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: YKYLpyPYxU
-Title: "Consejo de diseño #180, El Futuro es brillante"
+Title: "Consejo de diseño #180: El Futuro es brillante"
 Url: 2015/el-futuro-es-brillante.html
 Section: "Planificación y gestión de proyectos"
 Date: 2015-12-01T22:52:19.9456592+01:00
