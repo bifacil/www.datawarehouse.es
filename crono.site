@@ -7,10 +7,10 @@
   VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'Description', 'Author', 'Categories'),
   Categories=(),
   Authors=(
-    Author (Name='Ralph Kimball', Description='Ralph Kimball', Image='ralph-kimball.jpg'),
-    Author (Name='Margy Ross', Description='Margy Ross', Image='margy.ross.jpg'),
-    Author (Name='Joy Mundy', Description='Joy Mundy', Image='joy-mundy.jpg'),
-    Author (Name='Bob Becker', Description='Bob Becker', Image='bob-becker-jpg')
+    Author (Name='Ralph Kimball', Description='Ralph Kimball es el fundador de Kimball Group y de Kimball University donde ha impartido clases sobre diseño de data warehouses a más de 10.000 estudiantes. Es el autor del best seller Data warehouse Toolkit. Ha dedicado 4 décadas diseñando sistemas DWH simples y rápidos.', Image='ralph-kimball.jpg'),
+    Author (Name='Margy Ross', Description='Margy es Presidenta de Kimball Group y ha desarrollado su carrera profesional durante más de 30 años en entornos DSS y Data Warehousing. Es especialista en gestión de proyectos, toma de requerimienots de negocio, y modelado dimensional.', Image='margy-ross.jpg'),
+    Author (Name='Joy Mundy', Description='Joy es miembro de Kimball Group. Se ha dedicado a proyectos DWH/BI durante más de una década. Joy es cofundadora de InfoDynamics LLC, una consultoría DWH. Últimamente trabaja para Microsoft para desarrollar aplicaciones analíticas y data warehouses.', Image='joy-mundy.jpg'),
+    Author (Name='Bob Becker', Description='Bob es miembro de Kimball Group. Ha trabajado junto a responsables de negocio y profesionales IT para priorizar, justificar e implementar sistemas data warehouse para el soporte a la toma de decisiones desde 1990. Es experto en identificar requerimientos de negocio, gestionar proyectos, y diseñar modelos dimensionales para todo tipo de industrias.', Image='bob-becker.jpg')
   ),
   Links=(),
   SocialLinks=(),
