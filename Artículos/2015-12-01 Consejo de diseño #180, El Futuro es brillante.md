@@ -22,12 +22,12 @@ En este, mi último consejo de diseño en el Grupo Kimball, describiré como cre
 
 ## El futuro del  ETL
 
-Si el DWH va a abarcar todos los activos de datos de una organización, entonces tendrá que tratar con enormes torrentes de datos nuevos provenientes de datos estructurados de manera heterogénea. Diversos cambios importantes tendrán lugar en el entorno ETL: 
+Si el DWH va a abarcar todos los activos de datos de una organización, entonces tendrá que tratar con enormes torrentes de datos nuevos provenientes de datos estructurados de manera heterogénea. Diversos cambios importantes tendrán lugar en el entorno ETL:
 
 - Primero, los datos que se alimentan de fuentes originales deben soportar enormes anchos de banda, por lo menos gigabytes por segundo. Aprende sobre Sqoop cargando datos en Hadoop. Si estas palabras no significan nada para ti, ¡tienes lecturas que hacer! Empieza con la Wikipedia.
 - Segundo, muchos de los clientes analíticos de estas nuevas corrientes de datos insisten en que no deben aplicar transformaciones  a los datos entrantes. En otras palabras, la zona inicial  del ETL debe ser capaz de almacenar archivos consistentes en bits no interpretados y sin suposiciones sobre cómo será almacenado o analizado en la base de datos.
 - Tercero, la arquitectura de almacenamiento debe ser abierta para que múltiples herramientas de soporte de decisión y clientes analíticos puedan acceder a estos datos a través de una capa de metadatos universal.
-- Y cuarto, la descripción de metadatos de los archivos de datos de todo tipo debe ser más extensible, adaptable y fuerte ya que nuevas fuentes de datos más complejas estarán ahora disponibles. Hemos estado demasiado tiempo con archivos RDBMS simples de texto y números donde los metadatos contenidos en sistemas RDBMS tienen poca o ninguna semántica.  
+- Y cuarto, la descripción de metadatos de los archivos de datos de todo tipo debe ser más extensible, adaptable y fuerte ya que nuevas fuentes de datos más complejas estarán ahora disponibles. Hemos estado demasiado tiempo con archivos RDBMS simples de texto y números donde los metadatos contenidos en sistemas RDBMS tienen poca o ninguna semántica.
 
 Los proveedores de RDBMS tienen el reto de diferenciar las capas de almacenamiento, de matadatos, y de consultas. Esto ya sucede en el entorno abierto Hadoop bajo el sistema de distribución de archivos (HDFS). Esto significa que el procesamiento ETL en algunas ocasiones puede ser retrasado hasta cierto punto en el tiempo después de que los datos hayan sido cargados en archivos accesibles. Las herramientas de consulta y análisis, a través de los metadatos, deberán ser capaces de seleccionar el esquema objetivo en el momento de consulta (como una forma potente de virtualización en el momento de la consulta, no en el momento de la carga). Tan inusual como suena un *"schema on read"*, no es más que otra forma de virtualización de datos como las que hemos estado utilizando desde más de una década.
 
@@ -45,9 +45,9 @@ Incluso en el desafiante nuevo mundo de extraños tipos de datos y procesamiento
 
 Las dimensiones, por supuesto, son el alma del data warehousing. Los hechos son meras observaciones que siempre existen en un contexto dimensional. Para ir más lejos, podemos esperar que las dimensiones lleguen a ser más importantes para poder apoyar un comportamiento más sofisticado de las consultas de base y los análisis predictivos. Ya ha habido propuestas para generalizar el esquema de la estrella, a un esquema supernova. En el esquema de una supernova, los atributos dimensionales llegan a ser objetos complejos y no un simple texto. Las dimensiones Supernova también pasan a ser más maleables y extensibles de una análisis a otro. Compara el análisis de la dimensión del cliente tradicional con la dimensión cliente supernova en la Figura 1. Date cuenta de que la mayoría de esto no son castillos en el aire.  Hoy puedes generalizar una simple dimensión de un atributo en un ARRAY de STRUCTS. Hora de leer el manual de referencia SQL.
 
-<mark>IMAGEN</mark> 
+![Imagen 1](https://datawarehouse.es/images/dt-180-figure.png)
 
-Figura 1: Dimensiones de cliente tradicional y supernova.
+*Figura 1: Dimensiones de cliente tradicional y supernova.*
 
 ## El futuro de las herramientas BI
 
@@ -64,12 +64,6 @@ Creo que el reto más emocionante es la expansión de la descripción del trabaj
 Y como dice Margy: sal adelante y sé dimensional
 
 Artículo original: [http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/][1]
-
-
-
-
-
-
 
 
 
