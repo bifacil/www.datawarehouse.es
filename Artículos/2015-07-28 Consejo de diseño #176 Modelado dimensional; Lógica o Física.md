@@ -12,11 +12,11 @@ Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi 
 
 Los modelos dimensionales tienen dos expresiones diferentes, lógica y física. La expresión puramente lógica queda plasmada en el siguiente diagrama.
 
-<mark>IMAGEN</mark>
+![Imagen 1](https://datawarehouse.es/images/dt-176-figure.png)
 
 La caja del centro siempre representa mediciones de sucesos ("líneas de pedido" en el ejemplo). Llamamos a estos hechos. Las cajas de alrededor representan las dimensiones naturales asociadas con las mediciones del suceso. Hay poco contenido técnico de la base de datos en el diagrama del modelo lógico; pero mucho contenido de negocios. Una vez que la fuente de las mediciones de suceso ha sido identificada, el modelo lógico es el lugar donde empezar el diseño de forma seria.
 
- Una vez aceptado, el diagrama del modelo lógico se transformará con bastante rapidez a un diseño técnico más específico repleto de nombres de tablas, nombres de campos, y declaraciones de claves primarias y foráneas. Esto es lo que piensan la mayoría de la gente IT de un modelo dimensional. Hmmm... esto parece muy físico. Cuando este diseño físico ha sido declarado, parece que el único paso que queda es escribir el DDL explícito creando las tablas objetivo, y después entrar en materia de  implementar las conexiones ETL para rellenar los datos de estas tablas físicas.
+Una vez aceptado, el diagrama del modelo lógico se transformará con bastante rapidez a un diseño técnico más específico repleto de nombres de tablas, nombres de campos, y declaraciones de claves primarias y foráneas. Esto es lo que piensan la mayoría de la gente IT de un modelo dimensional. Hmmm... esto parece muy físico. Cuando este diseño físico ha sido declarado, parece que el único paso que queda es escribir el DDL explícito creando las tablas objetivo, y después entrar en materia de  implementar las conexiones ETL para rellenar los datos de estas tablas físicas.
 
 Espera. ¡No tan rápido! Para ser honestos sobre este atractivo modelo físico dimensional, tenemos que admitir que en el nivel real de almacenamiento físico, nuestro modelo dimensional sería implementado de manera muy diferente.  Los dos grandes "elefantes en la sala" son las bases de datos columnares y la virtualización de datos:
 
@@ -27,11 +27,7 @@ En lugar de atascarnos en argumentos religiosos sobre modelos lógicos versus f�
 
 El modelo dimensional API es muy específico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicación BI solicitante no puede y no debe ocuparse de cómo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.
 
-
-
 Artículo original:  [http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/][1]
-
-
 
 
 
