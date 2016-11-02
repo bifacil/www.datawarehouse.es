@@ -6,6 +6,7 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 <!DOCTYPE html>
 <html lang="en">
 	@Include("layouts\head.cshtml")
+	@{var ultimos=(from article in Site.Pages orderby article.Date descending select article).Take(5);}
 	<body class="home">
 		<div class="cabecera-home">
 			<div class="container-fluid">
@@ -29,7 +30,16 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 						<li><a class="scroll" href="#ralph-kimball">Ralph Kimball</a></li>
 						<li><a class="scroll" href="#crono">Crono</a></li>
 					</ul>
+					<div class="recientes">
+						<div>
+							<p><strong>Últimos artículos:</strong></p>
+							@foreach(var article in ultimos.Take(3)){
+								<p><a href="@Root/article.Url">@article.Title</a></p>
+							}						
+						</div>
+					</div>
 				</div>
+
 			</div>
 		</div>
 	
@@ -68,7 +78,6 @@ Description: "Data warehouse fácil recoje buenas prácticas en entornos DWH/Bus
 			<div class="container">
 				<h3>Últimos artículos traducidos</h3>
 				<div class="row espacio-articles">
-					@{var ultimos=(from article in Site.Pages orderby article.Date descending select article).Take(5);}
 					@foreach(var article in ultimos.Take(3)){
 					<div class="col-md-4">
 						<div>
