@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: mneNSHknqU
-Title: "Consejo de diseño #135. Las dimensiones conformadas como fundamento de un data warehouse ágil"
+Title: "Consejo de diseño #135: Las dimensiones conformadas como fundamento de un data warehouse ágil"
 Url: 2011/135-dimensiones-conformadas-fundamento-datawarehouse-agil.html
 Section: "Fundamentos diseño dimensional"
 Date: 2011-06-01T00:00:00.0000000+02:00
