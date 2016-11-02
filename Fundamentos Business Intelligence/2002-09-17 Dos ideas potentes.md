@@ -10,6 +10,10 @@ Author: Ralph Kimball
 ---
 Hay dos ideas potentes en la creación de los data warehouses de más éxito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos.
 
+
+
+
+
 En mi columna previa, describí un completo espectro de restricciones de diseño y realidades inevitables a las que debía enfrentarse un diseñador de data warehouse. Era una lista de grandes proporciones de la que me preocupaba que os hiciera coger la puerta y os fuerais. Pero, tal vez, lo que hizo seguir leyendo fue mi promesa de salir de la ciénaga. Aquí es donde entran las dos potentes ideas.
 
 La última vez, indiqué que las restricciones no negociables del diseño de un data warehouse eran el entendimiento por parte del usuario final y la velocidad en la ejecución de la consulta. Un almacén de datos complejo y lento es un fracaso sin importar como de elegante pueda ser el resto del diseño porque la gente para el que fue destinado no querrá utilizarlo.
