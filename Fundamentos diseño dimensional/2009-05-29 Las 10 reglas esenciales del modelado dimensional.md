@@ -3,7 +3,7 @@ UniqueId: vQSJbZiWGv
 Title: Las 10 reglas esenciales del modelado dimensional
 Url: 2009/los-10-mandamientos-de-kimball.html
 Section: "Fundamentos diseño dimensional"
-Date: 2009-05-29T00:07:50.7234435+02:00
+Date: 2016-11-03
 SecondaryDate: 2009-05-29T00:07:00.0000000
 Description: "Los 10 mandamientos de Kimball. Estas reglas incluyen recomendaciones que se deben seguir necesariamente junto a otras buenas prácticas que conviene tener en cuenta."
 Author: Margy Ross

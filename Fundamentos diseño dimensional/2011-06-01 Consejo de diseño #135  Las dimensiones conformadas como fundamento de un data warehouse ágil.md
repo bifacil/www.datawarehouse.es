@@ -3,7 +3,7 @@ UniqueId: mneNSHknqU
 Title: "Consejo de diseño #135: Las dimensiones conformadas como fundamento de un data warehouse ágil"
 Url: 2011/135-dimensiones-conformadas-fundamento-datawarehouse-agil.html
 Section: "Fundamentos diseño dimensional"
-Date: 2011-06-01T00:00:00.0000000+02:00
+Date: 2016-11-03
 SecondaryDate: 2011-06-01T00:00:00.0000000
 Description: "Las dimensiones conformadas permiten el desarrollo ágil de DW/BI  y agiliza la toma de decisiones. Reutilizando dimensiones conformadas entre proyectos es  donde se obtiene un impulso para obtener más agilidad en el desarrollo  DW/BI. A medida que desarrollas tu portfolio de dimensiones maestras conformadas, la manivela de desarrollo del proyecto empieza a girar más rápido."
 Author: Margy Ross

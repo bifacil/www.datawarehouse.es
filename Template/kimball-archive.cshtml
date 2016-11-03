@@ -34,8 +34,8 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 							<div class="seccion">
 								<h2 id="@item.Code">@item.Title</h2>
 								<ul>
-									@foreach(var page in item.Pages){
-									<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.Date.Year</span></li>
+									@foreach(var page in item.Pages.OrderBy(p=>p.SecondaryDate)){
+									<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
 									}
 								</ul>
 							</div>
