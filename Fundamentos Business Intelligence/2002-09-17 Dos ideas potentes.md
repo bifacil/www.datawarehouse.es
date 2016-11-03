@@ -4,15 +4,14 @@ Title: Dos ideas potentes
 Url: 2002/dos-ideas-potentes.html
 Section: Fundamentos Business Intelligence
 Date: 2002-09-17T00:00:00.0000000+02:00
+SecondaryDate: 2002-09-17T00:00:00.0000000
 Description: "Hay dos ideas potentes en la creación de los data warehouses de más éxito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos."
 Author: Ralph Kimball
+Category: Fundamentos Business Intelligence
+RelatedUrl: http://www.kimballgroup.com/2002/09/two-powerful-ideas/
 
 ---
 Hay dos ideas potentes en la creación de los data warehouses de más éxito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos.
-
-
-
-
 
 En mi columna previa, describí un completo espectro de restricciones de diseño y realidades inevitables a las que debía enfrentarse un diseñador de data warehouse. Era una lista de grandes proporciones de la que me preocupaba que os hiciera coger la puerta y os fuerais. Pero, tal vez, lo que hizo seguir leyendo fue mi promesa de salir de la ciénaga. Aquí es donde entran las dos potentes ideas.
 

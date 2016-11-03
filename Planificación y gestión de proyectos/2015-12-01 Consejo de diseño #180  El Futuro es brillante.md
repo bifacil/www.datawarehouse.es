@@ -4,8 +4,11 @@ Title: "Consejo de diseño #180: El futuro es brillante"
 Url: 2015/el-futuro-es-brillante.html
 Section: "Planificación y gestión de proyectos"
 Date: 2015-12-01T22:52:19.9456592+01:00
+SecondaryDate: 2015-12-01T22:52:00.0000000
 Description: "En mi último consejo de diseño en el Grupo Kimball describiré como creo que están cambiando los componentes más importantes del almacenamiento de datos y como cambiarán en el futuro cercano. ¡Es un momento emocionante y desafiante para ser un profesional del data warehouse!"
 Author: Ralph Kimball
+Category: "Planificación y gestión de proyectos"
+RelatedUrl: http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/
 
 ---
 El *datawarehousing* nunca ha sido tan valioso e interesante como es ahora. Tomar decisiones basadas en los datos es tan fundamental y obvio que la generación actual de usuarios de negocio y diseñadores/implementadores de data warehouses no podrían imaginar un mundo sin acceso a los datos. Me resistiré al impulso de contar historias sobre como era antes de 1980.

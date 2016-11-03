@@ -4,8 +4,11 @@ Title: "Consejo de diseño #176: Modelado dimensional: ¿Lógico o físico?"
 Url: 2015/modelado-dimensional-logico-o-fisico.html
 Section: "Fundamentos diseño dimensional"
 Date: 2015-07-28T23:42:15.4156255+02:00
+SecondaryDate: 2015-07-28T23:42:00.0000000
 Description: "La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos."
 Author: Ralph Kimball
+Category: "Fundamentos diseño dimensional"
+RelatedUrl: http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/
 
 ---
 Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original *Data Cube* entre Dartmouth y General Mills a finales de 1960. La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos.

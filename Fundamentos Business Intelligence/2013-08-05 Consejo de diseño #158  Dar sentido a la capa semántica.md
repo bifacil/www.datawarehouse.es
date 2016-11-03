@@ -4,7 +4,11 @@ Title: "Consejo de diseño #158: Dar sentido a la capa semántica"
 Url: 2013/dar-sentido-capa-semnatica.html
 Section: Fundamentos Business Intelligence
 Date: 2013-08-05T00:32:55.3152795+02:00
+SecondaryDate: 2013-08-05T00:32:00.0000000
+Description: "Uno de los componentes clave de la arquitectura de un sistema Business Intelligence es la capa semántica. La capa semántica proporciona la traducción de las estructuras subyacentes de la base de datos en términos y construcciones orientados  al usuario de negocio."
 Author: Joy Mundy
+Category: Fundamentos Business Intelligence
+RelatedUrl: http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-the-semantic-layer/
 
 ---
 Uno de los componentes clave de la arquitectura de un sistema Business Intelligence es la capa semántica. La capa semántica proporciona la traducción de las estructuras subyacentes de la base de datos en términos y construcciones orientados  al usuario de negocio. Normalmente es una parte integrante de la herramienta de consulta e informe. Los sistemas OLAP o las bases de datos multi-dimensionales (cubos) también incluyen una capa semántica.

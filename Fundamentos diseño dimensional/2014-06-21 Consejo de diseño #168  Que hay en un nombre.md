@@ -4,8 +4,11 @@ Title: "Consejo de diseño #168: Que hay en un nombre"
 Url: 2014/que-hay-en-un-nombre.html
 Section: "Fundamentos diseño dimensional"
 Date: 2014-06-21T00:00:00.0000000+02:00
+SecondaryDate: 2014-06-21T00:00:00.0000000
 Description: "Aunque parezca una cosa sin importancia, los nombres son importantes. Nombrar correctamente tablas y columnas es particularmente importante para los usuarios ad hoc del sistema DW/BI para que puedan encontrar lo que buscan. Los nombres de los objetos deben estar orientados a los usuarios de negocios, no al personal técnico."
 Author: Joy Mundy
+Category: "Fundamentos diseño dimensional"
+RelatedUrl: http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/
 
 ---
 Aunque parezca una cosa sin importancia, los nombres son importantes. Nombrar correctamente tablas y columnas es particularmente importante para los usuarios ad hoc del sistema DW/BI para que puedan encontrar lo que buscan. Los nombres de los objetos deben estar orientados a los usuarios de negocios, no al personal técnico.

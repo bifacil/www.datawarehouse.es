@@ -4,8 +4,11 @@ Title: "Consejo de dieño #134: Recomendaciones para las pruebas del Data Wareho
 Url: 2011/recomendaciones-testing-datawarehouse.html
 Section: ETL y calidad de datos
 Date: 2011-05-04T00:03:27.9860753+02:00
+SecondaryDate: 2011-05-04T00:03:00.0000000
 Description: "Aquí están mis 5 recomendaciones principales para construir y ejecutar un test en el entorno de tu proyecto DW/BI."
 Author: Joy Mundy
+Category: ETL y calidad de datos
+RelatedUrl: http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/
 
 ---
 La validación de un entorno datawarehouse/BI es un gran reto. La metodología de validación estándar valida sólo una pequeña cosa a la vez. Sin embargo, la naturaleza de un sistema DW/BI versa sobre integraciones complejas, sin mencionar el elevado volumen de datos. Aquí están mis 5 recomendaciones principales para construir y ejecutar un test en el entorno de tu proyecto DW/BI.

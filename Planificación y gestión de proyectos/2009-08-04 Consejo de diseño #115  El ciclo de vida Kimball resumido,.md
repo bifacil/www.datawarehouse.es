@@ -4,8 +4,11 @@ Title: "Consejo de diseño #115: El ciclo de vida Kimball resumido."
 Url: 2009/ciclo-de-vida-kimball.html
 Section: "Planificación y gestión de proyectos"
 Date: 2009-08-04T01:30:41.6438575+02:00
+SecondaryDate: 2009-08-04T01:30:00.0000000
 Description: "Nuestro enfoque para el diseño, desarrollando una y otra vez soluciones DW/BI, está probado y verificado. Ha sido utilizados por miles de equipos de proyectos virtualmente en todas las industrias, en el área de aplicación, en las funciones de negocio y en las plataformas de negocio. Una y otra vez se ha comprobado que el enfoque del Lifecylce Kimball funciona."
 Author: Margy Ross
+Category: "Planificación y gestión de proyectos"
+RelatedUrl: http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/
 
 ---
 Recientemente, en una clase sobre el Lifecycle del Data Warehouse un estudiante me preguntó a cerca de una visión resumida del enfoque Kimball para compartirlo con su director. Estaba contento de que me preguntara porque asumía que habíamos publicado un resumen ejecutivo sobre esto. Para mi sorpresa, nuestra única publicación sobre la visión del ciclo de vida era un capítulo en un libro de  herramientas de ayuda. Este consejo de diseño incluye el vacío de contenido inesperado en nuestros archivos.
