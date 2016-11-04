@@ -2,8 +2,8 @@
 UniqueId: SllVObxbVe
 Title: "Consejo de dieño #134: Recomendaciones para las pruebas del Data Warehouse"
 Url: 2011/recomendaciones-testing-datawarehouse.html
-Section: ETL y calidad de datos
-Date: 2016-11-03
+Section: "Artículos"
+Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2011-05-04T00:03:00.0000000
 Description: "Aquí están mis 5 recomendaciones principales para construir y ejecutar un test en el entorno de tu proyecto DW/BI."
 Author: Joy Mundy

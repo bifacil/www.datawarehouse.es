@@ -7,8 +7,8 @@
   VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'SecondaryDate', 'Description', 'Author', 'Category', 'RelatedUrl'),
   Categories=(
     Category (Name='Fundamentos Business Intelligence', Title='Fundamentos Business Intelligence', Code='bi'),
-    Category (Name='Fundamentos diseño dimensional', Title='Fundamentos diseño dimensional', Code='dmensional'),
-    Category (Name='Planificación y gestión de proyectos', Title='Planificación y gestión de proyectos', Code='management'),
+    Category (Name='Fundamentos diseño dimensional', Title='Fundamentos diseño dimensional', Code='dimensional'),
+    Category (Name='Planificación y gestión de proyectos', Title='Planificación y gestión de proyectos', Code='projectmanagment'),
     Category (Name='ETL y calidad de datos', Title='ETL y calidad de datos', Code='etl')
   ),
   Authors=(

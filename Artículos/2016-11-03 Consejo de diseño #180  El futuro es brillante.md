@@ -2,8 +2,8 @@
 UniqueId: YKYLpyPYxU
 Title: "Consejo de diseño #180: El futuro es brillante"
 Url: 2015/el-futuro-es-brillante.html
-Section: "Planificación y gestión de proyectos"
-Date: 2016-11-03
+Section: "Artículos"
+Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2015-12-01T22:52:00.0000000
 Description: "En mi último consejo de diseño en el Grupo Kimball describiré como creo que están cambiando los componentes más importantes del almacenamiento de datos y como cambiarán en el futuro cercano. ¡Es un momento emocionante y desafiante para ser un profesional del data warehouse!"
 Author: Ralph Kimball

@@ -30,11 +30,11 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 					<div>
-						@foreach(var item in Site.Sections.OrderBy(p=>p.Image)){
+						@foreach(var item in Site.Categories){
 							<div class="seccion">
 								<h2 id="@item.Code">@item.Title</h2>
 								<ul>
-									@foreach(var page in item.Pages.OrderBy(p=>p.SecondaryDate)){
+									@foreach(var page in item.MainPages.OrderBy(p=>p.SecondaryDate)){
 									<li><a href="@Root\@page.Url">@page.Title</a> <span class="year">@page.SecondaryDate.Year</span></li>
 									}
 								</ul>
