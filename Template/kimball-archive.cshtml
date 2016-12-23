@@ -30,7 +30,7 @@ Description: "Artículos de Kimball Group sobre recomendaciones y buenas prácti
 		<div class="row">
 			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 					<div>
-						@foreach(var item in Site.Categories){
+						@foreach(var item in Site.GetSection("Artículos").Categories){
 							<div class="seccion">
 								<h2 id="@item.Code">@item.Title</h2>
 								<ul>
