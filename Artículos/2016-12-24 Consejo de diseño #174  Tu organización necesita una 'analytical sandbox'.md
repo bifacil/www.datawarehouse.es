@@ -6,6 +6,7 @@ Date: 2016-12-24T01:54:00.6935640+01:00
 SecondaryDate: 2015-05-06T00:00:00.0000000
 Description: "Normalmente se considera que una caja analítica es un área situada fuera de la infraestructura existente en el data warehouse o como un entorno separado adyacente al data warehouse. Proporciona el entorno y los recursos requeridos para apoyar las capacidades analíticas experimentales o de desarrollo. "
 Author: Bob Becker
+Category: Fundamentos Business Intelligence
 RelatedUrl: http://www.kimballgroup.com/2015/05/design-tip-174-does-your-organization-need-an-analytic-sandbox/
 
 ---
@@ -25,6 +26,6 @@ La mayor parte de usuarios de negocio verán de manera acertada el data warehous
 
 Disponer de las habilidades necesarias “in house” es esencial para el éxito de la caja analítica. Los usuarios de la caja analítica necesitan poder conectar con los datos con bastantes menos reglas que la mayoría de los usuarios de negocio. Son usuarios capaces de auto-proporcionarse datos tanto si vienen del data warehouse como si no. Son capaces de construir las analíticas y modelos directamente contra estos datos sin asistencia.
 
-La caja analítica debería estar poco dirigida. La idea es crear un entorno que vive sin la sobrecarga del entorno del data warehouse. No debería ser usado para respaldar las capacidades de la misión crítica de la organización. No debería ser utilizada directamente para controlar o respaldar ninguna de las capacidades centrales operacionales. Igualmente, no está destinada a ser utilizada para informes continuos o analíticas requeridas por los negocios de forma continua que respalden informes externos para cumplir las regulaciones financieras o gubernamentales. 
+La caja analítica debería estar poco dirigida. La idea es crear un entorno que vive sin la sobrecarga del entorno del data warehouse. No debería ser usado para respaldar las capacidades de la misión crítica de la organización. No debería ser utilizada directamente para controlar o respaldar ninguna de las capacidades centrales operacionales. Igualmente, no está destinada a ser utilizada para informes continuos o analíticas requeridas por los negocios de forma continua que respalden informes externos para cumplir las regulaciones financieras o gubernamentales.
 
 Una característica importante de la caja analítica es que es de naturaleza transitoria. Los datos y el análisis vienen y van conforme son necesarios para respaldar los nuevos requerimientos analíticos. Los datos no persisten y no son regularmente actualizados vía las capacidades ETL. Los datos en la caja analítica normalmente tienen una fecha de expiración acordada. Así, cualquiera de los nuevos hallazgos o capacidades identificados como importantes para la organización y vitales para respaldar las continuas capacidades necesitarán ser incorporadas en las operaciones de la empresa o en los entornos del data warehouse.
