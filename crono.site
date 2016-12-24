@@ -13,5 +13,6 @@
   ),
   Links=(),
   SocialLinks=(),
+  DefaultSection='Artículos',
   AutoPublish=YES
 )

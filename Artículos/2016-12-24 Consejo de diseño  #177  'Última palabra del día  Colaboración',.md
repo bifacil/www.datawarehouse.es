@@ -3,15 +3,14 @@ UniqueId: vtAMGsvmaQ
 Title: "Consejo de diseño  #177: 'Última palabra del día: Colaboración'."
 Url: 2015/design-tip-177-colaboracion.html
 Date: 2016-12-24T00:58:16.5928170+01:00
+SecondaryDate: 2015-09-01T00:59:00.0000000
 Description: "El enfoque Kimball disuade la mentalidad cliente-vendedor donde el negocio proporciona al IT una orden que este intenta realizar. Nuestro enfoque siempre defiende la asociación entre IT y las partes interesadas del negocio. La colaboración va más allá de programar una reunión con las partes interesadas; colaborar significa trabajar diferente, involucrar a ambas partes en tomar decisiones."
 Author: Margy Ross
 Category: "Planificación y gestión de proyectos"
 RelatedUrl: http://www.kimballgroup.com/2015/09/design-tip-177-final-word-of-the-day-collaboration/
 
 ---
- 
-
-Para último consejo de diseño, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT. 
+Para último consejo de diseño, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT.
 
 Los equipos colaborativos multidisciplinares crean sistemas DW/BI de éxito. Cada cuestión importante del enfoque "Kimball Lifecycle" se presta a actividades conjuntas que refuerzan la alineación negocios-IT:
 
@@ -39,6 +38,6 @@ Desafortunadamente, la colaboración entre el negocio y IT no se da de manera na
 
 Finalmente, os comunico que esta es mi última oportunidad de hablar con todos vosotros. Quiero expresar mi gratitud y aprecio por las numerosas personas que se han cruzado en mi camino durante los últimos 34 años. Gracias a mi marido y a mi hija por vuestra paciencia inquebrantable y vuestro apoyo. Gracias a mis colegas de Metaphor cuya influencia ha persistido durante mi carrera. Gracias a mis socios de DecisionWorks y Kimball Group por vuestra inteligencia e inspiración. Y lo más importante, gracias a mis clientes, estudiantes y lectores; ¡habéis hecho que sea un viaje increíble!
 
-Bajar la persiana siempre duro. Mientras el Kimball Group está cerrando sus puertas, nuestros métodos vivirán a través de vosotros. 
+Bajar la persiana siempre duro. Mientras el Kimball Group está cerrando sus puertas, nuestros métodos vivirán a través de vosotros.
 
 ¡Buena suerte! Solo recordad: ¡centraos en el negocio y sed dimensionales!
