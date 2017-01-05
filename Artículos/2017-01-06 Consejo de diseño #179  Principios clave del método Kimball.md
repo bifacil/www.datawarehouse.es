@@ -23,13 +23,15 @@ El método Kimball, tal y como se explica en la segunda edición de The Data War
 
 Incluso el mejor modelador dimensional creará un modelo dimensional pobre si trabaja solo. El modelado dimensional no es solamente una actividad en grupo, es una actividad en grupo que debe involucrar a la comunidad de usuarios de negocio. A lo largo de los años, hemos rechazado incontables solicitudes de consultoría para diseñar modelos sin aportación empresarial. O, peor, hemos luchado en proyectos costosos donde no se materializó la participación de los usuarios de negocio prometida.
 
-Es sin duda una enorme solicitud que hace la comunidad de usuarios. Nuestro proceso de diseño requiere normalmente 50-60 horas en sesiones repartidas en un período de entre 4 a 6 semanas (o más, dependiendo de la complejidad). La gente que queremos que participen en las sesiones de diseño son siempre valiosas y exigentes. Pero si no los podemos convencer para que dediquen el tiempo y la energía necesarios, el sistema resultante fallará.
+Pedimos un esfuerzo importante a los usuarios, sin duda. Nuestro proceso de diseño requiere normalmente 50-60 horas en sesiones repartidas en un período de entre 4 a 6 semanas (o más, dependiendo de la complejidad). La gente que queremos que participe en las sesiones de diseño son siempre valiosa y exigente. Pero si no los podemos convencer para que dediquen el tiempo y la energía necesarios, el sistema resultante fallará.
 
 ### 3. El modelo dimensional es la mejor concreción para el sistema de DW / BI.
 
-La mayoría de clientes con los que trabajo no tienen una concreción escrita para el sistema DW/BI, ciertamente no tienen ningún documento  que refleje la realidad de manera significativa. El modelo de especificación más común incluye listas confusas de lo que los usuarios quieren filtrar y desglosar, así como la demanda de que los 2.000 informes existentes sean mantenidos en el nuevo sistema. Si todo lo que hemos conseguido con nuestro nuevo sistema DW/BI es resituar los  informes enlatados existentes, hemos fallado.
+La mayoría de clientes con los que trabajo no tienen una concreción escrita para el sistema DW/BI, ciertamente no tienen ningún documento  que refleje la realidad de manera significativa. El modelo de especificación más común incluye listas confusas de lo que los usuarios quieren filtrar y desglosar, así como la petición de que los 2.000 informes existentes sean mantenidos en el nuevo sistema. Si todo lo que hemos conseguido con nuestro nuevo sistema DW/BI es resituar los  informes enlatados existentes, hemos fallado.
 
-Al final del proceso de diseño les pedimos a los usuarios de negocio que piensen sobre los análisis que han hecho recientemente, que han intentado hacer, o que nos gustaría que hubiesen hecho, de la información en el ámbito de aplicación del diseño actual. Queremos que nos digan “Sí, este modelo satisface nuestras necesidades”. Al mismo tiempo, la gente IT del equipo han estado supervisando la discusión de las fuentes de datos, transformaciones y otros detalles técnicos. Les pedimos que afirmen “Si, podemos llenar este modelo de datos”. La redacción del diseño del modelo dimensional, es una especificación significativa y factible de los requisitos.
+Al final del proceso de diseño les pedimos a los usuarios de negocio que piensen sobre los análisis que han hecho recientemente, que han intentado hacer, o que nos gustaría que hubiesen hecho, de la información a partir del diseño actual. Queremos que nos digan *“Sí, el modelo propuesto satisface nuestras necesidades”*. Al mismo tiempo, a la gente IT del equipo que ha estado supervisando las fuentes de datos, las transformaciones u otros detalles técnicos, nos gusta que puedan afirmar *“Si, podemos llenar este modelo de datos”*. 
+
+**La redacción del diseño del modelo dimensional es una especificación significativa y factible de los requisitos.**
 
 ### 4. El modelo dimensional debe añadir valor más allá de la reestructuración.
 
@@ -48,23 +50,23 @@ La de-duplicación es una de las tareas más difíciles a las que se enfrenta el
 
 No importa lo buenas que sean nuestras herramientas, como de inteligente sea nuestro código, como de completas sean nuestras reglas de negocio, el proceso automatizado de deduplicación no puede alcanzar el 100% de precisión. Se requiere una persona para juzgar los casos cuestionables. Funciona mucho mejor si esto es una responsabilidad profesional durante los días laborables, más que esperar a la carga del ETL.
 
-Un simple sistema MDM se puede utilizar para construir datos con valor añadido debatidos previamente en este consejo de diseño. Las dimensiones jerárquicas se hacen notar más cuando son estructuradas desde los escritorios de los usuarios; las herramientas MDM proporcionan una plataforma simple para gestionar esta información.
+Un simple sistema MDM se puede utilizar para construir datos con valor añadido. Las dimensiones jerárquicas son mejores cuando son estructuradas desde los escritorios de los usuarios. Las herramientas MDM proporcionan una plataforma simple para gestionar esta información.
 
 ### 6. Que no se excluya el data warehouse relacional.
 
 Diseñar y llenar el data warehouse conformado de una empresa es duro. A todo el mundo le gustaría saltarse este paso. A lo largo de los más de 23 años de carrera en data warehousing, he observado  numerosos intentos para simplificar el proceso, desde construir la capa BI directamente desde el sistema de transacciones, hasta los llamados data warehouses virtuales, volviendo al ciclo actual de scripts de creación de  herramientas de visualización.
 
-Como comenté en el [Consejo de diseño #162][1], aprovecha las herramientas de visualización de datos, pero evita la anarquía. A menos que controles completamente toda tus datos de origen, debes dejar el ETL para la herramienta ETL, dejar el almacenamiento de datos y la gestión a un motor de database relacional, y dejar que las herramientas BI sean brillantes en lo que mejor hacen: grandes visualizaciones y experiencia de usuario.
+Como comenté en el [Consejo de diseño #162][1], aprovecha las herramientas de visualización de datos, pero evita la anarquía. A menos que controles completamente todos tus datos de origen, debes dejar el ETL para la herramienta ETL, dejar el almacenamiento de datos y la gestión a un motor de database relacional, y dejar que las herramientas BI sean brillantes en lo que mejor hacen: grandes visualizaciones y experiencia de usuario.
 
 ### 7. Todo se trata del negocio.
 
 Digo esto muchas veces durante mis clases y consultas. Es la característica más importante del método Kimball Lifecycle: Mantén el foco incuestionablemente en el negocio. Afecta a todo lo que hacemos y es el mensaje más importante que transmitir hacia el futuro.
 
-## Looking Forward
+## Mirando al futuro
 
-Me siento increíblemente afortunado de haber formado parte del Kimball Group durante los últimos 12 años. Ha sido un honor trabajar no solo con Ralph, Margy, Bob y Warren, sino también con los cientos de estudiantes, clientes y colegas con los que he aprendido tanto.  Me honra lo que hemos conseguido juntos, y me siento bendecida por lo que considero el mejor trabajo del mundo.
+Me siento increíblemente afortunada de haber formado parte del Kimball Group durante los últimos 12 años. Ha sido un honor trabajar no solo con Ralph, Margy, Bob y Warren, sino también con los cientos de estudiantes, clientes y colegas con los que he aprendido tanto.  Me honra lo que hemos conseguido juntos, y me siento bendecida por lo que considero el mejor trabajo del mundo.
 
-Me siento particularmente bendecida en comparación con Warren, falleció el año pasado de cáncer cerebral y su muerte me afectó profundamente tanto a mí como al toda la gente del Kimball Group. En 2016, homenajearé a Warren y su pasión por el fitness haciendo ciclismo por todo Estados Unidos para recaudar fondos para la investigación del cáncer cerebral. Me honrará si sigues nuestro blog que narrará este viaje ([https://itinerantphilosopher.org/][2]) y me emocionaré si consideras hacer una donación por nuestros esfuerzos para recaudar fondos de investigación para el cáncer cerebral.
+Me siento particularmente afortunada en comparación con Warren, que falleció el año pasado de cáncer cerebral y su muerte me afectó profundamente tanto a mí como al toda la gente del Kimball Group. En 2016, homenajearé a Warren y su pasión por el fitness haciendo ciclismo por todo Estados Unidos para recaudar fondos para la investigación del cáncer cerebral. Me honrará si sigues nuestro blog que narrará este viaje ([https://itinerantphilosopher.org/][2]) y me emocionaré si consideras hacer una donación por nuestros esfuerzos para recaudar fondos de investigación para el cáncer cerebral.
 
 
 
