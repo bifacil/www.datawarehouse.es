@@ -60,8 +60,8 @@
 &lt;p&gt;El enfoque Kimball sobre el ciclo de vida lleva d&#233;cadas siendo utilizado. Los conceptos fueron inicialmente establecidos en 1980 por miembros de Kimball Group y diversos colegas de &lt;em&gt;Metaphor Computer Systems&lt;/em&gt;. Cuando publicamos la metodolog&#237;a por primera vez en The Data Warehouse Lifecycle Toolkit en 1998, lo  llamamos &lt;em&gt;&amp;quot;Business Dimensional Lifecycle&amp;quot;&lt;/em&gt; porque este t&#237;tulo reforzaba tres conceptos fundamentales:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Se centraba en a&#241;adir valor empresarial en la organizaci&#243;n&lt;/li&gt;
-&lt;li&gt;Estructuraba  dimensionalmente los datos proporcionados a Negocio v&#237;a reportes y consultas.&lt;/li&gt;
-&lt;li&gt;Desarrollaba iterativamente la soluci&#243;n en incrementos manejables antes que facilitar un Big Bang que se pudiese entregar.&lt;/li&gt;
+&lt;li&gt;Estructuraba  dimensionalmente los datos proporcionados a negocio v&#237;a reportes y consultas.&lt;/li&gt;
+&lt;li&gt;Desarrollaba iterativamente la soluci&#243;n en incrementos manejables antes que pensar en un Big Bang entregable.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Rebobinando a 1990, nuestra metodolog&#237;a fue una de las pocas que recalcaban este conjunto de principios centrales, por tanto el t&#237;tulo El “Business Dimensional Lifecycle” diferenciaba nuestro enfoque de otros existentes en la industria.&lt;/p&gt;
 &lt;p&gt;En un avance r&#225;pido hacia 2008 cuando publicamos la segunda edici&#243;n de “&lt;em&gt;The Data Warehouse Lifecycle Toolkit&lt;/em&gt;”, todav&#237;a creemos absolutamente en estos conceptos, pero la industria ha evolucionado. Nuestros principios hab&#237;an llegado a ser la corriente principal en las mejores pr&#225;cticas ofrecidas por muchos, as&#237; que reducimos el nombre oficial de la metodolog&#237;a a simplemente &amp;quot;&lt;em&gt;Kimball Lifecylce&lt;/em&gt;&amp;quot;.&lt;/p&gt;
@@ -201,7 +201,7 @@
       <atom:updated>2016-11-03T00:00:00Z</atom:updated>
       <description>
 	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
-	  &lt;p&gt;Los modelos de datos dimensionales llevan aqu&#237; mucho tiempo. Ciertamente, casi podemos remontar sus or&#237;genes al proyecto original &lt;em&gt;Data Cube&lt;/em&gt; entre Dartmouth y General Mills a finales de 1960. La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan los modelos.&lt;/p&gt;
+	  &lt;p&gt;Los modelos de datos dimensionales llevan aqu&#237; mucho tiempo. Ciertamente, casi podemos remontar sus or&#237;genes al proyecto original &lt;em&gt;Data Cube&lt;/em&gt; entre Dartmouth y General Mills a finales de 1960. El atractivo del modelado dimensional reside en la evidente simplicidad de los modelos y en la forma natural que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan estos modelos.&lt;/p&gt;
 &lt;p&gt;Los modelos dimensionales tienen dos expresiones diferentes, l&#243;gica y f&#237;sica. La expresi&#243;n puramente l&#243;gica queda plasmada en el siguiente diagrama.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://datawarehouse.es/images/dt-176-figure.png&quot; alt=&quot;Imagen 1&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;La caja del centro siempre representa mediciones de sucesos (&amp;quot;l&#237;neas de pedido&amp;quot; en el ejemplo). Llamamos a estos hechos. Las cajas de alrededor representan las dimensiones naturales asociadas con las mediciones del suceso. Hay poco contenido t&#233;cnico de la base de datos en el diagrama del modelo l&#243;gico; pero mucho contenido de negocios. Una vez que la fuente de las mediciones de suceso ha sido identificada, el modelo l&#243;gico es el lugar donde empezar el dise&#241;o de forma seria.&lt;/p&gt;
