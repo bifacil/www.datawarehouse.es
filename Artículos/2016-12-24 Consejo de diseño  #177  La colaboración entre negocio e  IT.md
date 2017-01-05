@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: vtAMGsvmaQ
-Title: "Consejo de diseño  #177: 'Última palabra del día: Colaboración'."
+Title: "Consejo de diseño  #177: La colaboración entre negocio e  IT"
 Url: 2015/design-tip-177-colaboracion.html
 Date: 2016-12-24T00:58:16.5928170+01:00
 SecondaryDate: 2015-09-01T00:59:00.0000000

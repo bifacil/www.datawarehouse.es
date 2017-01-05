@@ -2,13 +2,13 @@
 UniqueId: BtrVMUvMvT
 Title: "Consejo de diseño #179: Principios clave del método Kimball"
 Url: 2015/claves-metodo-kimball.html
-Date: 2016-12-24T02:34:16.0167205+01:00
+Date: 2017-01-06T02:34:16.0160000+01:00
 SecondaryDate: 2015-11-05T00:00:00.0000000
 Description: "Me apasionan varios principios del método Kimball. En este consejo de diseño enumero las cosas que repito una y otra vez, tanto a las audiencias experimentadas como a las nuevas."
 Author: Joy Mundy
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2015/11/design-tip-179-key-tenets-of-kimball-method/
-IsDraft: true
+IsDraft: false
 
 ---
 La mayor parte de la guía del método Kimball para el diseño, desarrollo e  implementación de un sistema DW/BI es simplemente eso: una guía. Existen cientos o miles de reglas en los numerosos libros de Kimball Group y confieso haber quebrantado muchas de esas reglas durante décadas, cuando afrontaba objetivos conflictivos o realidades políticas desagradables.

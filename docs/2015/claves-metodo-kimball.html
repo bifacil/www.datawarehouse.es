@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Me apasionan varios principios del m&#233;todo Kimball. En este consejo de dise&#241;o enumero las cosas que repito una y otra vez, tanto a las audiencias experimentadas como a las nuevas.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil: Consejo de dise&#241;o #179: Principios clave del m&#233;todo Kimball</title>
+		<link href="../images/favicon.png" rel="shortcut icon" />
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #179: Principios clave del m&#233;todo Kimball</h2>
+				<p>Publicado por <strong>Joy Mundy</strong> en <strong>2015</strong></p>
+				<p>Archivado en <a href="..\kimball-archive.html#dimensional">Fundamentos dise&#241;o dimensional</a></p>
+			</div>
+		</div>
+
+		<div class="container contenido">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>La mayor parte de la guía del método Kimball para el diseño, desarrollo e  implementación de un sistema DW/BI es simplemente eso: una guía. Existen cientos o miles de reglas en los numerosos libros de Kimball Group y confieso haber quebrantado muchas de esas reglas durante décadas, cuando afrontaba objetivos conflictivos o realidades políticas desagradables.</p>
+					<p>Me apasionan varios principios del método Kimball. En este consejo de diseño enumero las cosas que repito una y otra vez, tanto a las audiencias experimentadas como a las nuevas. Cualquier lector que haya asistido a una de mis clases, o me haya contratado como consultor, habrá oído mi discurso sobre la mayoría o todos los puntos de esta lista.</p>
+					<h3>1. El modelo dimensional es el activo clave.</h3>
+					<p>El método Kimball, tal y como se explica en la segunda edición de The Data Warehouse Lifecycle Toolkit, se centra en el modelo dimensional. Los principios del modelado dimensional representan las contribuciones más conocidas de Ralph Kimball y Kimball Group, en el mundo de la inteligencia de negocios. Es nuestro foco ya que un buen modelado dimensional es absolutamente vital para el éxito de tu proyecto DW/BI. Si obtienes el modelo correcto, y lo completas con integridad, el resto será sencillo.</p>
+					<h3>2. El modelado dimensional es una actividad de grupo.</h3>
+					<p>Incluso el mejor modelador dimensional creará un modelo dimensional pobre si trabaja solo. El modelado dimensional no es solamente una actividad en grupo, es una actividad en grupo que debe involucrar a la comunidad de usuarios de negocio. A lo largo de los años, hemos rechazado incontables solicitudes de consultoría para diseñar modelos sin aportación empresarial. O, peor, hemos luchado en proyectos costosos donde no se materializó la participación de los usuarios de negocio prometida.</p>
+					<p>Es sin duda una enorme solicitud que hace la comunidad de usuarios. Nuestro proceso de diseño requiere normalmente 50-60 horas en sesiones repartidas en un período de entre 4 a 6 semanas (o más, dependiendo de la complejidad). La gente que queremos que participen en las sesiones de diseño son siempre valiosas y exigentes. Pero si no los podemos convencer para que dediquen el tiempo y la energía necesarios, el sistema resultante fallará.</p>
+					<h3>3. El modelo dimensional es la mejor concreción para el sistema de DW / BI.</h3>
+					<p>La mayoría de clientes con los que trabajo no tienen una concreción escrita para el sistema DW/BI, ciertamente no tienen ningún documento  que refleje la realidad de manera significativa. El modelo de especificación más común incluye listas confusas de lo que los usuarios quieren filtrar y desglosar, así como la demanda de que los 2.000 informes existentes sean mantenidos en el nuevo sistema. Si todo lo que hemos conseguido con nuestro nuevo sistema DW/BI es resituar los  informes enlatados existentes, hemos fallado.</p>
+					<p>Al final del proceso de diseño les pedimos a los usuarios de negocio que piensen sobre los análisis que han hecho recientemente, que han intentado hacer, o que nos gustaría que hubiesen hecho, de la información en el ámbito de aplicación del diseño actual. Queremos que nos digan “Sí, este modelo satisface nuestras necesidades”. Al mismo tiempo, la gente IT del equipo han estado supervisando la discusión de las fuentes de datos, transformaciones y otros detalles técnicos. Les pedimos que afirmen “Si, podemos llenar este modelo de datos”. La redacción del diseño del modelo dimensional, es una especificación significativa y factible de los requisitos.</p>
+					<h3>4. El modelo dimensional debe añadir valor más allá de la reestructuración.</h3>
+					<p>Algunas de las mejoras más valiosas que puedes implementar en tu sistema DW/BI son añadir descriptores mejorados y grupos de datos usados frecuentemente. Normalmente, estas posibilidades se olvidan por parte del equipo de diseño. Incluso he encontrado equipos con una política explícita de no añadir nada más allá de lo que está en el sistema fuente.</p>
+					<p>Ejemplos de incorporaciones valiosas al modelo de datos que incluyen:</p>
+					<ul>
+					<li>Permitir que los usuarios puedan filtrar códigos de transacción que se usan pocas veces.</li>
+					<li>Proporcionar columnas de clasificación para listas de selección e informes que sean atractivas.</li>
+					<li>Bandas pre-calculadas, como rangos de edad o medidas de calidad para las transacciones.</li>
+					<li>Dar soporte a diferentes jerarquías, o más profundas, de las que son administradas en los sistemas de origen, como marketing frente a las visiones de fabricación de la dimensión del producto.</li>
+					</ul>
+					<h3>5. Los sistemas de gestión de datos maestros son una gran fuente.</h3>
+					<p>La de-duplicación es una de las tareas más difíciles a las que se enfrenta el equipo de data warehouse. Desde los inicios del data warehousing, el equipo de mantenimiento ha luchado para diseñar los procesos ETL que deduplicaran entidades como la dimensión &quot;cliente&quot;. La popularidad creciente y la funcionalidad de la tecnología y programas del master data management (MDM) proporcionan una mejor solución que el flujo ETL. ¡Y no solo porque es duro!. El ritmo del proceso ETL,  donde queremos que la base en funcionamiento sea a prueba de balas, es  un inconveniente con el proceso de deduplicación.</p>
+					<p>No importa lo buenas que sean nuestras herramientas, como de inteligente sea nuestro código, como de completas sean nuestras reglas de negocio, el proceso automatizado de deduplicación no puede alcanzar el 100% de precisión. Se requiere una persona para juzgar los casos cuestionables. Funciona mucho mejor si esto es una responsabilidad profesional durante los días laborables, más que esperar a la carga del ETL.</p>
+					<p>Un simple sistema MDM se puede utilizar para construir datos con valor añadido debatidos previamente en este consejo de diseño. Las dimensiones jerárquicas se hacen notar más cuando son estructuradas desde los escritorios de los usuarios; las herramientas MDM proporcionan una plataforma simple para gestionar esta información.</p>
+					<h3>6. Que no se excluya el data warehouse relacional.</h3>
+					<p>Diseñar y llenar el data warehouse conformado de una empresa es duro. A todo el mundo le gustaría saltarse este paso. A lo largo de los más de 23 años de carrera en data warehousing, he observado  numerosos intentos para simplificar el proceso, desde construir la capa BI directamente desde el sistema de transacciones, hasta los llamados data warehouses virtuales, volviendo al ciclo actual de scripts de creación de  herramientas de visualización.</p>
+					<p>Como comenté en el <a href="http://www.kimballgroup.com/2014/01/design-tip-162-leverage-data-visualization-tools-but-avoid-anarchy/">Consejo de diseño #162</a>, aprovecha las herramientas de visualización de datos, pero evita la anarquía. A menos que controles completamente toda tus datos de origen, debes dejar el ETL para la herramienta ETL, dejar el almacenamiento de datos y la gestión a un motor de database relacional, y dejar que las herramientas BI sean brillantes en lo que mejor hacen: grandes visualizaciones y experiencia de usuario.</p>
+					<h3>7. Todo se trata del negocio.</h3>
+					<p>Digo esto muchas veces durante mis clases y consultas. Es la característica más importante del método Kimball Lifecycle: Mantén el foco incuestionablemente en el negocio. Afecta a todo lo que hacemos y es el mensaje más importante que transmitir hacia el futuro.</p>
+					<h2>Looking Forward</h2>
+					<p>Me siento increíblemente afortunado de haber formado parte del Kimball Group durante los últimos 12 años. Ha sido un honor trabajar no solo con Ralph, Margy, Bob y Warren, sino también con los cientos de estudiantes, clientes y colegas con los que he aprendido tanto.  Me honra lo que hemos conseguido juntos, y me siento bendecida por lo que considero el mejor trabajo del mundo.</p>
+					<p>Me siento particularmente bendecida en comparación con Warren, falleció el año pasado de cáncer cerebral y su muerte me afectó profundamente tanto a mí como al toda la gente del Kimball Group. En 2016, homenajearé a Warren y su pasión por el fitness haciendo ciclismo por todo Estados Unidos para recaudar fondos para la investigación del cáncer cerebral. Me honrará si sigues nuestro blog que narrará este viaje (<a href="https://itinerantphilosopher.org/">https://itinerantphilosopher.org/</a>) y me emocionaré si consideras hacer una donación por nuestros esfuerzos para recaudar fondos de investigación para el cáncer cerebral.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/joy-mundy.jpg" width="250" height="318" alt="Joy Mundy" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Joy Mundy</h4>
+						<p>Joy es miembro de Kimball Group. Se ha dedicado a proyectos DWH/BI durante m&#225;s de una d&#233;cada. Joy es cofundadora de InfoDynamics LLC, una consultor&#237;a DWH. &#218;ltimamente trabaja para Microsoft para desarrollar aplicaciones anal&#237;ticas y data warehouses.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet enlaces">
+						<h5>Mapa del Sitio</h5>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<h5>Blogs Amigos</h5>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-linkedin" href="https://www.linkedin.com/company/businessintelligence"></a>
+							<a class="icon-twitter" href="https://twitter.com/bifacil"></a>
+							<a class="icon-facebook" href="https://www.facebook.com/CronoBusinessIntelligence/"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 suscripcion">
+						<div class="subscribe-text">
+							<h4>LA MEJOR <strong>NEWSLETTER</strong> SOBRE BI</h4>
+							<a class="boton-newsletter" href="../subscribe.html">QUIERO SUSCRIBIRME</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-86725886-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+				
+	</body>
+</html>
