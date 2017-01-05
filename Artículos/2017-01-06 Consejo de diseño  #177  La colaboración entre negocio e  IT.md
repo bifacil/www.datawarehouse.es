@@ -2,13 +2,13 @@
 UniqueId: vtAMGsvmaQ
 Title: "Consejo de diseño  #177: La colaboración entre negocio e  IT"
 Url: 2015/design-tip-177-colaboracion.html
-Date: 2016-12-24T00:58:16.5928170+01:00
+Date: 2017-01-06T00:58:16.5920000+01:00
 SecondaryDate: 2015-09-01T00:59:00.0000000
 Description: "El enfoque Kimball disuade la mentalidad cliente-vendedor donde el negocio proporciona al IT una orden que este intenta realizar. Nuestro enfoque siempre defiende la asociación entre IT y las partes interesadas del negocio. La colaboración va más allá de programar una reunión con las partes interesadas; colaborar significa trabajar diferente, involucrar a ambas partes en tomar decisiones."
 Author: Margy Ross
 Category: "Planificación y gestión de proyectos"
 RelatedUrl: http://www.kimballgroup.com/2015/09/design-tip-177-final-word-of-the-day-collaboration/
-IsDraft: true
+IsDraft: false
 
 ---
 Para último consejo de diseño, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT.
