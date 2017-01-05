@@ -8,6 +8,7 @@ Description: "La gran ventaja de la orden MERGE es que es capaz de llevar a cabo
 Author: Warren Thornthwaite
 Category: ETL y calidad de datos
 RelatedUrl: http://www.kimballgroup.com/2008/11/design-tip-107-using-the-sql-merge-statement-for-slowly-changing-dimension-processing/
+IsDraft: true
 
 ---
 La mayoría de las herramientas ETL proporcionan cierta funcionalidad para poder manipular dimensiones de variación lenta (Slowly Changing Dimensions).
@@ -23,10 +24,10 @@ Este ejemplo contiene una dimensión con un solo cliente con dos atributos: nomb
 Intenté conseguir el ejemplo completo trabajando sobre una única orden MERGE, pero la función es determinista y sólo permite una orden de actualización, así que tuve que utilizar MERGE separadamente  para actualizar el Tipo1. Esto se podría haber llevado a cabo también con una instrucción  UPDATEya que el Tipo 1 es una actualización por definición.
 
 ```
-MERGE INTO dbo.Customer\\\\\\\_Master AS CM
-USING Customer\\\\\\\_Source AS CS ON (CM.Source\\\\\\\_Cust\\\\\\\_ID = CS.Source\\\\\\\_Cust\\\\\\\_ID)
-WHEN MATCHED AND CM.First\\\\\\\_Name \\\\\\\<\\\\\\\> CS.First\\\\\\\_Name — Update all existing rows for Type 1 changes
-THEN UPDATE SET CM.First\\\\\\\_Name = CS.First\\\\\\\_Name
+MERGE INTO dbo.Customer\\\\\\\\\\\\\\\_Master AS CM
+USING Customer\\\\\\\\\\\\\\\_Source AS CS ON (CM.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID = CS.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID)
+WHEN MATCHED AND CM.First\\\\\\\\\\\\\\\_Name \\\\\\\\\\\\\\\<\\\\\\\\\\\\\\\> CS.First\\\\\\\\\\\\\\\_Name — Update all existing rows for Type 1 changes
+THEN UPDATE SET CM.First\\\\\\\\\\\\\\\_Name = CS.First\\\\\\\\\\\\\\\_Name
 ```
 
 Esta es una versión simple de la sintaxis del comando MERGE para combinar la tabla Customer\_Source con la dimensión Customer\_Master utilizando la clave de negocios, y actualizar todas las filas asignadas donde el nombre en la tabla maestra (Master table) no es igual que el nombre en la tabla de origen (Source table).
@@ -46,20 +47,20 @@ El problema en este caso es que hay demasiados pasos a llevar a cabo por la sint
 El código empieza con la cláusula INSERT. Esto se debe realizar primero porque la orden MERGE está incluida en INSERT. El código incluye varias referencias a conseguir fecha; el código asume que el cambio fue efectivo ayer (getdate()-1) lo que significa que la versión previa expiraría el dia anterior (getdate()-2).
 
 ```
-1 INSERT INTO Customer\\\\\\\_Master
-2 SELECT Source\\\\\\\_Cust\\\\\\\_ID, First\\\\\\\_Name, Last\\\\\\\_Name, Eff\\\\\\\_Date, End\\\\\\\_Date, Current\\\\\\\_Flag
+1 INSERT INTO Customer\\\\\\\\\\\\\\\_Master
+2 SELECT Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID, First\\\\\\\\\\\\\\\_Name, Last\\\\\\\\\\\\\\\_Name, Eff\\\\\\\\\\\\\\\_Date, End\\\\\\\\\\\\\\\_Date, Current\\\\\\\\\\\\\\\_Flag
 3 FROM
-4 ( MERGE Customer\\\\\\\_Master CM
-5 USING Customer\\\\\\\_Source CS
-6 ON (CM.Source\\\\\\\_Cust\\\\\\\_ID = CS.Source\\\\\\\_Cust\\\\\\\_ID)
+4 ( MERGE Customer\\\\\\\\\\\\\\\_Master CM
+5 USING Customer\\\\\\\\\\\\\\\_Source CS
+6 ON (CM.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID = CS.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID)
 7 WHEN NOT MATCHED THEN
-8 INSERT VALUES (CS.Source\\\\\\\_Cust\\\\\\\_ID, CS.First\\\\\\\_Name, CS.Last\\\\\\\_Name, convert(char(10), getdate()-1, 101), ’12/31/2199′, ‘y’)
-9 WHEN MATCHED AND CM.Current\\\\\\\_Flag = ‘y’
-10 AND (CM.Last\\\\\\\_Name \\\\\\\<\\\\\\\> CS.Last\\\\\\\_Name ) THEN
-11 UPDATE SET CM.Current\\\\\\\_Flag = ‘n’, CM.End\\\\\\\_date = convert(char(10), getdate()- 2, 101)
-12 OUTPUT $Action Action\\\\\\\_Out, CS.Source\\\\\\\_Cust\\\\\\\_ID, CS.First\\\\\\\_Name, CS.Last\\\\\\\_Name, convert(char(10), getdate()-1, 101) Eff\\\\\\\_Date, ’12/31/2199′ End\\\\\\\_Date, ‘y’Current\\\\\\\_Flag
-13 ) AS MERGE\\\\\\\_OUT
-14 WHERE MERGE\\\\\\\_OUT.Action\\\\\\\_Out = ‘UPDATE’;
+8 INSERT VALUES (CS.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID, CS.First\\\\\\\\\\\\\\\_Name, CS.Last\\\\\\\\\\\\\\\_Name, convert(char(10), getdate()-1, 101), ’12/31/2199′, ‘y’)
+9 WHEN MATCHED AND CM.Current\\\\\\\\\\\\\\\_Flag = ‘y’
+10 AND (CM.Last\\\\\\\\\\\\\\\_Name \\\\\\\\\\\\\\\<\\\\\\\\\\\\\\\> CS.Last\\\\\\\\\\\\\\\_Name ) THEN
+11 UPDATE SET CM.Current\\\\\\\\\\\\\\\_Flag = ‘n’, CM.End\\\\\\\\\\\\\\\_date = convert(char(10), getdate()- 2, 101)
+12 OUTPUT $Action Action\\\\\\\\\\\\\\\_Out, CS.Source\\\\\\\\\\\\\\\_Cust\\\\\\\\\\\\\\\_ID, CS.First\\\\\\\\\\\\\\\_Name, CS.Last\\\\\\\\\\\\\\\_Name, convert(char(10), getdate()-1, 101) Eff\\\\\\\\\\\\\\\_Date, ’12/31/2199′ End\\\\\\\\\\\\\\\_Date, ‘y’Current\\\\\\\\\\\\\\\_Flag
+13 ) AS MERGE\\\\\\\\\\\\\\\_OUT
+14 WHERE MERGE\\\\\\\\\\\\\\\_OUT.Action\\\\\\\\\\\\\\\_Out = ‘UPDATE’;
 ```
 
 #### Comentarios sobre el código

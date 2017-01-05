@@ -1,6 +1,6 @@
 ﻿---
 UniqueId: SJFNKHHEKH
-Title: "Consejo de diseño #173: Los perfil peligrosos son un peligro para el negocio"
+Title: "Consejo de diseño #173: Los perfiles peligrosos son un peligro para el negocio"
 Url: 2015/perfiles-peligrosos.html
 Date: 2016-12-27T10:46:45.0525440+01:00
 SecondaryDate: 2015-03-09T00:00:00.0000000
@@ -8,6 +8,7 @@ Description: "Los miembros de los equipos a menudo llegan permanecer poco si el 
 Author: Margy Ross
 Category: "Planificación y gestión de proyectos"
 RelatedUrl: http://www.kimballgroup.com/2015/03/design-tip-173-risky-project-resources-risky-business/
+IsDraft: true
 
 ---
 A lo largo de los años, hemos trabajado con incontables y ejemplares miembros de proyectos DW/BI: brillantes, expertos, dedicados y motivados, en comunión con una dosis sana de confianza mutua, respeto y camaradería con sus compañeros de equipo. Equipos con miembros que poseen estas característica tienden a trabajar a máximo rendimiento con un mayor resultado global que el obtenido por la suma de las partes.

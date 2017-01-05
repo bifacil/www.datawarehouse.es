@@ -4,7 +4,7 @@
   DestinationPath='docs\',
   ImagesDirectory='Template\images\',
   SiteTemplate='Template',
-  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'SecondaryDate', 'Description', 'Author', 'Category', 'RelatedUrl'),
+  VisibleDocumentProperties=('Title', 'Url', 'Section', 'Date', 'SecondaryDate', 'Description', 'Author', 'Category', 'RelatedUrl', 'IsDraft'),
   Authors=(
     Author (Name='Ralph Kimball', Description='Ralph Kimball es el fundador de Kimball Group y de Kimball University donde ha impartido clases sobre diseño de data warehouses a más de 10.000 estudiantes. Es el autor del best seller Data warehouse Toolkit. Ha dedicado 4 décadas diseñando sistemas DWH simples y rápidos.', Image='ralph-kimball.jpg'),
     Author (Name='Margy Ross', Description='Margy es Presidenta de Kimball Group y ha desarrollado su carrera profesional durante más de 30 años en entornos DSS y Data Warehousing. Es especialista en gestión de proyectos, toma de requerimienots de negocio, y modelado dimensional.', Image='margy-ross.jpg'),

@@ -8,6 +8,7 @@ Description: "Normalmente se considera que una caja analítica es un área situa
 Author: Bob Becker
 Category: Fundamentos Business Intelligence
 RelatedUrl: http://www.kimballgroup.com/2015/05/design-tip-174-does-your-organization-need-an-analytic-sandbox/
+IsDraft: true
 
 ---
 Innumerables organizaciones han creado data warehouses dimensionales y están considerados como grandes éxitos dentro de sus organizaciones. Estos entornos de data warehouse respaldan los informes clave y los requisitos de análisis para la empresa. Muchos son capaces de dar apoyo al acceso autosuficiente a los datos y a las capacidades de análisis para usuarios de negocio dispares.

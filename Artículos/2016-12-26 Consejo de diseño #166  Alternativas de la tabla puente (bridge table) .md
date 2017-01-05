@@ -8,13 +8,14 @@ Description: "Las dimensiones multivalor son una realidad para muchos diseñador
 Author: Margy Ross
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2014/05/design-tip-166-potential-bridge-table-detours/
+IsDraft: true
 
 ---
 ### El reto de las relaciones M-N
 
 Los diseños dimensionales a menudo necesitan adecuar las dimensiones multivalor. Los pacientes pueden tener múltiples diagnósticos. Los estudiantes pueden tener múltiples especialidades. Los consumidores pueden tener múltiples hobbies o intereses. Los clientes comerciales pueden tener múltiples clasificaciones en la industria. Los empleados pueden tener múltiples habilidades o certificaciones. Los productos pueden tener múltiples características opcionales. Las cuentas bancarias pueden tener múltiples clientes. Las dimensiones multivalor son un dilema natural e inevitable en todo tipo de industrias.
 
-Un enfoque común para manejar las dimensiones multivalor es introducir una tabla puente. La siguiente figura muestra una tabla puente para asociar múltiples clientes con una cuenta. 
+Un enfoque común para manejar las dimensiones multivalor es introducir una tabla puente. La siguiente figura muestra una tabla puente para asociar múltiples clientes con una cuenta.
 
 ![Tabla puente](images/bridge.png "Tabla puente")
 
@@ -37,11 +38,9 @@ En otras situaciones, esta técnica no tendría sentido. Por ejemplo, si necesit
 
 Establecer un diagnostico inicial, un titular de la cuenta principal, una especialidad principal, etc. ya sea con una simple clave foránea en la tabla de hechos (o un atributo simple en la tabla de dimensiones) elimina el problema multi-valor. En  este escenario, todas los nombres de las columnas de atributos serán precedidos por la palabra “principal”. Por supuesto, acertar con las reglas del negocio para determinar la relación principal puede ser imposible. Y el subsecuente análisis basado únicamente en la relación principal estará incompleto o erróneo (ya que los restantes valores de la dimensión multivalor serán ignorados).
 
-### 3. Añade múltiples atributos nombrados  a la tabla de dimensiones 
+### 3. Añade múltiples atributos nombrados  a la tabla de dimensiones
 
-
-
-Por ejemplo, si vendes suministros para mascotas, debes incluir una bandera en la dimensión del cliente para designar a los compradores de perros, compradores de gatos, compradores de aves, etc. No estamos sugiriendo que incluyas 10 columnas etiquetadas genéricamente, como comprador de animales 1, comprador de animales 2, etc. 
+Por ejemplo, si vendes suministros para mascotas, debes incluir una bandera en la dimensión del cliente para designar a los compradores de perros, compradores de gatos, compradores de aves, etc. No estamos sugiriendo que incluyas 10 columnas etiquetadas genéricamente, como comprador de animales 1, comprador de animales 2, etc.
 
 Este diseño es atractivo porque es fácil de consultar con cualquier herramienta BI con un excelente y predecible rendimiento para la consulta. Sin embargo, sólo es apropiado para un número fijo y limitado de opciones. No deberías incluir 150 columnas diferentes en una dimensión para estudiantes, como por ejemplo en la especialidad de historia, para cada especialidad universitaria posible.
 
@@ -51,9 +50,9 @@ Este enfoque no es muy escalable, ya que los nuevos valores requieren alterar la
 
 Por ejemplo, si los cursos pueden ser impartidos de forma dual, debes concatenar los nombres de los instructores en un único atributo, como *|MRoss|RKimball|*. Necesitarías un delimitador como un retroceso o una barra vertical al inicio de la cadena y después de cada valor. Este enfoque permite que el valor concatenado sea fácilmente mostrado en un análisis. Pero existen desventajas obvias:
 
-1. Las consultas necesitarían hacer una búsqueda comodín con contenidos/preferencias y este tipo de consultas tieen un rendimiento notablemente lento. 
-2. Habría ambigüedad alrededor de los valores superiores e inferiores en la cadena concatenada. 
-3. No sería apropiado para una lista larga de atributos. 
+1. Las consultas necesitarían hacer una búsqueda comodín con contenidos/preferencias y este tipo de consultas tieen un rendimiento notablemente lento.
+2. Habría ambigüedad alrededor de los valores superiores e inferiores en la cadena concatenada.
+3. No sería apropiado para una lista larga de atributos.
 4. Finalmente, no podrías contar/sumar fácilmente los registro para cada grupo.
 
 ### Conclusión

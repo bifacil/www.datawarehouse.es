@@ -15,8 +15,8 @@ Recientemente, en una clase sobre el Lifecycle del Data Warehouse un estudiante 
 El enfoque Kimball sobre el ciclo de vida lleva décadas siendo utilizado. Los conceptos fueron inicialmente establecidos en 1980 por miembros de Kimball Group y diversos colegas de *Metaphor Computer Systems*. Cuando publicamos la metodología por primera vez en The Data Warehouse Lifecycle Toolkit en 1998, lo  llamamos *"Business Dimensional Lifecycle"* porque este título reforzaba tres conceptos fundamentales:
 
 - Se centraba en añadir valor empresarial en la organización
-- Estructuraba  dimensionalmente los datos proporcionados a Negocio vía reportes y consultas.
-- Desarrollaba iterativamente la solución en incrementos manejables antes que facilitar un Big Bang que se pudiese entregar.
+- Estructuraba  dimensionalmente los datos proporcionados a negocio vía reportes y consultas.
+- Desarrollaba iterativamente la solución en incrementos manejables antes que pensar en un Big Bang entregable.
 
 Rebobinando a 1990, nuestra metodología fue una de las pocas que recalcaban este conjunto de principios centrales, por tanto el título El “Business Dimensional Lifecycle” diferenciaba nuestro enfoque de otros existentes en la industria.
 

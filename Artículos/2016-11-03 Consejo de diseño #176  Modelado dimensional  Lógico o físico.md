@@ -10,7 +10,7 @@ Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/
 
 ---
-Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original *Data Cube* entre Dartmouth y General Mills a finales de 1960. La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos.
+Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original *Data Cube* entre Dartmouth y General Mills a finales de 1960. El atractivo del modelado dimensional reside en la evidente simplicidad de los modelos y en la forma natural que la gente de negocios y la gente técnica puedan entender lo que significan estos modelos.
 
 Los modelos dimensionales tienen dos expresiones diferentes, lógica y física. La expresión puramente lógica queda plasmada en el siguiente diagrama.
 

@@ -8,6 +8,7 @@ Description: "Las tecnologías de almacenamiento de datos ofrecen cada vez mejor
 Author: Joy Mundy
 Category: ETL y calidad de datos
 RelatedUrl: http://www.kimballgroup.com/2015/06/design-tip-175-there-is-no-database-magic/
+IsDraft: true
 
 ---
 Las tecnologías de almacenamiento de datos ofrecen cada vez más opciones al arquitecto del DWH y llega a parecer mágico. ¿Cómo puedes saber qué hacer? ¿Debes aferrarte a las bases de datos relacionales, probadas y verificadas, para hospedar tu data warehouse? ¿Debes usar cubos? ¿O debes dirigirte hacia las últimas y mejores soluciones de almacenamiento de datos como el MPP (massively parallel processing ) o las soluciones columnares? ¿O la nube?

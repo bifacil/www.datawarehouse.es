@@ -8,13 +8,14 @@ Description: "Hay tres tipos fundamentales de tablas de hechos en el área de pr
 Author: Bob Becker
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2014/06/design-tip-167-complementary-fact-table-types/
+IsDraft: true
 
 ---
-Hay tres tipos fundamentales de tablas de hechos en el área de presentación del data warehouse: 
+Hay tres tipos fundamentales de tablas de hechos en el área de presentación del data warehouse:
 
 - [Tablas de hechos de transacciones][1]
 - [Tablas de hechos de capturas periódicas][2]
-- [Tablas de hechos de capturas acumuladas][3] 
+- [Tablas de hechos de capturas acumuladas][3]
 
 La mayoría de equipos de diseño DW/BI están muy familiarizados con las **tablas de hechos de transacciones**. Son el tipo más común de tipos de tablas de hecho y normalmente el caballo de batalla para muchas organizaciones. Muchos equipos también han incorporado las **tablas de hechos de capturas periódicas** en sus áreas de presentación. Pocas organizaciones aprovechan las **tablas de hechos de capturas acumuladas**. Los equipos de diseño normalmente no aprecian como una tabla de hechos de captura acumulada puede complementar tablas de hechos de capturas de transacciones y/o periódicas.
 
@@ -36,7 +37,7 @@ Un componente clave de la cadena logística es la fluidez del inventario desde u
 
 Las tablas de hechos transaccionales son una respuesta de diseño apropiada para los requerimientos del negocio que buscan entender la intensidad o cantidad del proceso de un negocio. Las tablas de hechos transaccionales ayudan a responder la pregunta ¿cuántos?. Por ejemplo ¿cuántos vehículos deportivos blancos (SUVs) se vendieron la semana pasada? ¿Cuántas fueron las vendas en dólares? ¿Cuántos vehículos de tracción total se lanzaron para ensamblarse en inventario comercial? ¿Cuántos vehículos enviamos con un transportista pactado? ¿Cuántos vehículos han recibido nuestros distribuidores este mes? ¿Y comparado con el último mes, el último trimestre, o el último año?  Hay una razón por la cual las tablas de datos transaccionales son el caballo de batalla de los tipos de tablas de hechos: Soportan importanteS requerimientos críticos del negocio. Por otra parte, las tablas de hechos transaccionales son menos efectivas respondiendo preguntas sobre el estado de los niveles nuestro inventario o la rapidez/eficiencia de la cadena logística. Para dar apoyo a estos requerimientos del negocio, buscamos otras tablas de hechos para complementar las tablas de hechos.
 
-#### Tablas de hechos de capturas periódicas 
+#### Tablas de hechos de capturas periódicas
 
 El segundo requisito es conocer la cantidad total de inventario en cualquier punto de la cadena. El apoyo del análisis del nivel de inventario es una tarea adecuada para una tabla de hechos de captura periódica. En cualquier momento del tiempo, cada vehículo está en una sola localización física como por ejemplo el inventario de productos terminados en la planta, en un centro de distribución regional, en el parking de un distribuidor, o en tránsito en un tren o camión. Para apoyar el análisis de inventario, la tabla de hechos de captura periódica tiene un gránulo de una fila por vehículo por día. Una dimensión de localización soportará el análisis de inventario en cada punto de la cadena.
 
@@ -44,7 +45,7 @@ La tabla de hechos de captura periódica hace un excelente trabajo ayudando a co
 
 La captura periódica respalda la tendencia de niveles de inventario a lo largo del tiempo. Las tablas de transacciones de movimiento y las capturas periódicas de inventario juntas dan soporte a una amplia gama de requerimientos de negocio alrededor de la cadena logística. Sin embargo, incluso con dos de estas tablas de hechos, será difícil atender los requisitos de eficiencia de la cadena. Para completar la fotografía, una tabla de hechos de captura acumulada complementará la tabla de hechos transaccional y de captura periódica.
 
-#### Tabla de hechos de captura acumulada 
+#### Tabla de hechos de captura acumulada
 
 El tercer conjunto de requisitos para la cadena logística es soportar la velocidad de análisis a la que los vehículos viajan en la cadena logística. Cada vehículo recorrerá una serie de etapas durante su viaje al cliente final. Para cumplir los requisitos analíticos de medir y entender las eficiencias de nuestra cadena logística, una tabla de hechos de captura acumulada se llenará con una fila por vehículo. A medida que cada vehículo se mueve por la cadena, la captura acumulada se actualizará con la fecha de cada movimiento y la localización actual del vehículo. La captura acumulada tendrá numerosas fechas clave, como por ejemplo fecha de entrega por ensamblaje, fecha de envío al centro de distribución, fecha de llegada al centro de distribución y así hasta la venta final. Las métricas de tablas de hechos incluirán una serie de retrasos en las fechas que miden el tiempo que cuesta mover un vehículo entre las diferentes etapas de la cadena.
 
@@ -55,10 +56,6 @@ Consecuentemente, la captura acumulada también se usa para comprobar el estado 
 ### Conclusión
 
 En el caso de nuestro fabricante de coches, está claro que los tres tipos de tabla de hechos se complementan. Implementar las tres tablas de hechos es una respuesta apropiada al rico conjunto de requisitos empresariales. Implementar solo una o incluso solo dos de los tipos de tablas de hechos hubiesen hecho muy difícil, si no imposible, respaldar todos los requerimientos.
-
-
-
-
 
 
 

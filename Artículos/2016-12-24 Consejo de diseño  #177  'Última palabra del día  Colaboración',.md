@@ -8,6 +8,7 @@ Description: "El enfoque Kimball disuade la mentalidad cliente-vendedor donde el
 Author: Margy Ross
 Category: "Planificación y gestión de proyectos"
 RelatedUrl: http://www.kimballgroup.com/2015/09/design-tip-177-final-word-of-the-day-collaboration/
+IsDraft: true
 
 ---
 Para último consejo de diseño, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT.

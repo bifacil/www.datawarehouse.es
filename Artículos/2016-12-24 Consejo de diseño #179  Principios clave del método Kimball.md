@@ -8,6 +8,7 @@ Description: "Me apasionan varios principios del método Kimball. En este consej
 Author: Joy Mundy
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2015/11/design-tip-179-key-tenets-of-kimball-method/
+IsDraft: true
 
 ---
 La mayor parte de la guía del método Kimball para el diseño, desarrollo e  implementación de un sistema DW/BI es simplemente eso: una guía. Existen cientos o miles de reglas en los numerosos libros de Kimball Group y confieso haber quebrantado muchas de esas reglas durante décadas, cuando afrontaba objetivos conflictivos o realidades políticas desagradables.
@@ -34,7 +35,7 @@ Al final del proceso de diseño les pedimos a los usuarios de negocio que piense
 
 Algunas de las mejoras más valiosas que puedes implementar en tu sistema DW/BI son añadir descriptores mejorados y grupos de datos usados frecuentemente. Normalmente, estas posibilidades se olvidan por parte del equipo de diseño. Incluso he encontrado equipos con una política explícita de no añadir nada más allá de lo que está en el sistema fuente.
 
-Ejemplos de incorporaciones valiosas al modelo de datos que incluyen: 
+Ejemplos de incorporaciones valiosas al modelo de datos que incluyen:
 
 - Permitir que los usuarios puedan filtrar códigos de transacción que se usan pocas veces.
 - Proporcionar columnas de clasificación para listas de selección e informes que sean atractivas.
@@ -51,11 +52,9 @@ Un simple sistema MDM se puede utilizar para construir datos con valor añadido 
 
 ### 6. Que no se excluya el data warehouse relacional.
 
-Diseñar y llenar el data warehouse conformado de una empresa es duro. A todo el mundo le gustaría saltarse este paso. A lo largo de los más de 23 años de carrera en data warehousing, he observado  numerosos intentos para simplificar el proceso, desde construir la capa BI directamente desde el sistema de transacciones, hasta los llamados data warehouses virtuales, volviendo al ciclo actual de scripts de creación de  herramientas de visualización. 
+Diseñar y llenar el data warehouse conformado de una empresa es duro. A todo el mundo le gustaría saltarse este paso. A lo largo de los más de 23 años de carrera en data warehousing, he observado  numerosos intentos para simplificar el proceso, desde construir la capa BI directamente desde el sistema de transacciones, hasta los llamados data warehouses virtuales, volviendo al ciclo actual de scripts de creación de  herramientas de visualización.
 
 Como comenté en el [Consejo de diseño #162][1], aprovecha las herramientas de visualización de datos, pero evita la anarquía. A menos que controles completamente toda tus datos de origen, debes dejar el ETL para la herramienta ETL, dejar el almacenamiento de datos y la gestión a un motor de database relacional, y dejar que las herramientas BI sean brillantes en lo que mejor hacen: grandes visualizaciones y experiencia de usuario.
-
-
 
 ### 7. Todo se trata del negocio.
 
@@ -66,12 +65,6 @@ Digo esto muchas veces durante mis clases y consultas. Es la característica má
 Me siento increíblemente afortunado de haber formado parte del Kimball Group durante los últimos 12 años. Ha sido un honor trabajar no solo con Ralph, Margy, Bob y Warren, sino también con los cientos de estudiantes, clientes y colegas con los que he aprendido tanto.  Me honra lo que hemos conseguido juntos, y me siento bendecida por lo que considero el mejor trabajo del mundo.
 
 Me siento particularmente bendecida en comparación con Warren, falleció el año pasado de cáncer cerebral y su muerte me afectó profundamente tanto a mí como al toda la gente del Kimball Group. En 2016, homenajearé a Warren y su pasión por el fitness haciendo ciclismo por todo Estados Unidos para recaudar fondos para la investigación del cáncer cerebral. Me honrará si sigues nuestro blog que narrará este viaje ([https://itinerantphilosopher.org/][2]) y me emocionaré si consideras hacer una donación por nuestros esfuerzos para recaudar fondos de investigación para el cáncer cerebral.
-
-
-
-
-
-
 
 
 
