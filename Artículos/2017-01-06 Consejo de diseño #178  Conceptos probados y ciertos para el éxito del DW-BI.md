@@ -2,13 +2,13 @@
 UniqueId: JpjtNSvDiZ
 Title: "Consejo de diseño #178: Conceptos probados y ciertos para el éxito del DW-BI"
 Url: 2015/conceptos-probados-y-ciertos-datawarehouse-businessintelligence.html
-Date: 2016-12-24T02:15:23.8712912+01:00
+Date: 2017-01-06T02:15:23.8710000+01:00
 SecondaryDate: 2015-10-01T00:00:00.0000000
 Description: "Mi recomendación para el éxito continuado es mantener tus ojos bien abiertos y centrarse constantemente en lo básico. Abraza estos conceptos probados y ciertos que años de experiencia han revelado como certeros."
 Author: Bob Becker
 Category: Fundamentos Business Intelligence
 RelatedUrl: http://www.kimballgroup.com/2015/10/design-tip-178-tried-and-true-concepts-for-dw-bi-success/
-IsDraft: true
+IsDraft: false
 
 ---
 El tiempo pasa y pronto llegará la jubilación colectiva del Kimball Group. A finales de 2015 nos jubilaremos. En mi último "Consejo de diseño" me gustaría compartir la perspectiva para el éxito del DW/BI que he alcanzado durante mis 26 años en el negocio del data warehouse/business intelligence.
