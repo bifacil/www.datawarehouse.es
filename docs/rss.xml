@@ -79,6 +79,44 @@
 	  &lt;/div&gt;</description>
 </item>
  <item>
+      <guid isPermaLink="true">https://datawarehouse.es/2015/design-tip-177-colaboracion.html</guid>
+      <link>https://datawarehouse.es/2015/design-tip-177-colaboracion.html</link>
+      <title>Consejo de dise&#241;o  #177: La colaboraci&#243;n entre negocio e  IT</title>
+      <pubDate>Fri, 06 Jan 2017 00:58:16 GMT</pubDate>
+      <atom:updated>2017-01-06T00:58:16Z</atom:updated>
+      <description>
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;p&gt;Para &#250;ltimo consejo de dise&#241;o, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: &lt;strong&gt;La colaboraci&#243;n entre negocio e  IT&lt;/strong&gt;. Si aceptas la proposici&#243;n de que la verdadera medida del &#233;xito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboraci&#243;n deber&#237;a ser f&#225;cil. Lograr la aceptaci&#243;n empresarial es una utop&#237;a si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT.&lt;/p&gt;
+&lt;p&gt;Los equipos colaborativos multidisciplinares crean sistemas DW/BI de &#233;xito. Cada cuesti&#243;n importante del enfoque &amp;quot;Kimball Lifecycle&amp;quot; se presta a actividades conjuntas que refuerzan la alineaci&#243;n negocios-IT:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Planificaci&#243;n del proyecto:&lt;/strong&gt; Marca prioridades basadas en metas y objetivos empresariales, equilibradas con las facilidades de entrega.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Direcci&#243;n del proyecto:&lt;/strong&gt; Comunicar abiertamente sobre la situaci&#243;n del proyecto y solicitar &amp;quot;feedback&amp;quot; para definir modificaciones en el alcance de manera consensuada.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Requerimientos empresariales:&lt;/strong&gt; Incidir en lo que hace el negocio y por qu&#233;, y en como la empresa espera tomar las decisiones en el futuro, en lugar de preguntar “&#191;qu&#233; quieres en un sistema DW/BI?”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arquitectura t&#233;cnica y selecci&#243;n de productos:&lt;/strong&gt; Involucra a los representantes de la empresa para seleccionar sus herramientas. Como un recordatorio amistoso a los ingenieros: la tecnolog&#237;a es un habilitador previo, &#161;pero no debe ser el foco de atenci&#243;n primario del equipo DW/BI! No te molestes en educar (o tal vez educar en exceso) al negocio sobre infraestructura y tuber&#237;as.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Modelado dimensional:&lt;/strong&gt; Derivar modelos dimensionales de talleres interactivos con negocio y representantes IT en lugar de dejarlo en manos de un dise&#241;ador solitario sentado en una torre de  marfil. Contratar a expertos en la materia del negocio es absolutamente necesario para dise&#241;ar modelos dimensionales apropiados. Deben estar incluidos en el descubrimiento de datos y en las decisiones asociadas al gobierno de los datos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;El dise&#241;o y desarrollo del ETL:&lt;/strong&gt; Hacer una lista de expertos en la materia empresarial para enlazar adecuadamente los problemas en la calidad de datos con representante IT. IT no debe tomar estas decisiones en solitario.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dise&#241;o y desarrollo de la aplicaci&#243;n BI:&lt;/strong&gt; El prototipo BI se crea y analiza con el negocio.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Implementaci&#243;n:&lt;/strong&gt; Solicita aportaci&#243;n empresarial sobre las necesidades iniciales y continuas de educaci&#243;n y apoyo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Puesto que muchos suscriptores a este sitio pertenecen al departamento de IT, me he centrado en la importancia de que IT rompa barreras con el negocio. De esta manera, ver&#225;n a sus colegas como colaboradores en lugar de como cuellos de botella. Pero la colaboraci&#243;n se debe dar en los dos sentidos. Es igual de importante que los representantes de negocio colaboren con su contraparte IT considerando la siguiente gu&#237;a:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Invita a IT a sentarse contigo durante las sesiones de estrategia.&lt;/li&gt;
+&lt;li&gt;Invierte tiempo en educar a IT acerca del negocio. Cuanto m&#225;s sepa IT, mejor te podr&#225;n apoyar tus necesidades. Es insuficiente e inefectivo proporcionar a IT simplemente un informe con las especificaciones del conjunto de datos.&lt;/li&gt;
+&lt;li&gt;Contrata IT en el principio de la iniciativa en lugar de esperar a la mitad del proyecto (o despu&#233;s de que tus consultores se hayan ido).&lt;/li&gt;
+&lt;li&gt;Aprecia la necesidad de IT de pensar sobre la empresa, no solo en tu departamento individual. Sus preocupaciones referentes al gobierno de datos y los &amp;quot;metadatos&amp;quot; son reales.&lt;/li&gt;
+&lt;li&gt;Esfu&#233;rzate en evitar la proliferaci&#243;n de conjuntos de datos, informes y an&#225;lisis similares, pero ligeramente diferentes. Esta proliferaci&#243;n normalmente termina en costes directos e indirectos significativos para la organizaci&#243;n.&lt;/li&gt;
+&lt;li&gt;Aprovecha la experiencia IT. No tomes decisiones sobre la tecnolog&#237;a sin involucrarles. Y preg&#250;ntate a ti mismo si realmente quieres mantener los silos de datos y aplicaciones con proveedores sin la ayuda de IT.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;El enfoque Kimball disuade la mentalidad cliente-vendedor donde el negocio proporciona al IT una orden que este intenta realizar. Nuestro enfoque siempre defiende la asociaci&#243;n entre IT y las partes interesadas del negocio. La colaboraci&#243;n va m&#225;s all&#225; de programar una reuni&#243;n con las partes interesadas; colaborar significa trabajar diferente, involucrar a ambas partes en tomar decisiones.&lt;/p&gt;
+&lt;p&gt;Desafortunadamente, la colaboraci&#243;n entre el negocio y IT no se da de manera natural en algunas organizaciones. La gente puede pensar diferente, comunicar usando diferente vocabulario y ser incentivada de manera diferente. La meta es involucrarse mutuamente y entender que se requiere un fuerte apoyo organizacional en los niveles de liderazgo, especialmente si negocio e IT necesitan ser empujados fuera de su zona de confort. La l&#237;nea que separa ambos campos se difuminar&#225; con personas que cabalgan c&#243;modamente entre ambos mundos.&lt;/p&gt;
+&lt;p&gt;Finalmente, os comunico que esta es mi &#250;ltima oportunidad de hablar con todos vosotros. Quiero expresar mi gratitud y aprecio por las numerosas personas que se han cruzado en mi camino durante los &#250;ltimos 34 a&#241;os. Gracias a mi marido y a mi hija por vuestra paciencia inquebrantable y vuestro apoyo. Gracias a mis colegas de Metaphor cuya influencia ha persistido durante mi carrera. Gracias a mis socios de DecisionWorks y Kimball Group por vuestra inteligencia e inspiraci&#243;n. Y lo m&#225;s importante, gracias a mis clientes, estudiantes y lectores; &#161;hab&#233;is hecho que sea un viaje incre&#237;ble!&lt;/p&gt;
+&lt;p&gt;Bajar la persiana siempre duro. Mientras el Kimball Group est&#225; cerrando sus puertas, nuestros m&#233;todos vivir&#225;n a trav&#233;s de vosotros.&lt;/p&gt;
+&lt;p&gt;&#161;Buena suerte! Solo recordad: &#161;centraos en el negocio y sed dimensionales!&lt;/p&gt;
+	   
+	  
+	  &lt;/div&gt;</description>
+</item>
+ <item>
       <guid isPermaLink="true">https://datawarehouse.es/2011/recomendaciones-testing-datawarehouse.html</guid>
       <link>https://datawarehouse.es/2011/recomendaciones-testing-datawarehouse.html</link>
       <title>Consejo de die&#241;o #134: Recomendaciones para las pruebas del Data Warehouse</title>
@@ -330,71 +368,6 @@
 &lt;p&gt;Creo que el reto m&#225;s emocionante es la expansi&#243;n de la descripci&#243;n del trabajo del profesional del DWH. De repente aparecen nuevos departamentos que intentan luchar con torrentes de datos y que probablemente est&#225;n reinventando la rueda del data warehouse. Encuentra cu&#225;les son estos departamentos y ed&#250;calos en la importancia de las dimensiones conformadas y las claves subrogadas. Ofr&#233;celes adjuntar tu dimensiones EDW de alta calidad a sus datos.&lt;/p&gt;
 &lt;p&gt;Y como dice Margy: sal adelante y s&#233; dimensional&lt;/p&gt;
 &lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/&quot;&gt;http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/&lt;/a&gt;&lt;/p&gt;
-	   
-	  
-	  &lt;/div&gt;</description>
-</item>
- <item>
-      <guid isPermaLink="true">https://datawarehouse.es/2002/dos-ideas-potentes.html</guid>
-      <link>https://datawarehouse.es/2002/dos-ideas-potentes.html</link>
-      <title>Dos ideas potentes</title>
-      <pubDate>Thu, 03 Nov 2016 00:00:00 GMT</pubDate>
-      <atom:updated>2016-11-03T00:00:00Z</atom:updated>
-      <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
-	  &lt;p&gt;Hay dos ideas potentes en la creaci&#243;n de los data warehouses de m&#225;s &#233;xito. Primero, separar tus sistemas. Segundo, construir estrellas y cubos.&lt;/p&gt;
-&lt;p&gt;En mi columna previa, describ&#237; un completo espectro de restricciones de dise&#241;o y realidades inevitables a las que deb&#237;a enfrentarse un dise&#241;ador de data warehouse. Era una lista de grandes proporciones de la que me preocupaba que os hiciera coger la puerta y os fuerais. Pero, tal vez, lo que hizo seguir leyendo fue mi promesa de salir de la ci&#233;naga. Aqu&#237; es donde entran las dos potentes ideas.&lt;/p&gt;
-&lt;p&gt;La &#250;ltima vez, indiqu&#233; que las restricciones no negociables del dise&#241;o de un data warehouse eran el entendimiento por parte del usuario final y la velocidad en la ejecuci&#243;n de la consulta. Un almac&#233;n de datos complejo y lento es un fracaso sin importar como de elegante pueda ser el resto del dise&#241;o porque la gente para el que fue destinado no querr&#225; utilizarlo.&lt;/p&gt;
-&lt;p&gt;El resto de restricciones implicaban el reconocimiento de que el dise&#241;o del DWH es extremadamente complejo. La fuente de datos, las tecnolog&#237;as de la base de datos y los entornos empresariales con los que tratamos son incre&#237;blemente complicados. As&#237; que, como buenos ingenieros, para buscar nuestro camino hacia fuera de la ci&#233;naga, debemos descomponer el problema en partes separadas manejables y poner &#233;nfasis en las t&#233;cnicas que son predecibles, reutilizables y robustas.&lt;/p&gt;
-&lt;h2&gt;Separa tus sistemas&lt;/h2&gt;
-&lt;p&gt;El primer paso crucial en el dise&#241;o de un almac&#233;n de datos en una empresa es separar los sistemas l&#243;gica, f&#237;sica y administrativamente.&lt;/p&gt;
-&lt;p&gt;Encuentro muy &#250;til pensar en el proyecto como cuatro sistemas distintos y diferentes, de los cu&#225;les el administrador del DWH ser&#225; el responsable de solo dos. No agobiar&#233; con el t&#237;pico bloque de diagramas porque estas cuestiones son m&#225;s simples que eso.&lt;/p&gt;
-&lt;p&gt;Los cuatro sistemas son:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Sistema transaccional de producci&#243;n (ERP origen).&lt;/li&gt;
-&lt;li&gt;Sistema data warehouse de almacenamiento (staging area system)&lt;/li&gt;
-&lt;li&gt;Sistemas de presentaci&#243;n del DWH, incluyendo las herramientas de &lt;em&gt;query, reporting y analysis&lt;/em&gt;, ya sean soluciones cliente/servidor o web.&lt;/li&gt;
-&lt;li&gt;Opcionalmente, herramientas anal&#237;ticas  de alta gama para la miner&#237;a de datos, forecasting, valoraci&#243;n o asignaci&#243;n.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Como administrador del DWH no debes ser responsable de los sistemas origen que captan y procesan transacciones. Ese es el trabajo de otro. No tienes que verte involucrado en soportar las funciones de auditor&#237;a legal y financiera o las funciones de retroceso y recuperaci&#243;n de estos sistemas. Son los sistemas de cajas registradoras de la compa&#241;&#237;a, y sus prioridades son diferentes que las del data warehouse.&lt;/p&gt;
-&lt;p&gt;El &lt;u&gt;primer sistema&lt;/u&gt; del cu&#225;l es responsable el dise&#241;ador del DWH es el &#225;rea de almacenamiento de datos intermedio, donde los datos de producci&#243;n de los distintos or&#237;genes  es tra&#237;do, limpiado, conformado, combinado y en &#250;ltima instancia entregado  a los sistemas de presentaci&#243;n del almac&#233;n de datos.&lt;/p&gt;
-&lt;p&gt;Mucho se ha escrito sobre el crucial proceso de extracci&#243;n-transformacci&#243;n-carga (ETL) en el DWH, pero  alej&#225;ndonos de este detalle, el principal requerimiento del &#225;rea de almacenamiento es que est&#225; fuera de los l&#237;mites para todos los clientes finales del almac&#233;n de datos. El &#225;rea de almacenamiento es exactamente como la cocina en un restaurante. La cocina es un lugar concurrido, incluso peligroso, lleno de cuchillos afilados y l&#237;quidos calientes. Los cocineros est&#225;n ocupados, centrados en la tarea de preparar la comida. No es apropiado permitir a los comensales entrar en una cocina profesional o permitir que los cocineros se distraigan con las cuestiones separadas de la experiencia culinaria. En t&#233;rminos de almac&#233;n de base de datos, prohibiendo el acceso de todos clientes del almac&#233;n de datos desde el &#225;rea de almacenamiento, conseguimos:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Garantizar &#243;ptimos niveles de servicio para consultar o informar.&lt;/li&gt;
-&lt;li&gt;Cumplir con el nivel de seguridad del cliente.&lt;/li&gt;
-&lt;li&gt;Posibilidad de construir &#237;ndices y agregaciones para el rendimiento de las consultas.&lt;/li&gt;
-&lt;li&gt;Manejar conflictos l&#243;gicos y f&#237;sicos entre los pasos de consulta y limpieza de datos.&lt;/li&gt;
-&lt;li&gt;Garantizar la consistencia entre las distintas fuentes de datos&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Las dos estructuras de datos dominantes para el almacenamiento de datos que son extra&#237;dos directamente del sistema de producci&#243;n son el archivo de texto plano y el esquema entidad/relaci&#243;n. Casi todo el procesamiento en el &#225;rea de almacenamiento (DWH) es clasificaci&#243;n o procesamiento secuencial simple.&lt;/p&gt;
-&lt;p&gt;El &lt;u&gt;segundo sistema&lt;/u&gt; m&#225;s grande bajo el control espec&#237;fico del responsable DWH es el sistema de presentaci&#243;n. Por supuesto, este sistema es an&#225;logo al &#225;rea del comedor de un buen restaurante. El &#225;rea de comedor est&#225; dise&#241;ado para ofrecer confort a los comensales. La comida se sirve r&#225;pido y de la forma m&#225;s atractiva, y los problemas y distracciones se evitan tanto como es posible. De la misma manera, el sistema de presentaci&#243;n del almac&#233;n de datos est&#225; construido con el prop&#243;sito de mejorar la experiencia de consultar e informar. El sistema de presentaci&#243;n necesita ser simple y r&#225;pido y ofrecer los datos correctos que correspondan a las necesidades de an&#225;lisis de los usuarios finales. Tambi&#233;n, en el sistema de presentaci&#243;n, podemos manejar con facilidad la lista enumerada con anterioridad sobre los requerimientos que hab&#237;amos excluido del &#225;rea de almacenamiento.&lt;/p&gt;
-&lt;p&gt;Las estructuras de datos dominantes en el &#225;rea de presentaci&#243;n son el esquema relacional de estrella y el cubo de datos de procesamiento anal&#237;tico online (OLAP). El procesamiento en el &#225;rea de presentaci&#243;n debe responder a una tormenta de grandes y peque&#241;as consultas procedentes de cualquier &#225;ngulo de los datos. A lo largo del tiempo, no habr&#225; un patr&#243;n predecible a estas consultas. Algunos dise&#241;adores le llaman &lt;em&gt;consultas ad hoc&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;El &lt;u&gt;siguiente sistema&lt;/u&gt; en nuestra lista es una capa opcional de herramientas anal&#237;ticas espec&#237;ficas de alta gama que normalmente consume datos del almac&#233;n de datos en grandes lotes. Frecuentemente estas herramientas de extracci&#243;n, predicci&#243;n, valoraci&#243;n y distribuci&#243;n de datos utilizan algoritmos especializados fuera de la experiencia normal de un dise&#241;ador de almac&#233;n de datos.&lt;/p&gt;
-&lt;p&gt;Y, honestamente, muchos de estos procesos tienen un componente interpretativo o pol&#237;tico que es sabiamente separado  del almac&#233;n de datos. Por ejemplo, la miner&#237;a de datos como disciplina es una tarea interpretativa compleja que involucra una completa colecci&#243;n de potentes t&#233;cnicas anal&#237;ticas, muchas de las cuales no son entendidas o cre&#237;das del todo por la comunidad de usuarios. La miner&#237;a de datos requiere un profesional experto en data mining cualificado para utilizar las herramientas de manera efectiva y presentar los resultados de la mineria de datos a la comunidad.&lt;/p&gt;
-&lt;p&gt;Adem&#225;s, como he mencionado frecuentemente, hay un desajuste fundamental entre el data mining y el almac&#233;n de datos. La miner&#237;a de datos frecuentemente necesita  examinar miles o millones de observaciones una y otra vez, a velocidades extremas. No es f&#225;cil de sostener directamente desde el data warehouse. Es mejor manejar el set de observaci&#243;n desde un equipo de extracci&#243;n de datos, s&#243;lo una vez.&lt;/p&gt;
-&lt;p&gt;Otro ejemplo de herramienta anal&#237;tica de alta gama que el almac&#233;n de datos debe evitar es el sistema de distribuci&#243;n para asignar costes a las distintas l&#237;neas de negocios en tu organizaci&#243;n para calcular la rentabilidad global. No s&#243;lo puede ser un paso complejo de procesar fuera de las posibilidades de la mayor&#237;a de las herramientas de consulta e informe, tambi&#233;n es un asunto delicado pol&#237;ticamente. Dejemos que el departamento financiero haga las asignaciones, y tu (el almac&#233;n de datos) estar&#225;s encantado de almacenar los resultados.&lt;/p&gt;
-&lt;h2&gt;Estrellas y cubos sim&#233;tricos&lt;/h2&gt;
-&lt;p&gt;La mayor parte de las &#225;reas de representaci&#243;n hoy en d&#237;a est&#225;n dominadas por esquemas relacionales de esquemas de estrella y cubos de datos multidimensionales OLAP. Estas estructuras de datos han demostrado durante los  &#250;ltimos 30 a&#241;os ser las que mejor entienden los usuarios finales. Recordad que el entendimiento es una de las dos condiciones no negociables en el dise&#241;o.&lt;/p&gt;
-&lt;p&gt;La simplicidad de los esquemas de estrella y cubos OLAP ha permitido a los brillantes dise&#241;adores de software centrarse en los algoritmos m&#225;s potentes para ofrecer un rendimiento r&#225;pido en las consultas. Recordad que la velocidad es la otra condici&#243;n no negociable en el dise&#241;o.&lt;/p&gt;
-&lt;p&gt;La simetr&#237;a de ambas, el esquema de estrella y el cubo OLAP tambi&#233;n permiten:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Interfaz de usuario predecible que puede “aprender” qu&#233; hacer en el momento de la consulta.&lt;/li&gt;
-&lt;li&gt;Escenarios administrativos predecibles en el DWH porque toda la estructura de datos tienen aspecto parecido.&lt;/li&gt;
-&lt;li&gt;Respuestas de implementaci&#243;n predecibles cuando nuevos tipos de datos est&#225;n disponibles.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Por supuesto, el esquema de estrella y el cubo OLAP est&#225;n estrechamente relacionados. Los esquemas de estrellas son los m&#225;s apropiados para los conjuntos grandes de datos, con muchos millones o billones de mediciones num&#233;ricas o muchos millones de miembros en una dimensi&#243;n de cliente o de producto.&lt;/p&gt;
-&lt;p&gt;Los cubos OLAP son los m&#225;s apropiados para conjuntos de datos m&#225;s peque&#241;os donde las herramientas anal&#237;ticas pueden realizar comparaciones de datos complejas y c&#225;lculos. En casi todos los entornos de cubos OLAP, se recomienda que introduzcas originalmente los datos en un esquema de estructura de estrella, y despu&#233;s utilices asistentes para transformar los datos en el cubo de OLAP. De esa manera, toda las potentes herramientas ETL del &#225;rea de almacenamiento que tratan con los archivos planos y esquemas entidades/relaciones participan en la carga de los datos OLAP.  Y, por supuesto, el sistema de esquema h&#237;brido estrella-OLAP permite que se pueda realizar &lt;em&gt;drill-down&lt;/em&gt; entre los los grandes conjuntos de datos en estrella y los cubos de datos OLAP , todos bajo una &#250;nica interfaz de usuario.&lt;/p&gt;
-&lt;h2&gt;La gran recompensa&lt;/h2&gt;
-&lt;p&gt;La gran recompensa final de construir el sistema de representaci&#243;n en el almac&#233;n de datos sobre esquemas sim&#233;tricos de estrella y cubos OLAP es un resultado predecible con puntos comunes para encajar datos desde toda la empresa.&lt;/p&gt;
-&lt;p&gt;En mi pr&#243;xima columna, pondr&#233; al descubierto las t&#233;cnicas para conformar las dimensiones y hechos de las distintas y dispares fuentes de datos de tu gran empresa.  Estas dimensiones conformadas (y hechos) ser&#225;n la base de un &lt;em&gt;almac&#233;n de datos de aquitectura de bus&lt;/em&gt;--- un conjunto de puntos conectados que proporcionan poder a todas las l&#237;neas de transmisi&#243;n, y justo como el bus en tu ordenador proporciona datos a todos los perif&#233;ricos.&lt;/p&gt;
-&lt;h2&gt;&#191;Qu&#233; hemos conseguido?&lt;/h2&gt;
-&lt;p&gt;Hasta ahora hemos implementado dos ideas potentes:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Primero, hemos separado l&#243;gicamente, f&#237;sicamente y administrativamente los sistemas de nuestro entorno en 4 distritos distintos. Realmente necesitas 4 sistemas inform&#225;ticos diferentes, pero &lt;strong&gt;&#161;eres responsable solo de dos de ellos!&lt;/strong&gt; Nuestros dos sistemas de almacenes de datos tambi&#233;n nos permiten separar las responsabilidades del almacenamiento de datos y las responsabilidades de consultas de los usuarios finales.&lt;/li&gt;
-&lt;li&gt;Segundo, hemos llenado nuestra &#225;rea de presentaci&#243;n del almac&#233;n de datos con esquemas de estrellas y cubos de datos OLAP, las &#250;nicas estructuras entendibles, y que pueden soportar el ataque ad hoc.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Aunque claramente no hemos solucionado todas las  complejas restricciones de dise&#241;o y realidades inevitables, hemos neutralizado en gran parte el desaf&#237;o global, solamente impulsando estas dos potentes ideas. Vuelve a mi columna previa y revisa la lista. Hemos conseguidos (1) grandes partes comprensibilidad, (2) rapidez en las consultas, (3) los tres costes mencionados en esa columna, (4) los riesgos de la centralizaci&#243;n inapropiada, (5) la necesidad de desarrollo incremental, (6) manejar continuos cambios consistentes en peque&#241;as y grandes sorpresas y (7) como pensar en el papel de los data marts. Quiz&#225; hay esperanza.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2002/09/two-powerful-ideas/&quot;&gt;http://www.kimballgroup.com/2002/09/two-powerful-ideas/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
