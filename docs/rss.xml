@@ -153,7 +153,6 @@
 &lt;li&gt;Roles de seguridad y privilegios para las cuentas de mantenimiento. Tu despliegue est&#225; virtualmente relegado al fracaso si no compruebas los roles de seguridad primero. No s&#233; porque, pero siempre parece que va a ir mal.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;Si sigues estas sugerencias, especialmente la sugerencia de probar continuamente, probablemente tengas una fase de test agradable y sin crisis y cumplir&#225;s el hito de pase a producci&#243;n en  la fecha programada.&lt;/strong&gt;  Si no, est&#225;s corriendo un serio riesgo de retrasar interminablemente un fabuloso proyecto en el infierno QA, con los usuarios de negocios y la direcci&#243;n llamando a tu puerta.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/&quot;&gt;http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -196,7 +195,6 @@
 &lt;p&gt;Las tres rutas de ciclos de vida convergen en la implementaci&#243;n, reuniendo la tecnolog&#237;a, los datos y las aplicaciones BI. La implementaci&#243;n iterada entra en fase de mantenimiento, mientras que el crecimiento vuelve atr&#225;s hacia la planificaci&#243;n del proyecto para la pr&#243;xima iteraci&#243;n del sistema DW/BI. Recuerda que el sistema DW/BI es un proceso a largo plazo, &#161;no un proyecto que se hace una sola vez!.&lt;/p&gt;
 &lt;p&gt;A lo largo del ciclo de vida Kimball, hay un tema recurrente reconociendo que los profesionales del DW/BI deben combinar los requerimientos de los usuarios de negocio con las realidades subyacentes de los datos fuente, tecnolog&#237;a y recursos relacionados. Los equipos de proyecto que se centran exclusivamente en las necesidades (o realidades) de un modo aislado, inevitablemente tendr&#225;n que hacer frente a riesgos en forma de retrasos en las entregas y/o adopci&#243;n por parte de los usuarios.&lt;/p&gt;
 &lt;p&gt;Finalmente, como hemos dicho en otras ocasiones, y seguro que repetiremos en el  futuro: Independientemente de los objetivos espec&#237;ficos DW/BI de tu organizaci&#243;n, creemos que tu objetivo general debe ser la aceptaci&#243;n por parte de los usuarios de negocio del DW/BI para el apoyar la toma de decisiones. Este objetivo debe permanecer en el ojo del hurac&#225;n durante el dise&#241;o, desarrollo e implementaci&#243;n del ciclo de vida de cualquier sistema data warehouse o business intelligence.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/&quot;&gt;http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -218,7 +216,6 @@
 &lt;p&gt;A lo largo del tiempo, puedes expandir este sencillo punto de partida de manera iterativa. Ninguno de los atributos dimensionales especiales procedentes de un solo proceso empresarial no deben ser descartados durante el proceso de conformaci&#243;n (asumimos muy pocos compromisos definitivos). Y finalmente, si tu organizaci&#243;n ya ha implementado la capacidad de &lt;em&gt;master data managment&lt;/em&gt; (MDM) para apoyar el sistema de fuente transaccional, el trabajo de crear dimensiones conformadas para el almac&#233;n de datos de la empresa, ser&#225; m&#225;s sencillo.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Si fallas en concentrarte en las dimensiones conformadas porque est&#225;s bajo presi&#243;n de entregar alguna cosa, los distintos departamentos anal&#237;ticos de silos de datos probablemente tendr&#225;n categor&#237;as y etiquetas inconsistentes&lt;/strong&gt;. O peor: Los conjuntos de datos ofrecer&#225;n la apariencia de poder ser comparados y integrados debido a la similitud de sus etiquetas, pero las reglas empresariales subyacentes ser&#225;n ligeramente diferentes. Los usuarios de negocio malgastar&#225;n cantidades exageradas de tiempo intentando componer y resolver estas inconsistencias en los datos que influir&#225;n negativamente en su agilidad para la toma de decisiones.&lt;/p&gt;
 &lt;p&gt;Los altos directivos de IT que demandan desarrollo de sistemas &#225;giles, si est&#225;n interesados en conseguir eficiencia en el desarrollo a largo plazo y quieren una toma de decisiones efectiva en la empresa a largo plazo, deber&#225;n ejercer incluso una mayor presi&#243;n a la organizaci&#243;n para definir dimensiones conformadas consistentes .&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/&quot;&gt;http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -246,7 +243,6 @@
 &lt;p&gt;Lo dicho: He trabajado con clientes que han tenido &#233;xito enganchando una herramienta BI directamente al modelo de datos normalizado (transaccional o ODS). El escenario m&#225;s com&#250;n es un prototipo: Ense&#241;&#233;mosle a la gente  como ser&#237;a un universo de objetos de negocios o una interfaz Tableau para generar entusiasmo y apoyo financiero para un proyecto Business Intelligence.&lt;/p&gt;
 &lt;p&gt;Otro escenario seria conocer los informes de requerimientos operacionales mediante la construcci&#243;n de una capa sem&#225;ntica sobre el sistema transaccional. Pero, en la mayor&#237;a de casos, esta capa sem&#225;ntica operacional es un componente relativamente menor en un entorno anal&#237;tico de una empresa que incluye un DWH real. Soy muy esc&#233;ptico con cualquier organizaci&#243;n que proclama que sus sistemas transaccionales est&#225;n lo suficientemente limpios, y sus necesidades anal&#237;ticas son bastante simples, que no necesitan  instanciar sus modelos dimensionales. No me opongo a la idea en la teor&#237;a, pero en la pr&#225;ctica todav&#237;a no lo veo funcionando.&lt;/p&gt;
 &lt;p&gt;No creo que haya visto alguna vez que una organizaci&#243;n sobre-invirtiese en una capa sem&#225;ntica, pero he visto muchos data warehouses fallar debido a la falta de inversi&#243;n. Adquiere una herramienta BI decente (hay docenas), e invierte tiempo desarrollando la capa sem&#225;ntica. De lo contrario estar&#225;s subestimando tu sustancial inversi&#243;n en dise&#241;o y desarrollo de un data warehouse t&#233;cnicamente solido.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original:  &lt;a href=&quot;http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-the-semantic-layer/&quot;&gt;http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-the-semantic-layer/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -298,7 +294,6 @@
 &lt;/ol&gt;
 &lt;h3&gt;10. &#161;Se constante!&lt;/h3&gt;
 &lt;p&gt;La necia coherencia es el duende de las mentes peque&#241;as. La coherencia en la nomenclatura es sumamente valiosa para sus usuarios.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/&quot;&gt;http://www.kimballgroup.com/2014/07/design-tip-168-whats-name/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -323,7 +318,6 @@
 &lt;/ul&gt;
 &lt;p&gt;En lugar de atascarnos en argumentos religiosos sobre modelos l&#243;gicos versus f&#237;sicos, debemos simplemente reconocer que un modelo dimensional es actualmente una interfaz de programaci&#243;n de aplicaciones (API) de data warehouse. El poder de esta API reside en la interfaz consistente y uniforme que ven todos los observadores, ambos usuarios y aplicaciones BI. Vemos que no importa donde est&#225;n almacenados los bits o como se entregan cuando se lanza una solicitud desde la API.&lt;/p&gt;
 &lt;p&gt;El modelo dimensional API es muy espec&#237;fico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicaci&#243;n BI solicitante no puede y no debe ocuparse de c&#243;mo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original:  &lt;a href=&quot;http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/&quot;&gt;http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>
@@ -367,7 +361,6 @@
 &lt;p&gt;Una vez dicho esto, los profesionales del DWH que quieran ir m&#225;s all&#225; necesitan tener habilidades en Unix y Java como m&#237;nimo, y estar familiarizado con algunos de los principales entornos anal&#237;ticos no SQL como Spark, MongoDB y HBase, as&#237; como herramientas de transferencia de datos como Sqoop.&lt;/p&gt;
 &lt;p&gt;Creo que el reto m&#225;s emocionante es la expansi&#243;n de la descripci&#243;n del trabajo del profesional del DWH. De repente aparecen nuevos departamentos que intentan luchar con torrentes de datos y que probablemente est&#225;n reinventando la rueda del data warehouse. Encuentra cu&#225;les son estos departamentos y ed&#250;calos en la importancia de las dimensiones conformadas y las claves subrogadas. Ofr&#233;celes adjuntar tu dimensiones EDW de alta calidad a sus datos.&lt;/p&gt;
 &lt;p&gt;Y como dice Margy: sal adelante y s&#233; dimensional&lt;/p&gt;
-&lt;p&gt;Art&#237;culo original: &lt;a href=&quot;http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/&quot;&gt;http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/&lt;/a&gt;&lt;/p&gt;
 	   
 	  
 	  &lt;/div&gt;</description>

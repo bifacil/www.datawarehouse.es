@@ -88,10 +88,6 @@ Hasta ahora hemos implementado dos ideas potentes:
 
 Aunque claramente no hemos solucionado todas las  complejas restricciones de diseño y realidades inevitables, hemos neutralizado en gran parte el desafío global, solamente impulsando estas dos potentes ideas. Vuelve a mi columna previa y revisa la lista. Hemos conseguidos (1) grandes partes comprensibilidad, (2) rapidez en las consultas, (3) los tres costes mencionados en esa columna, (4) los riesgos de la centralización inapropiada, (5) la necesidad de desarrollo incremental, (6) manejar continuos cambios consistentes en pequeñas y grandes sorpresas y (7) como pensar en el papel de los data marts. Quizá hay esperanza.
 
-Artículo original: [http://www.kimballgroup.com/2002/09/two-powerful-ideas/][1]
-
-
-
 
 
 [1]: http://www.kimballgroup.com/2002/09/two-powerful-ideas/

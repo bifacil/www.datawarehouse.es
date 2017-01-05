@@ -29,8 +29,6 @@ En lugar de atascarnos en argumentos religiosos sobre modelos lógicos versus f�
 
 El modelo dimensional API es muy específico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicación BI solicitante no puede y no debe ocuparse de cómo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.
 
-Artículo original:  [http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/][1]
-
 
 
 

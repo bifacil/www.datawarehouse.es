@@ -33,9 +33,6 @@ Otro escenario seria conocer los informes de requerimientos operacionales median
 
 No creo que haya visto alguna vez que una organización sobre-invirtiese en una capa semántica, pero he visto muchos data warehouses fallar debido a la falta de inversión. Adquiere una herramienta BI decente (hay docenas), e invierte tiempo desarrollando la capa semántica. De lo contrario estarás subestimando tu sustancial inversión en diseño y desarrollo de un data warehouse técnicamente solido.
 
-Artículo original:  [http://www.kimballgroup.com/2013/08/design-tip-158-making-sense-of-the-semantic-layer/][1]
-
-
 
 
 

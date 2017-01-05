@@ -72,10 +72,6 @@ Si has leído regularmente nuestro Kit de artículos, o los consejos de diseño,
 
 ¡Buena suerte!
 
-Artículo original: [http://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/][1]
-
-
-
 
 
 [1]: http://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/

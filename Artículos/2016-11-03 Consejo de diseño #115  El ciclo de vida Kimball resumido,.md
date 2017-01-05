@@ -64,9 +64,6 @@ A lo largo del ciclo de vida Kimball, hay un tema recurrente reconociendo que lo
 
 Finalmente, como hemos dicho en otras ocasiones, y seguro que repetiremos en el  futuro: Independientemente de los objetivos específicos DW/BI de tu organización, creemos que tu objetivo general debe ser la aceptación por parte de los usuarios de negocio del DW/BI para el apoyar la toma de decisiones. Este objetivo debe permanecer en el ojo del huracán durante el diseño, desarrollo e implementación del ciclo de vida de cualquier sistema data warehouse o business intelligence.
 
-Artículo original: [http://www.kimballgroup.com/2009/08/design-tip-115-kimball-lifecycle-in-a-nutshell/][1]
-
-
 
 
 

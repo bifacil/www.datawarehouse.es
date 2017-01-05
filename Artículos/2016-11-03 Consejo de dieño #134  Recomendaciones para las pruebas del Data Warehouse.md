@@ -55,10 +55,6 @@ Es de vital importancia que el entorno de test sea similar al de producción. Se
 
 **Si sigues estas sugerencias, especialmente la sugerencia de probar continuamente, probablemente tengas una fase de test agradable y sin crisis y cumplirás el hito de pase a producción en  la fecha programada.**  Si no, estás corriendo un serio riesgo de retrasar interminablemente un fabuloso proyecto en el infierno QA, con los usuarios de negocios y la dirección llamando a tu puerta.
 
-Artículo original: [http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/][1]
-
-
-
 
 
 [1]: http://www.kimballgroup.com/2011/05/design-tip-134-data-warehouse-testing-recommendations/

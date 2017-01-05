@@ -65,8 +65,6 @@ Creo que el reto más emocionante es la expansión de la descripción del trabaj
 
 Y como dice Margy: sal adelante y sé dimensional
 
-Artículo original: [http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/][1]
-
 
 
 

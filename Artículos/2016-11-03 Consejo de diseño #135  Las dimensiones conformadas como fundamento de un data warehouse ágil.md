@@ -28,9 +28,6 @@ A lo largo del tiempo, puedes expandir este sencillo punto de partida de manera 
 
 Los altos directivos de IT que demandan desarrollo de sistemas ágiles, si están interesados en conseguir eficiencia en el desarrollo a largo plazo y quieren una toma de decisiones efectiva en la empresa a largo plazo, deberán ejercer incluso una mayor presión a la organización para definir dimensiones conformadas consistentes .
 
-Artículo original: [http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/][1]
-
-
 
 
 
