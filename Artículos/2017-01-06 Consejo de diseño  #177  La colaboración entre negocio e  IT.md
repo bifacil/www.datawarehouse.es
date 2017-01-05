@@ -11,11 +11,11 @@ RelatedUrl: http://www.kimballgroup.com/2015/09/design-tip-177-final-word-of-the
 IsDraft: false
 
 ---
-Para último consejo de diseño, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colaboran con sus contrapartes empresariales. Del mismo modo, el negocio necesitan estar deseando colaborar con el IT.
+En el último "consejo de diseño", vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: **La colaboración entre negocio e  IT**. Si aceptas la proposición de que la verdadera medida del éxito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboración debería ser fácil. Lograr la aceptación empresarial es una utopía si el equipo de IT no colabora con su contraparte empresarial. Del mismo modo, Negocio necesita estar deseando colaborar con el IT.
 
 Los equipos colaborativos multidisciplinares crean sistemas DW/BI de éxito. Cada cuestión importante del enfoque "Kimball Lifecycle" se presta a actividades conjuntas que refuerzan la alineación negocios-IT:
 
-- **Planificación del proyecto:** Marca prioridades basadas en metas y objetivos empresariales, equilibradas con las facilidades de entrega.
+- **Planificación del proyecto:** Marca prioridades basadas en metas y objetivos empresariales, proponiendo unos entregables realistas.
 - **Dirección del proyecto:** Comunicar abiertamente sobre la situación del proyecto y solicitar "feedback" para definir modificaciones en el alcance de manera consensuada.
 - **Requerimientos empresariales:** Incidir en lo que hace el negocio y por qué, y en como la empresa espera tomar las decisiones en el futuro, en lugar de preguntar “¿qué quieres en un sistema DW/BI?”
 - **Arquitectura técnica y selección de productos:** Involucra a los representantes de la empresa para seleccionar sus herramientas. Como un recordatorio amistoso a los ingenieros: la tecnología es un habilitador previo, ¡pero no debe ser el foco de atención primario del equipo DW/BI! No te molestes en educar (o tal vez educar en exceso) al negocio sobre infraestructura y tuberías.
@@ -36,6 +36,8 @@ Puesto que muchos suscriptores a este sitio pertenecen al departamento de IT, me
 El enfoque Kimball disuade la mentalidad cliente-vendedor donde el negocio proporciona al IT una orden que este intenta realizar. Nuestro enfoque siempre defiende la asociación entre IT y las partes interesadas del negocio. La colaboración va más allá de programar una reunión con las partes interesadas; colaborar significa trabajar diferente, involucrar a ambas partes en tomar decisiones.
 
 Desafortunadamente, la colaboración entre el negocio y IT no se da de manera natural en algunas organizaciones. La gente puede pensar diferente, comunicar usando diferente vocabulario y ser incentivada de manera diferente. La meta es involucrarse mutuamente y entender que se requiere un fuerte apoyo organizacional en los niveles de liderazgo, especialmente si negocio e IT necesitan ser empujados fuera de su zona de confort. La línea que separa ambos campos se difuminará con personas que cabalgan cómodamente entre ambos mundos.
+
+### Despedida
 
 Finalmente, os comunico que esta es mi última oportunidad de hablar con todos vosotros. Quiero expresar mi gratitud y aprecio por las numerosas personas que se han cruzado en mi camino durante los últimos 34 años. Gracias a mi marido y a mi hija por vuestra paciencia inquebrantable y vuestro apoyo. Gracias a mis colegas de Metaphor cuya influencia ha persistido durante mi carrera. Gracias a mis socios de DecisionWorks y Kimball Group por vuestra inteligencia e inspiración. Y lo más importante, gracias a mis clientes, estudiantes y lectores; ¡habéis hecho que sea un viaje increíble!
 
