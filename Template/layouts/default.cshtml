@@ -16,6 +16,12 @@
 			<div class="row">
 				<div class="col-md-12 after-content">
 					@RenderBody()
+					@if (Page.Image != null)
+					{
+						<div>
+							<img class="post-banner" src="@Root/banners/@Page.Image">
+						</div>
+					}
 					<p>Artículo original: <strong><a href="@Page.RelatedUrl">Kimball Group</a></strong></p>
 				</div>
 			</div>

@@ -133,6 +133,12 @@ h2.header-libros {color:#006db0;}
 .contenido {
 	margin-bottom: 80px;
 }
+
+.contenido img.post-banner{
+	width:60%;
+}
+
+
 .contenido h2{
 	color:#006db0;
 	font-weight:700;

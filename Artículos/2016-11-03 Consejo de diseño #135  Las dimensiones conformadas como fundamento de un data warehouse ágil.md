@@ -5,9 +5,11 @@ Url: 2011/135-dimensiones-conformadas-fundamento-datawarehouse-agil.html
 Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2011-06-01T00:00:00.0000000
 Description: "Las dimensiones conformadas permiten el desarrollo ágil de DW/BI  y agiliza la toma de decisiones. Reutilizando dimensiones conformadas entre proyectos es  donde se obtiene un impulso para obtener más agilidad en el desarrollo  DW/BI. A medida que desarrollas tu portfolio de dimensiones maestras conformadas, la manivela de desarrollo del proyecto empieza a girar más rápido."
+Image: 2011-135-dimensiones-conformadas-fundamento-datawarehouse-agil.jpg
 Author: Margy Ross
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/
+IsDraft: false
 
 ---
 ## Consejo de diseño \#135
@@ -27,8 +29,3 @@ A lo largo del tiempo, puedes expandir este sencillo punto de partida de manera 
 **Si fallas en concentrarte en las dimensiones conformadas porque estás bajo presión de entregar alguna cosa, los distintos departamentos analíticos de silos de datos probablemente tendrán categorías y etiquetas inconsistentes**. O peor: Los conjuntos de datos ofrecerán la apariencia de poder ser comparados y integrados debido a la similitud de sus etiquetas, pero las reglas empresariales subyacentes serán ligeramente diferentes. Los usuarios de negocio malgastarán cantidades exageradas de tiempo intentando componer y resolver estas inconsistencias en los datos que influirán negativamente en su agilidad para la toma de decisiones.
 
 Los altos directivos de IT que demandan desarrollo de sistemas ágiles, si están interesados en conseguir eficiencia en el desarrollo a largo plazo y quieren una toma de decisiones efectiva en la empresa a largo plazo, deberán ejercer incluso una mayor presión a la organización para definir dimensiones conformadas consistentes .
-
-
-
-
-[1]: http://www.kimballgroup.com/2011/06/design-tip-135-conformed-dimensions-as-the-foundation-for-agile-data-warehousing/

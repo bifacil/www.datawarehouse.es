@@ -5,9 +5,11 @@ Url: 2015/el-futuro-es-brillante.html
 Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2015-12-01T22:52:00.0000000
 Description: "En mi último consejo de diseño en el Grupo Kimball describiré como creo que están cambiando los componentes más importantes del almacenamiento de datos y como cambiarán en el futuro cercano. ¡Es un momento emocionante y desafiante para ser un profesional del data warehouse!"
+Image: 2015-el-futuro-es-brillante.jpg
 Author: Ralph Kimball
 Category: "Planificación y gestión de proyectos"
 RelatedUrl: http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/
+IsDraft: false
 
 ---
 El *datawarehousing* nunca ha sido tan valioso e interesante como es ahora. Tomar decisiones basadas en los datos es tan fundamental y obvio que la generación actual de usuarios de negocio y diseñadores/implementadores de data warehouses no podrían imaginar un mundo sin acceso a los datos. Me resistiré al impulso de contar historias sobre como era antes de 1980.
@@ -64,9 +66,3 @@ Una vez dicho esto, los profesionales del DWH que quieran ir más allá necesita
 Creo que el reto más emocionante es la expansión de la descripción del trabajo del profesional del DWH. De repente aparecen nuevos departamentos que intentan luchar con torrentes de datos y que probablemente están reinventando la rueda del data warehouse. Encuentra cuáles son estos departamentos y edúcalos en la importancia de las dimensiones conformadas y las claves subrogadas. Ofréceles adjuntar tu dimensiones EDW de alta calidad a sus datos.
 
 Y como dice Margy: sal adelante y sé dimensional
-
-
-
-
-
-[1]: http://www.kimballgroup.com/2015/12/design-tip-180-the-future-is-bright/

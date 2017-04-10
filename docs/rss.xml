@@ -208,7 +208,7 @@
       <pubDate>Thu, 03 Nov 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-11-03T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2011-135-dimensiones-conformadas-fundamento-datawarehouse-agil.jpg&quot; /&gt;
 	  &lt;h2&gt;Consejo de dise&#241;o #135&lt;/h2&gt;
 &lt;p&gt;Algunos clientes y estudiantes lamentan que cuando quieren entregar y compartir dimensiones maestras definidas consistentemente en el entorno DWH/BI, simplemente, &amp;quot;no se puede&amp;quot;. Explican que lo har&#237;an si pudiesen, pero con una alta direcci&#243;n centrada en utilizar t&#233;cnicas de desarrollo &#225;gil para ofrecer soluciones DW/BI, es &amp;quot;imposible&amp;quot; tener tiempo para llegar a un acuerdo en toda la organizaci&#243;n sobre dimensiones conformadas. Quiero llevar a cabo este argumento al rev&#233;s afirmando que &lt;strong&gt;las dimensiones conformadas permiten el desarrollo &#225;gil de DW/BI  y agiliza la toma de decisiones&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Se&#225;is o no un especialista Kimball, muchos de vosotros est&#225;is familiarizados con las dimensiones conformadas. Una dimensi&#243;n conformada es un dato maestro descriptivo que est&#225; referenciado en m&#250;ltiples modelos dimensionales. Las dimensiones conformadas son fundamentales dentro del enfoque Kimball. Las dimensiones conformadas permiten a  los usuarios del DW/BI cortar y fragmentar constantemente las m&#233;tricas de rendimiento de los procesos de fuentes de datos procedentes de m&#250;ltiples empresas. Las dimensiones conformadas permiten que datos de diferentes fuentes sean integrados bas&#225;ndose en atributos de dimensiones comunes y unificados. Finalmente, las dimensiones conformadas permiten construir y mantener una tabla de datos una sola vez en lugar de recrear versiones ligeramente diferentes durante cada ciclo de desarrollo.&lt;/p&gt;
@@ -307,7 +307,7 @@
       <pubDate>Thu, 03 Nov 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-11-03T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2015-modelado-dimensional.jpg&quot; /&gt;
 	  &lt;p&gt;Los modelos de datos dimensionales llevan aqu&#237; mucho tiempo. Ciertamente, casi podemos remontar sus or&#237;genes al proyecto original &lt;em&gt;Data Cube&lt;/em&gt; entre Dartmouth y General Mills a finales de 1960. El atractivo del modelado dimensional reside en la evidente simplicidad de los modelos y en la forma natural que la gente de negocios y la gente t&#233;cnica puedan entender lo que significan estos modelos.&lt;/p&gt;
 &lt;p&gt;Los modelos dimensionales tienen dos expresiones diferentes, l&#243;gica y f&#237;sica. La expresi&#243;n puramente l&#243;gica queda plasmada en el siguiente diagrama.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://datawarehouse.es/images/dt-176-figure.png&quot; alt=&quot;Imagen 1&quot; /&gt;&lt;/p&gt;
@@ -331,7 +331,7 @@
       <pubDate>Thu, 03 Nov 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-11-03T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2015-el-futuro-es-brillante.jpg&quot; /&gt;
 	  &lt;p&gt;El &lt;em&gt;datawarehousing&lt;/em&gt; nunca ha sido tan valioso e interesante como es ahora. Tomar decisiones basadas en los datos es tan fundamental y obvio que la generaci&#243;n actual de usuarios de negocio y dise&#241;adores/implementadores de data warehouses no podr&#237;an imaginar un mundo sin acceso a los datos. Me resistir&#233; al impulso de contar historias sobre como era antes de 1980.&lt;/p&gt;
 &lt;p&gt;Pero este es un momento de cambio en la pr&#225;ctica del datawarehousing. Es esencial que el &amp;quot;data warehousing&amp;quot; siempre recopile las necesidades del negocio y enumere todos los activos de datos de una organizaci&#243;n en el sentido m&#225;s amplio posible. Si el DWH se relega simplemente a informar sobre datos de  textos y m&#233;tricas obtenidos a partir de los registros transaccionales, entonces grandes oportunidades se perder&#225;n.&lt;/p&gt;
 &lt;p&gt;El data warehousing ha definido una arquitectura para la &lt;em&gt;publicaci&#243;n de los datos correctos&lt;/em&gt; &#250;til para aquellos que toman las decisiones, y esa arquitectura recibe nombres: modelado dimensional, tablas de hechos, tablas dimensionales, claves subrogadas, dimensiones de variaci&#243;n lenta, dimensiones conformadas y muchas m&#225;s.&lt;/p&gt;

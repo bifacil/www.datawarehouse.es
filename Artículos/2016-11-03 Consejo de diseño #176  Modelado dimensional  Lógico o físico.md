@@ -5,9 +5,11 @@ Url: 2015/modelado-dimensional-logico-o-fisico.html
 Date: 2016-11-03T00:00:00.0000000
 SecondaryDate: 2015-07-28T23:42:00.0000000
 Description: "La solicitud del modelado dimensional deriva de la evidente simplicidad de los modelos y de la forma natural en que la gente de negocios y la gente técnica puedan entender lo que significan los modelos."
+Image: 2015-modelado-dimensional.jpg
 Author: Ralph Kimball
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/
+IsDraft: false
 
 ---
 Los modelos de datos dimensionales llevan aquí mucho tiempo. Ciertamente, casi podemos remontar sus orígenes al proyecto original *Data Cube* entre Dartmouth y General Mills a finales de 1960. El atractivo del modelado dimensional reside en la evidente simplicidad de los modelos y en la forma natural que la gente de negocios y la gente técnica puedan entender lo que significan estos modelos.
@@ -28,9 +30,3 @@ Espera. ¡No tan rápido! Para ser honestos sobre este atractivo modelo físico 
 En lugar de atascarnos en argumentos religiosos sobre modelos lógicos versus físicos, debemos simplemente reconocer que un modelo dimensional es actualmente una interfaz de programación de aplicaciones (API) de data warehouse. El poder de esta API reside en la interfaz consistente y uniforme que ven todos los observadores, ambos usuarios y aplicaciones BI. Vemos que no importa donde están almacenados los bits o como se entregan cuando se lanza una solicitud desde la API.
 
 El modelo dimensional API es muy específico. Debe exponer tablas de hechos, tablas dimensionales desnormalizadas y una columna para las claves subrogadas. La aplicación BI solicitante no puede y no debe ocuparse de cómo los grupos de resultados son implementados y entregados. Ahora vemos que la verdadera identidad del modelo dimensional es una API de data warehouse.
-
-
-
-
-
-[1]: http://www.kimballgroup.com/2015/07/design-tip-176-dimensional-models-logical-or-physical/
