@@ -2,13 +2,14 @@
 UniqueId: KBuEXNuKlD
 Title: "Consejo de diseño #167 Tipos de tablas de hechos complementarias"
 Url: 2014/tipos-tablas-de-hecho.html
-Date: 2016-12-27T00:06:51.6480773+01:00
+Date: 2017-04-10T00:06:51.6480000
 SecondaryDate: 2014-06-17T00:00:00.0000000
 Description: "Hay tres tipos fundamentales de tablas de hechos en el área de presentación del data warehouse: ·Tablas de hechos de transacciones, tablas de hechos de capturas periódicas,· tablas de hechos de capturas acumuladas."
+Image: 2014-tipos-tablas-de-hecho.jpg
 Author: Bob Becker
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2014/06/design-tip-167-complementary-fact-table-types/
-IsDraft: true
+IsDraft: false
 
 ---
 Hay tres tipos fundamentales de tablas de hechos en el área de presentación del data warehouse:

@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Normalmente se considera que una caja anal&#237;tica es un &#225;rea situada fuera de la infraestructura existente en el data warehouse o como un entorno separado adyacente al data warehouse. Proporciona el entorno y los recursos requeridos para apoyar las capacidades anal&#237;ticas experimentales o de desarrollo. ">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil: Consejo de dise&#241;o #174: &#191;Tu organizaci&#243;n necesita una &#39;analytical sandbox&#39;?</title>
+		<link href="../images/favicon.png" rel="shortcut icon" />
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #174: &#191;Tu organizaci&#243;n necesita una &#39;analytical sandbox&#39;?</h2>
+				<p>Publicado por <strong>Bob Becker</strong> en <strong>2015</strong></p>
+				<p>Archivado en <a href="..\kimball-archive.html#bi">Fundamentos Business Intelligence</a></p>
+			</div>
+		</div>
+
+		<div class="container contenido">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Innumerables organizaciones han creado data warehouses dimensionales y están considerados como grandes éxitos dentro de sus organizaciones. Estos entornos de data warehouse respaldan los informes clave y los requisitos de análisis para la empresa. Muchos son capaces de dar apoyo al acceso autosuficiente a los datos y a las capacidades de análisis para usuarios de negocio dispares.</p>
+					<p>Sin embargo, pese al éxito obtenido por estos data warehouses dimensionales, son a veces criticados por ser demasiado lentos en reaccionar a los nuevos requisitos, implementar nuevas fuentes de datos y respaldar las nuevas capacidades de análisis. A veces estas preocupaciones son exageradas, ya que claramente se necesita un cierto período de tiempo para reaccionar a los nuevos requisitos, pero otras veces estas críticas son ciertas. Muchos data warehouses han crecido y evolucionado para llegar a ser entornos de misión crítica que respaldan los informes de empresa clave, cuadros de mando, scorecards y capacidades de  acceso autoservicio a los datos. Debido a la naturaleza de misión crítica, el modelado dimensional, la dirección, el desarrollo de reglas ETL, y los cambios en los requisitos de gestión desembocan en una aprobación larga, ciclos de diseño y desarrollo para los nuevos requisitos y cambios. En muchos sentidos, estos desafíos son el precio del éxito.</p>
+					<p>El data warehouse es probable que esté muy estructurado, cuidadosamente diseñado, sujeto a reglas de negocio bien definidas, y estrechamente dirigido por la empresa. Gran parte de los datos del data warehouse se limpian y transforman de forma intensiva para asegurar que ofrecen una imagen fiel de lo que pasa actualmente en el negocio. Además, los datos del data warehouse se sincronizan frecuentemente con los entornos de producción vía cargas programadas regularmente. De esta manera, al final, es bastante rígido; simplemente lleva tiempo reaccionar a los nuevos datos y las solicitudes analíticas.</p>
+					<p>En el mundo competitivo de hoy en día, las organizaciones necesitan ser todavía más ágiles. Quieren comprobar rápidamente las nuevas ideas, nuevas hipótesis, nuevas fuentes de datos y nuevas tecnologías. La creación de una caja analítica (data sandbox)  puede ser una respuesta apropiada a estos requerimientos. Una caja analítica complementa el data warehouse dimensional. No se destina a reemplazar el data warehouse, sino que se mantiene a su lado y proporciona un entorno que puede reaccionar más rápidamente a los nuevos requerimientos. La caja analítica no es un concepto realmente nuevo, pero en los recientes debates sobre grandes datos han puesto el concepto de nuevo en vanguardia. <strong>Normalmente se considera que una caja analítica es un área situada fuera de la infraestructura existente en el data warehouse o como un entorno separado adyacente al data warehouse. Proporciona el entorno y los recursos requeridos para apoyar las capacidades analíticas experimentales o de desarrollo.</strong> Es un lugar donde estas nuevas ideas, hipótesis, fuentes de datos y herramientas pueden ser utilizadas, probadas, evaluadas y exploradas. Mientras tanto, el data warehouse se mantiene como el pre-requisito de la fundación de datos que contiene los datos históricos precisos que los esfuerzos de la caja analítica hace girar alrededor y en contra.</p>
+					<p>A veces, los datos del entorno de data warehouse existente alimentan la caja analítica y se alinea con otros almacenes cuyos datos no están aún en el DWH. Es un lugar donde las nuevas fuentes de datos pueden ser probadas para determinar su valor para la empresa. Un ejemplo de estas nuevas fuentes de datos puede ser la inteligencia de mercado adquirida externamente, atributos de los consumidores adquiridos externamente, o fuentes como interacciones en las redes sociales, interacciones con las aplicaciones móviles y la actividad web. A menudo sería muy costoso traer estas nuevas fuentes de datos al entorno de data warehouse existente a menos que (o hasta que) se pruebe su validez. Los datos de la caja analítica no necesitan estar sincronizados sobre una base recurrente con un entorno de producción y estos conjuntos de datos expiran con el paso del tiempo.</p>
+					<p>Un objetivo clave de la caja analítica es comprobar cierta variedad de hipótesis sobre los datos y analíticas. De esta manera, no debería ser una gran sorpresa que la mayoría de proyectos de caja analítica terminen en fracaso. Eso significa que la hipótesis no funciona como se esperaba. Esta es una de las grandes ventajas del <em>sandbox</em>. Los datos utilizados en estos fallos no tendrían que ejecutarse con el rigor esperado de los datos contenidos en el data warehouse. En este caso, el fallo es su propio éxito; cada fallo es un paso hacia la respuesta correcta.</p>
+					<p>La mayor parte de usuarios de negocio verán de manera acertada el data warehouse como la fuente de acceso a los datos de la empresa. Sus informes, cuadros de mandos/scorecards y las solicitudes de autoservicio ad hoc serán fácilmente respaldadas por el data warehouse. A los usuarios objetivo de la caja analítica se les llama normalmente “científicos de datos&quot;. Estos individuos son el pequeño grupo de usuarios de negocio suficientemente inteligentes para identificar las fuentes potenciales de datos, crear su propia “sombra” de base de datos, y construir análisis con objetivos especiales. A menudo estos individuos tienen que trabajar desconectados de la red. Ellos han elaborado y creado su propio entorno analítico en hojas de cálculo, conjuntos locales de datos, bajo los data marts del escritorio o donde quiera que el trabajo necesite ser llevado a cabo. La caja analítica reconoce que estos individuos tienen requerimientos reales. Les proporciona un entorno para trabajar en la red en un entorno dotado, respaldado, establecido, disponible, funcional y, de alguna manera, más sutil y dirigido.</p>
+					<p>Disponer de las habilidades necesarias “in house” es esencial para el éxito de la caja analítica. Los usuarios de la caja analítica necesitan poder conectar con los datos con bastantes menos reglas que la mayoría de los usuarios de negocio. Son usuarios capaces de auto-proporcionarse datos tanto si vienen del data warehouse como si no. Son capaces de construir las analíticas y modelos directamente contra estos datos sin asistencia.</p>
+					<p>La caja analítica debería estar poco dirigida. La idea es crear un entorno que vive sin la sobrecarga del entorno del data warehouse. No debería ser usado para respaldar las capacidades de la misión crítica de la organización. No debería ser utilizada directamente para controlar o respaldar ninguna de las capacidades centrales operacionales. Igualmente, no está destinada a ser utilizada para informes continuos o analíticas requeridas por los negocios de forma continua que respalden informes externos para cumplir las regulaciones financieras o gubernamentales.</p>
+					<p>Una característica importante de la caja analítica es que es de naturaleza transitoria. Los datos y el análisis vienen y van conforme son necesarios para respaldar los nuevos requerimientos analíticos. Los datos no persisten y no son regularmente actualizados vía las capacidades ETL. Los datos en la caja analítica normalmente tienen una fecha de expiración acordada. Así, cualquiera de los nuevos hallazgos o capacidades identificados como importantes para la organización y vitales para respaldar las continuas capacidades necesitarán ser incorporadas en las operaciones de la empresa o en los entornos del data warehouse.</p>
+						<div>
+							<img class="post-banner" src="../banners/2015-cajas-analiticas.jpg">
+						</div>
+					<p>Artículo original: <strong><a href="http://www.kimballgroup.com/2015/05/design-tip-174-does-your-organization-need-an-analytic-sandbox/">Kimball Group</a></strong></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/bob-becker.jpg" width="250" height="318" alt="Bob Becker" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Bob Becker</h4>
+						<p>Bob es miembro de Kimball Group. Ha trabajado junto a responsables de negocio y profesionales IT para priorizar, justificar e implementar sistemas data warehouse para el soporte a la toma de decisiones desde 1990. Es experto en identificar requerimientos de negocio, gestionar proyectos, y dise&#241;ar modelos dimensionales para todo tipo de industrias.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet enlaces">
+						<h5>Mapa del Sitio</h5>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<h5>Blogs Amigos</h5>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-linkedin" href="https://www.linkedin.com/company/businessintelligence"></a>
+							<a class="icon-twitter" href="https://twitter.com/bifacil"></a>
+							<a class="icon-facebook" href="https://www.facebook.com/CronoBusinessIntelligence/"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 suscripcion">
+						<div class="subscribe-text">
+							<h4>LA MEJOR <strong>NEWSLETTER</strong> SOBRE BI</h4>
+							<a class="boton-newsletter" href="../subscribe.html">QUIERO SUSCRIBIRME</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-86725886-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+				
+	</body>
+</html>

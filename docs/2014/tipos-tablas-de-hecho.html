@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Hay tres tipos fundamentales de tablas de hechos en el &#225;rea de presentaci&#243;n del data warehouse: &#183;Tablas de hechos de transacciones, tablas de hechos de capturas peri&#243;dicas,&#183; tablas de hechos de capturas acumuladas.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil: Consejo de dise&#241;o #167 Tipos de tablas de hechos complementarias</title>
+		<link href="../images/favicon.png" rel="shortcut icon" />
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #167 Tipos de tablas de hechos complementarias</h2>
+				<p>Publicado por <strong>Bob Becker</strong> en <strong>2014</strong></p>
+				<p>Archivado en <a href="..\kimball-archive.html#dimensional">Fundamentos dise&#241;o dimensional</a></p>
+			</div>
+		</div>
+
+		<div class="container contenido">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Hay tres tipos fundamentales de tablas de hechos en el área de presentación del data warehouse:</p>
+					<ul>
+					<li><a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/transaction-fact-table/">Tablas de hechos de transacciones</a></li>
+					<li><a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/periodic-snapshot-fact-table/">Tablas de hechos de capturas periódicas</a></li>
+					<li><a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/accumulating-snapshot-fact-table/">Tablas de hechos de capturas acumuladas</a></li>
+					</ul>
+					<p>La mayoría de equipos de diseño DW/BI están muy familiarizados con las <strong>tablas de hechos de transacciones</strong>. Son el tipo más común de tipos de tablas de hecho y normalmente el caballo de batalla para muchas organizaciones. Muchos equipos también han incorporado las <strong>tablas de hechos de capturas periódicas</strong> en sus áreas de presentación. Pocas organizaciones aprovechan las <strong>tablas de hechos de capturas acumuladas</strong>. Los equipos de diseño normalmente no aprecian como una tabla de hechos de captura acumulada puede complementar tablas de hechos de capturas de transacciones y/o periódicas.</p>
+					<p>Cada tipo de tabla de hechos es una respuesta de diseño a la amplia variedad de requisitos planteados por la comunidad de negocio. A menudo la mejor respuesta de diseño es una combinación de dos, o incluso de tres, tipos de tabla de hechos. Las tablas de hechos múltiples complementan unas a las otras, cada una apoya una única visión de los procesos de negocio los cuales sería difícil conseguir con sólo un tipo de tabla de hechos.</p>
+					<h3>Un ejemplo</h3>
+					<p>Una cadena de suministro logística es un escenario excelente para ilustrar los tres tipos de tablas de hecho trabajando a la vez para dar soporte a un rico conjunto de requisitos empresariales. Utilizaremos una vista simplificada de los productos terminados de la cadena logística de un gran fabricante de coches como ayuda para entender las fortalezas y el uso apropiado de cada tabla de hechos.</p>
+					<p>Nuestro fabricante de coches tiene plantas donde los vehículos se ensamblan. Los vehículos terminados son llevados finalmente a los distribuidores donde se venderán a los usuarios finales. Nuestro fabricante ficticio mantiene el inventario de productos acabados en un gran aparcamiento -un verdadero almacén- situado justo a las puertas de la planta de ensamblaje. Los vehículos (del inventario) se envían desde el almacén de productos acabados mediante tren de carga a uno de los varios aparcamientos de la región. Desde estos almacenes regionales, el inventario se envía mediante camión de carga a la localización del distribuidor. Una vez que el vehículo llega al distribuidor, se prepara y se pone en el lote del distribuidor (inventario del almacén) para la venta final.</p>
+					<p>Los usuarios del negocio logístico necesitan entender el número de vehículos que fluyen fuera del final de la cadena de ensamblaje, dentro y fuera de cada almacén, y el cliente final demanda varios tipos de vehículos, colores, modelos  y así sucesivamente. La compañía también necesita entender y analizar el nivel de inventario en cada etapa de la cadena logística. La gestión de logística quiere comprender cuanto tiempo lleva mover un vehículo desde la planta de ensamblaje hasta el cliente final, dependiendo del tipo de vehículo, almacenes y transportes. Mover los vehículos más rápidamente y de forma eficiente a través de la cadena logística ayuda a la compañía a minimizar los niveles de inventario y reducir los costes de transporte.</p>
+					<p>Un diseño robusto para respaldar la cadena logística de productos terminados de nuestro fabricante ilustra los tres tipos de tablas de hechos.</p>
+					<h4>Tabla de hechos de transacciones</h4>
+					<p>Un componente clave de la cadena logística es la fluidez del inventario desde una localización a otra. El flujo de vehículos se captura en una serie de inventarios de movimientos de transacciones. El vehículo es entonces enviado mediante tren al almacén regional donde se recibe para su inventario; más tarde se mueve desde el inventario y se envía mediante camión al distribuidor donde este lo recibe en su inventario. Para cada uno de estos movimientos de inventario, se genera un movimiento de inventario o una transacción de envío/recepción. El granulo de esta tabla de hechos es una fila para cada transacción de  movimiento de inventario de cada vehículo. Del mismo modo la venta final del vehículo debería ser capturada en una tabla de hechos de  transacción de ventas con una fila para cada vehículo vendido.</p>
+					<p>Las tablas de hechos transaccionales son una respuesta de diseño apropiada para los requerimientos del negocio que buscan entender la intensidad o cantidad del proceso de un negocio. Las tablas de hechos transaccionales ayudan a responder la pregunta ¿cuántos?. Por ejemplo ¿cuántos vehículos deportivos blancos (SUVs) se vendieron la semana pasada? ¿Cuántas fueron las vendas en dólares? ¿Cuántos vehículos de tracción total se lanzaron para ensamblarse en inventario comercial? ¿Cuántos vehículos enviamos con un transportista pactado? ¿Cuántos vehículos han recibido nuestros distribuidores este mes? ¿Y comparado con el último mes, el último trimestre, o el último año?  Hay una razón por la cual las tablas de datos transaccionales son el caballo de batalla de los tipos de tablas de hechos: Soportan importanteS requerimientos críticos del negocio. Por otra parte, las tablas de hechos transaccionales son menos efectivas respondiendo preguntas sobre el estado de los niveles nuestro inventario o la rapidez/eficiencia de la cadena logística. Para dar apoyo a estos requerimientos del negocio, buscamos otras tablas de hechos para complementar las tablas de hechos.</p>
+					<h4>Tablas de hechos de capturas periódicas</h4>
+					<p>El segundo requisito es conocer la cantidad total de inventario en cualquier punto de la cadena. El apoyo del análisis del nivel de inventario es una tarea adecuada para una tabla de hechos de captura periódica. En cualquier momento del tiempo, cada vehículo está en una sola localización física como por ejemplo el inventario de productos terminados en la planta, en un centro de distribución regional, en el parking de un distribuidor, o en tránsito en un tren o camión. Para apoyar el análisis de inventario, la tabla de hechos de captura periódica tiene un gránulo de una fila por vehículo por día. Una dimensión de localización soportará el análisis de inventario en cada punto de la cadena.</p>
+					<p>La tabla de hechos de captura periódica hace un excelente trabajo ayudando a comprender el volumen de vehículos en nuestra cadena. Contesta a la pregunta ¿cuánto? .¿Cuánto inventario tenemos? ¿Cuánto inventario de vehículos blancos hay disponible? ¿SUVs? ¿cuatro puertas? ¿modelos deportivos? ¿en California? ¿en los lotes de distribuidor? ¿Comparados a meses anteriores, trimestres o años?</p>
+					<p>La captura periódica respalda la tendencia de niveles de inventario a lo largo del tiempo. Las tablas de transacciones de movimiento y las capturas periódicas de inventario juntas dan soporte a una amplia gama de requerimientos de negocio alrededor de la cadena logística. Sin embargo, incluso con dos de estas tablas de hechos, será difícil atender los requisitos de eficiencia de la cadena. Para completar la fotografía, una tabla de hechos de captura acumulada complementará la tabla de hechos transaccional y de captura periódica.</p>
+					<h4>Tabla de hechos de captura acumulada</h4>
+					<p>El tercer conjunto de requisitos para la cadena logística es soportar la velocidad de análisis a la que los vehículos viajan en la cadena logística. Cada vehículo recorrerá una serie de etapas durante su viaje al cliente final. Para cumplir los requisitos analíticos de medir y entender las eficiencias de nuestra cadena logística, una tabla de hechos de captura acumulada se llenará con una fila por vehículo. A medida que cada vehículo se mueve por la cadena, la captura acumulada se actualizará con la fecha de cada movimiento y la localización actual del vehículo. La captura acumulada tendrá numerosas fechas clave, como por ejemplo fecha de entrega por ensamblaje, fecha de envío al centro de distribución, fecha de llegada al centro de distribución y así hasta la venta final. Las métricas de tablas de hechos incluirán una serie de retrasos en las fechas que miden el tiempo que cuesta mover un vehículo entre las diferentes etapas de la cadena.</p>
+					<p>La tabla de datos de captura acumulada respalda las principales medidas de eficiencia de velocidad. ¿Con que rapidez se mueven los vehículos a través de la cadena? ¿Cuál es la media de tiempo desde la salida de montaje hasta el consumidor final? ¿Es diferente para los coches que para los SUVs? ¿Híbridos versus No-híbridos? ¿Coches blancos versus coches rojos? ¿Cuáles son los transportistas/vías más efectivos? Las capturas acumuladas  se actualizarán diariamente para los vehículos que se encuentren actualmente en la cadena logística.</p>
+					<p>Consecuentemente, la captura acumulada también se usa para comprobar el estado actual de la cadena e identificar vehículos atascados, como por ejemplo encontrar todos los vehículos que han estado en un centro regional de distribución o en un distribuidor durante más de “x” días. ¿Cuántos vehículos han estado en tránsito vía tren o camión durante más de “x” días? ¿Dónde están todos los SUVs? Esta tabla de hechos puede ayudar al equipo logístico a identificar y mover los vehículos de mayor demanda, identificar las oportunidades de mejora, e identificar los socios de transporte preferidos.</p>
+					<h3>Conclusión</h3>
+					<p>En el caso de nuestro fabricante de coches, está claro que los tres tipos de tabla de hechos se complementan. Implementar las tres tablas de hechos es una respuesta apropiada al rico conjunto de requisitos empresariales. Implementar solo una o incluso solo dos de los tipos de tablas de hechos hubiesen hecho muy difícil, si no imposible, respaldar todos los requerimientos.</p>
+						<div>
+							<img class="post-banner" src="../banners/2014-tipos-tablas-de-hecho.jpg">
+						</div>
+					<p>Artículo original: <strong><a href="http://www.kimballgroup.com/2014/06/design-tip-167-complementary-fact-table-types/">Kimball Group</a></strong></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/bob-becker.jpg" width="250" height="318" alt="Bob Becker" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Bob Becker</h4>
+						<p>Bob es miembro de Kimball Group. Ha trabajado junto a responsables de negocio y profesionales IT para priorizar, justificar e implementar sistemas data warehouse para el soporte a la toma de decisiones desde 1990. Es experto en identificar requerimientos de negocio, gestionar proyectos, y dise&#241;ar modelos dimensionales para todo tipo de industrias.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet enlaces">
+						<h5>Mapa del Sitio</h5>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<h5>Blogs Amigos</h5>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-linkedin" href="https://www.linkedin.com/company/businessintelligence"></a>
+							<a class="icon-twitter" href="https://twitter.com/bifacil"></a>
+							<a class="icon-facebook" href="https://www.facebook.com/CronoBusinessIntelligence/"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 suscripcion">
+						<div class="subscribe-text">
+							<h4>LA MEJOR <strong>NEWSLETTER</strong> SOBRE BI</h4>
+							<a class="boton-newsletter" href="../subscribe.html">QUIERO SUSCRIBIRME</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-86725886-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+				
+	</body>
+</html>

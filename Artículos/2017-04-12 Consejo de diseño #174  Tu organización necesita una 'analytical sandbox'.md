@@ -2,13 +2,14 @@
 UniqueId: sjGmcmCsmS
 Title: "Consejo de diseño #174: ¿Tu organización necesita una 'analytical sandbox'?"
 Url: 2015/cajas-analiticas.html
-Date: 2016-12-24T01:54:00.6935640+01:00
+Date: 2017-04-12T01:54:00.6930000
 SecondaryDate: 2015-05-06T00:00:00.0000000
 Description: "Normalmente se considera que una caja analítica es un área situada fuera de la infraestructura existente en el data warehouse o como un entorno separado adyacente al data warehouse. Proporciona el entorno y los recursos requeridos para apoyar las capacidades analíticas experimentales o de desarrollo. "
+Image: 2015-cajas-analiticas.jpg
 Author: Bob Becker
 Category: Fundamentos Business Intelligence
 RelatedUrl: http://www.kimballgroup.com/2015/05/design-tip-174-does-your-organization-need-an-analytic-sandbox/
-IsDraft: true
+IsDraft: false
 
 ---
 Innumerables organizaciones han creado data warehouses dimensionales y están considerados como grandes éxitos dentro de sus organizaciones. Estos entornos de data warehouse respaldan los informes clave y los requisitos de análisis para la empresa. Muchos son capaces de dar apoyo al acceso autosuficiente a los datos y a las capacidades de análisis para usuarios de negocio dispares.
