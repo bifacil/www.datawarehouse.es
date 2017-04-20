@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="An&#225;lisis predictivo es el nombre que recibe una amplia gama de t&#233;cnicas usadas para hacer predicciones sobre comportamientos futuros. Calificaci&#243;n de cr&#233;dito, an&#225;lisis de riesgo, y selecci&#243;n de promoci&#243;n est&#225;n entre las muchas  aplicaciones que han probado ser &#250;tiles para generar ingresos y beneficios.">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil: Consejo de dise&#241;o #172: Aprovecha tu modelo dimensional para an&#225;lisis predictivo</title>
+		<link href="../images/favicon.png" rel="shortcut icon" />
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #172: Aprovecha tu modelo dimensional para an&#225;lisis predictivo</h2>
+				<p>Publicado por <strong>Ralph Kimball</strong> en <strong>2015</strong></p>
+				<p>Archivado en <a href="..\kimball-archive.html#bi">Fundamentos Business Intelligence</a></p>
+			</div>
+		</div>
+
+		<div class="container contenido">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Análisis predictivo es el nombre que recibe una amplia gama de técnicas usadas para hacer predicciones sobre comportamientos futuros. Calificación de crédito, análisis de riesgo, y selección de promoción están entre las muchas  aplicaciones que han probado ser útiles para generar ingresos y beneficios. Vale la pena echar un vistazo a la sección “<a href="https://en.wikipedia.org/wiki/Predictive_analytics">análisis predictivo</a>” de la Wikipedia para apreciar el amplio alcance de estas técnicas.</p>
+					<p>A pesar de las diferencias significantes entre las técnicas de análisis predictivo, casi todas pueden tomar los datos como series de “observaciones” normalmente codificadas por una clave del data warehouse conocida como &quot;cliente&quot;. Con motivo de la discusión asumiremos que tenemos 10 millones de clientes y esperamos predecir el comportamiento futuro poniendo en marcha una serie de aplicaciones analíticas predictivas sobre las historias de estos clientes.</p>
+					<p>Los datos de entrada deseados para la aplicación del análisis predictivo es una tabla de 10 millones de filas cuya clave primaria es la clave duradera y única del cliente, y cuyas columnas son un número abierto de atributos descriptivos, incluyendo los campos descriptivos usuales y los campos demográficos,* pero también incluyendo indicadores, saldos y cantidades preparadas a propósito para la puesta en marcha de la aplicación de análisis predictivo*. Es este requisito en cursiva el que hace que esto sea tan interesante.</p>
+					<p>Nuestros datos de entrada al modelo de análisis predictivo parecen una tabla muy amplia, pero es mucho más volátil y compleja que una tabla de dimensiones bastante estable. Algunos de los atributos ya existen en la dimensión normal de cliente, pero muchos de los atributos interesantes se eligen en el momento del análisis buscando en las tablas de hechos describiendo la historia de los clientes y después resumiendo esa historia en una etiqueta, puntuación o cantidad. Algunas aplicaciones de análisis predictivo pueden querer actualizar los datos de entrada en tiempo real, y el analista puede desear añadir de manera dinámica nuevos atributos calculados para los datos de entrada en cualquier momento.</p>
+					<p>Finalmente, una instantánea dada de estos datos de entrada puede ser una dimensión de cliente útil por propio derecho.</p>
+					<p>Si estas etiquetas de cliente, puntuaciones y cantidades son estables y se usan regularmente para filtrar consultas y agrupar más allá del análisis predictivo, entonces pueden llegar formar parte de la dimensión del consumidor de manera permanente. Dos patrones específicos de diseño (<a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/aggregated-fact-attribute/">&quot;hechos agregados como atributos dimensoinales&quot;</a> y la  <a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/behavior-tag-series-attribute/">&quot;etiqueta de comportamiento en un periodo&quot;</a>), se describen brevemente en el glosario de nuestra web y se ilustran en el <a href="https://datawarehouse.es/ralph-kimball-books.html">capítulo 8 de la tercera edición de “The Data Warehouse Toolkit”</a>.</p>
+					<p>Los datos de observación que alimentan una aplicación de análisis predictivo de  un modelo dimensional es muy simple. Pero ¿cómo llenamos la tabla? ¿Se hace con el ETL mediante una compleja aplicación backroom que escribe esta tabla final en un formato convencional? ¿Se hace completamente con SQL en el momento de ejecución donde cada campo de cada columna se rellena con un comando SELECT  correlacionado accediendo a tablas de hechos remotas? ¿Pueden los datos de los atributos de observación ser almacenados en una dimensión actual, antes que en tablas de hecho separadas, donde los múltiples valores se almacenan como una array, incluso como series de tiempo? ¿Hay herramientas de los entornos Hadoop como Spark o HBase que proporcionan un modo más natural y eficiente de construir el conjunto de datos de observación entregado para el análisis predictivo?</p>
+					<p>Parte de mi papel en este año de jubilación del Kimball Group es describir la relevancia duradera de nuestro bien-probado modelo de técnicas dimensionales, y al mismo tiempo desafiaros a vosotros, lectores de la comunidad data warehouse, a pensar sobre las nuevas direcciones del data warehousing en el futuro. Para ser honesto, no tengo todas las respuestas a las preguntas mencionadas anteriormente, pero entre ahora y el final del año describiré al menos los desafíos y mi pensamiento de estos enfoques lo mejor que pueda.</p>
+						<div>
+							<img class="post-banner" src="../banners/2015-kimball-sobre-analisis-predictivo.jpg">
+						</div>
+					<p>Artículo original: <strong><a href="http://www.kimballgroup.com/2015/02/design-tip-172-leverage-dimensional-model-predictive-analytics/">Kimball Group</a></strong></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/ralph-kimball.jpg" width="250" height="318" alt="Ralph Kimball" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Ralph Kimball</h4>
+						<p>Ralph Kimball es el fundador de Kimball Group y de Kimball University donde ha impartido clases sobre dise&#241;o de data warehouses a m&#225;s de 10.000 estudiantes. Es el autor del best seller Data warehouse Toolkit. Ha dedicado 4 d&#233;cadas dise&#241;ando sistemas DWH simples y r&#225;pidos.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet enlaces">
+						<h5>Mapa del Sitio</h5>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<h5>Blogs Amigos</h5>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-linkedin" href="https://www.linkedin.com/company/businessintelligence"></a>
+							<a class="icon-twitter" href="https://twitter.com/bifacil"></a>
+							<a class="icon-facebook" href="https://www.facebook.com/CronoBusinessIntelligence/"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 suscripcion">
+						<div class="subscribe-text">
+							<h4>LA MEJOR <strong>NEWSLETTER</strong> SOBRE BI</h4>
+							<a class="boton-newsletter" href="../subscribe.html">QUIERO SUSCRIBIRME</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-86725886-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+				
+	</body>
+</html>

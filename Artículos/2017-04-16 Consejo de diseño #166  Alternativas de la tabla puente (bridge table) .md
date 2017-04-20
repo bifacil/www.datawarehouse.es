@@ -2,13 +2,14 @@
 UniqueId: GmnJhfYNTR
 Title: "Consejo de diseño #166: Alternativas de la tabla puente (bridge table) "
 Url: 2014/design-tip-tabla-puente.html
-Date: 2016-12-26T23:23:25.0595070+01:00
+Date: 2017-04-16T23:23:25.0595070+02:00
 SecondaryDate: 2014-05-14T00:00:00.0000000
 Description: "Las dimensiones multivalor son una realidad para muchos diseñadores. La técnica de la tabla puente y las alternativas discutidas en este \"Consejo de diseño\" tienen sus más y sus menos. No hay una única estrategia correcta. Necesitarás determinar con que compromisos tienes que trabajar."
+Image: 2014-design-tip-tabla-puente.jpg
 Author: Margy Ross
 Category: "Fundamentos diseño dimensional"
 RelatedUrl: http://www.kimballgroup.com/2014/05/design-tip-166-potential-bridge-table-detours/
-IsDraft: true
+IsDraft: false
 
 ---
 ### El reto de las relaciones M-N

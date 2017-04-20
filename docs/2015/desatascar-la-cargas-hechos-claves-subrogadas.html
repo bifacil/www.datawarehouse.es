@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description">
+		<link rel="icon" href="../favicon.ico">
+		<title>Data warehouse fácil: Consejo de dise&#241;o #171: Desatascar la cadena de claves en la carga de las tabla de hechos</title>
+		<link href="../images/favicon.png" rel="shortcut icon" />
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/style.css" rel="stylesheet">
+		<link href="../css/font-awesome.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu:100,100i,300,300i,400,400i,700" rel="stylesheet">
+	</head>
+		
+	<body>
+		<div class="container-fluid header-pages">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 logo-desktop">
+					<a class="header-divider" href="..\index.html"><img src="../images/logo-datawarehouse.png" width="250" height="25" alt="" /></a>
+					<a class="indice" href="..\kimball-archive.html">Índice Artículos</a>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 boton-desktop">
+					<a class="btn btn-primary btn-lg btn-header" href="..\ralph-kimball-books.html" role="button">Comprar Libro</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="cabecera">
+			<div class="container">
+				<h2>Consejo de dise&#241;o #171: Desatascar la cadena de claves en la carga de las tabla de hechos</h2>
+				<p>Publicado por <strong>Joy Mundy</strong> en <strong>2015</strong></p>
+				<p>Archivado en <a href="..\kimball-archive.html#etl">ETL y calidad de datos</a></p>
+			</div>
+		</div>
+
+		<div class="container contenido">
+			<div class="row">
+				<div class="col-md-12 after-content">
+					<p>Definimos el sistema ETL como una actividad “back room” que los usuarios nunca verán o tocarán. De todas maneras, el sistema ETL debe diseñarse según los requisitos del usuario. En este &quot;consejo de diseño&quot; miramos el diseño de una pieza de la ETL desde la perspectiva de las necesidades del usuario de negocio.</p>
+					<p>La <strong>cadena de clave subrogada</strong> es la 14 de 34 sistemas ETL descritos por Ralph Kimball en <a href="https://datawarehouse.es/ralph-kimball-books.html">la tercera edición del The Data Warehouse Toolkit</a>. Hay una <a href="http://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/etl-architecture-34-subsystems/">reseña de los subsistemas ETL en nuestra web</a>, junto con un <a href="http://www.kimballgroup.com/2007/10/subsystems-of-etl-revisited/">artículo</a> de Bob Becker. La cadena de clave subrogada es normalmente el último paso del procesamiento de la tabla de hechos donde el sistema ETL intercambia claves del sistema fuente por claves subrogadas del data warehouse.</p>
+					<p>Para la mayor parte, la implementación de la cadena es un detalle dejado para el equipo ETL. Ellos decidirán si cargar los datos de hechos primero y si usar un widget de herramienta ETL, búsquedas o  combinaciones de bases de datos para hacer la tarea de intercambiar claves de sistema fuente por las claves subrogadas del DWH. en cualquier caso, sin embargo, el equipo de diseño ETL necesita información de la comunidad de usuarios de negocio sobre cómo manejar las filas problemáticas descritas en los escenarios siguientes.</p>
+					<h3>Falta de la clave del sistema fuente</h3>
+					<p>La situación más simple se da cuando una fila de hechos de entrada pierde por completo una clave para una de las dimensiones. A veces una dimensión simplemente no se refiere a alguna de las filas de hecho. Por ejemplo, considera el escenario de una tabla de hechos que describe la venta de productos en las tiendas. Este modelo dimensional debe incluir una dimensión de promoción que describa las promociones de marketing y cupones asociados con la venta de un artículo. Pero muchas ventas no están asociadas con ninguna promoción: el código de promoción del sistema fuente está en blanco o nulo.</p>
+					<p><strong>Es absolutamente imperativo que cada fila de la tabla de hechos tenga una fila correspondiente en cada tabla dimensional.</strong> Sería un error manejar este problema de falta de clave insertando una fila de hechos con una clave de promoción nula. Una clave foránea nula en la tabla de hechos violaría automáticamente la integridad referencial, y ninguna solución que implique OUTER JOINS tendría sentido para el negocio.</p>
+					<p>El problema de una clave ausente en el sistema de origen tiene una solución simple: poner una fila específica en la tabla dimensional para tratar esta circunstancia. Es común utilizar una clave subrogada de -1, y después rellenar las otras columnas de dimensiones con una descripción adecuada (ausente, desconocido, no disponible o no informado). Asegúrate de preguntar a los usuarios de negocio como quieren que se vean los atributos visibles en las filas de dimensiones ausentes.</p>
+					<h3>Mala fuente de clave de sistema</h3>
+					<p>Un problema de diseño más importante es manejar una clave de sistema de entrada que el data warehouse no ha visto nunca antes. Las dimensiones deberían ser procesadas antes que los datos. De esta manera, bajo circunstancias normales, debería haber una fila en cada tabla de dimensiones para cada clave en una fila de hechos. Pero el proceso ETL debe contar con lo inesperado. Hemos visto muchas soluciones, ninguna de ellas es perfecta.</p>
+					<p><strong><em>Opción 1: Elimina la fila de hechos ausente.</em></strong></p>
+					<p>Hay pocos escenarios en los cuáles tendría sentido para los usuarios de negocio que el sistema eliminara filas de hechos entrantes. Eliminando las filas se distorsionarían los totales y recuentos, y podría existir contenido valioso en la fila.</p>
+					<p><strong><em>Opción 2: Registra la fila de hechos negativos con una tabla de error.</em></strong></p>
+					<p>Probablemente, esta es la solución más común. Es fácil de implementar y mantiene limpias la tabla de hecho y las tablas de dimensiones. Sin embargo, si tu sistema ETL simplemente escribe las filas de hechos problemáticas en una tabla de error y nunca son revisadas, el resultado es funcionalmente equivalente a eliminar la fila de hechos. El diseño correcto del sistema debe incluir dos procesos:</p>
+					<ul>
+					<li>Un proceso automatizado que revisa las filas con errores para ver si la dimensión ha aparecido y ya puede asignarse una clave subrogada.</li>
+					<li>Un proceso manual mediante el cual una persona evalúa los errores antiguos y se comunica con los sistemas operacionales para solucionarlos en origen.</li>
+					</ul>
+					<p>La mayor desventaja de este diseño es que los datos de hechos  no entran en la tabla de hechos. Esto estaría bien en algunos escenarios, pero sería muy problemático en otros casos (por ejemplo, en temas financieros, que necesitan cuadrar cifras).</p>
+					<p><strong><em>Opción 3: Asigna todas las filas de errores a una fila de dimensiones</em></strong></p>
+					<p>Esta solución es muy similar a la sugerencia de manejar un sistema de clave fuente ausente: todas las filas de hechos problemáticas se asignan a una única fila de dimensiones (llamémosla fila -2). Como el valor ausente, esta dimensión de fila desconocida tiene valores por defecto reconocible para todos los atributos, clarificando el propósito de la fila.</p>
+					<p>Hay dos ventajas para este enfoque:</p>
+					<ol>
+					<li>Es extremadamente simple de implementar.</li>
+					<li>Devuelve la fila de hechos errónea a la tabla de hechos. En informes, los hechos erróneos se muestran asociados a la dimensión desconocida.</li>
+					</ol>
+					<p>Sin embargo, hay dos problemas significantes en este enfoque: 1) diversas filas de hechos erróneos se agruparán en una única súper fila que no tendrá sentido empresarial; y 2) es difícil corregir los datos si mañana el ETL recibe los detalles correctos de la dimensión. Si es posible recibir posteriormente la información sobre la dimensión, los usuarios de negocio querrán que el ETL corrija la fila de hechos errónea para señalar la dimensión correcta.</p>
+					<p>Si los usuarios de negocio quieren que las filas de hechos sean re-enlazadas, necesitarás localizar el identificador de la dimensión del sistema fuente en algún sitio. Puedes:</p>
+					<ol>
+					<li>Poner los identificadores del sistema origen en la tabla de hechos. Esta estrategia añadirá una amplitud significativa a la tabla de hechos y por lo tanto degradarán el rendimiento en la consulta.</li>
+					<li>Poner una clave primaria subrogada en la tabla de hechos, y registrar la condición de error en una tabla separada que contenga al mismo tiempo  los identificadores del sistema fuente y la tabla de hechos de la clave primaria. Utiliza la tabla de hechos de la clave primaria para encontrar las filas de hechos a actualizar cuando descubras una dimensión que ha llegado más tarde.</li>
+					</ol>
+					<p>En cualquier caso, necesitarás emitir una sentencia UPDATE contra las filas de hecho apropiadas, re-situándolas desde -2 a la nueva clave de dimensión correcta. El  principal argumento a favor de este enfoque era su simplicidad de implementación, pero si necesitas corregir los datos de hechos, este enfoque no es simple.</p>
+					<p><strong><em>Opción 4: Crea una fila en la tabla de dimensión (técnica recomendada)</em></strong></p>
+					<p>La solución final al problema de una mala clave del sistema fuente es crear un &quot;hueco&quot; en la dimensión para acomodar el miembro misterioso. Si el ETL encuentra una mala clave del sistema fuente durante el procesado de la tabla de hechos, deberá parar, recorrer la tabla dimensional, crear una fila, obtener su clave subrogada, y devolver esa clave a la tabla de hechos de clave subrogada.</p>
+					<p>Los atributos de estas filas serán similares a los atributos de filas ausentes o desconocidas, pero no son exactamente lo mismo. Sabemos un dato sobre estos atributos: El código en el sistema origen.</p>
+					<p>Con esta técnica, el sistema ETL está en una posición ventajosa para arreglar el problema cuando recibe información de este miembro dimensional. El procesamiento normal de la dimensión actualizará los valores &quot;desconocidos&quot; a sus valores verdaderos y conocidos. La tabla de hecho no requerirá ningún tratamiento especial porque los hechos ya estarán correctamente asignados a la clave subrogada adecuada.</p>
+					<p>Esta técnica es arriesgada si existe un ratio elevado de ruido-señal. Si hay muchas filas de hechos problemáticas, se crearán muchos registros de dimensión dudosos, pero solo unos pocos se corregirán en futuras cargas. Esta es una de las razones por las que en sistemas ETL en tiempo real (donde datos sucios llegan cada pocos minutos o segundos), los datos en tiempo real son a menudo sustituidos por un lote de carga convencional al final del día (el cual tendrá mejor calidad, incluyendo el detalle completo de la transacción).</p>
+					<h3>Implicaciones de los requisitos empresariales</h3>
+					<p>Tus decisiones de diseño sobre qué técnica utilizar para manejar filas de hechos problemáticas deben estar dirigidas por las siguientes necesidades de los usuarios de negocio:</p>
+					<ol>
+					<li>¿Quieren los usuarios de negocio que las filas de hecho negativas estén en la tabla de hechos para cuadrar las cifras? en caso negativo, redirige las filas con problemas hacia una tabla de error. Asegúrate que construyes procesos para sacarlos del apuro.</li>
+					<li>¿Quieren los usuarios de negocio tratar las filas de hecho con correcciones de dimensiones que hayan llegado tarde? Si no, una posible solución es enlazar todos los hechos negativos al miembro desconocido (-2).</li>
+					<li>Si los usuarios de negocio quieren los hechos problemáticos en la tabla de hechos, y ellos quieren actualizar las dimensiones tan pronto como llegue mejor información, entonces el enfoque del &quot;placeholder&quot; es la apuesta mejor.</li>
+					<li>En todos los casos, alguien de la comunidad de usuarios de negocio debe intervenir sobre cómo tratar los errores y las filas falsas. También debe considerarse la ordenación de la dimensión (normalmente los usuarios de negocio quieren ver estas filas falsas en la parte superior de cualquier lista).</li>
+					</ol>
+					<p>Este ejemplo sobre la &quot;cadena de la clave subrogada&quot; es una muestra de como el mejor diseño del sistema ETL sigue el mantra Kimball: <strong>It’s all about the business.</strong></p>
+						<div>
+							<img class="post-banner" src="../banners/2015-desatacagar-la-cargas-hechos.jpg">
+						</div>
+					<p>Artículo original: <strong><a href="http://www.kimballgroup.com/2015/01/design-tip-171-unclogging-fact-table-surrogate-key-pipeline/">Kimball Group</a></strong></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="author">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="#">
+							<img class="author-image img-responsive" src="../images/joy-mundy.jpg" width="250" height="318" alt="Joy Mundy" />
+						</a>
+					</div>
+					<div class="col-md-9">
+						<h4 class="about-author">Sobre el autor: <span class="author-name">Joy Mundy</h4>
+						<p>Joy es miembro de Kimball Group. Se ha dedicado a proyectos DWH/BI durante m&#225;s de una d&#233;cada. Joy es cofundadora de InfoDynamics LLC, una consultor&#237;a DWH. &#218;ltimamente trabaja para Microsoft para desarrollar aplicaciones anal&#237;ticas y data warehouses.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    
+		<div class="pre-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="boton-comprar" src="../images/boton-amazon.png" width="250" height="58" alt="" /></a>
+					</div>
+					<div class="col-md-6 titulo-libro">
+						<h4 class="libro-recomendado">Libro recomendado</h4>
+						<h5 class="libro">"The Kimball Group Reader, Remastered Collection"<h5>
+					</div>
+					<div class="col-md-3">
+						<a href="http://amzn.to/2ee3QAM"><img class="img-responsive center-block" src="../images/libro.png" width="192" height="250" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container foot">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12 ajuste-footer-tablet enlaces">
+						<h5>Mapa del Sitio</h5>
+						<ul class="list-styled">
+							<li><a class="footer-links" href="../index.html">Página de inicio</a></li>
+							<li><a class="footer-links scroll" href="../index.html#presentacion">¿Qué es esto?</a></li>
+							<li><a class="footer-links scroll" href="../index.html#about-kimball">Sobre Kimball Group</a></li>
+							<li><a class="footer-links scroll" href="https://businessintelligence.es/">Sobre Crono</a></li>
+							<li><a class="footer-links" href="../ralph-kimball-books.html">Compra un libro</a></li>
+							<li><a class="footer-links" href="../kimball-archive.html">Índice de artículos</a></li>
+						</ul>
+						<h5>Blogs Amigos</h5>
+						<ul class="list-unstyled">
+							<li><a class="footer-links" href="http://businessintelligence.info/">Business Intelligence fácil</a></li>
+							<li><a class="footer-links" href="http://businessintelligence.es/blog">Lo bueno, si breve, dos veces bueno</a></li>
+						</ul>
+					</div>
+				
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="social-media-footer">
+							<a class="icon-linkedin" href="https://www.linkedin.com/company/businessintelligence"></a>
+							<a class="icon-twitter" href="https://twitter.com/bifacil"></a>
+							<a class="icon-facebook" href="https://www.facebook.com/CronoBusinessIntelligence/"></a>
+						</div>
+						<div class="sm-text">
+							<span>Síguenos en Redes Sociales</span>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12" style="height:235px">
+						<!-- Este div está solo como fix para que la chica quede completamente abajo a la derecha
+							Con tal de hacer eso, el div de la chica tiene que tener position absolute, y al tener position absolute su height es 0,
+							con este div simulamos que hay un elemento con el height del de la chica
+						-->
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12 suscripcion">
+						<div class="subscribe-text">
+							<h4>LA MEJOR <strong>NEWSLETTER</strong> SOBRE BI</h4>
+							<a class="boton-newsletter" href="../subscribe.html">QUIERO SUSCRIBIRME</a>
+						</div>
+						<div class="subscribe-girl">
+							<img src="../images/subscribe-datawarehouse.png" width="210" height="auto" alt="" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-86725886-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+				
+	</body>
+</html>

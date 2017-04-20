@@ -1,13 +1,14 @@
 ﻿---
 UniqueId: dfNcjZyjvC
 Title: "Consejo de diseño #171: Desatascar la cadena de claves en la carga de las tabla de hechos"
-Url: 2015/desatacagar-la-cargas-hechos-claves-subrogadas.html
-Date: 2016-12-27T00:25:24.2605620+01:00
+Url: 2015/desatascar-la-cargas-hechos-claves-subrogadas.html
+Date: 2017-02-15T00:25:24.2605620+01:00
 SecondaryDate: 2015-01-05T00:00:00.0000000
+Image: 2015-desatacagar-la-cargas-hechos.jpg
 Author: Joy Mundy
 Category: ETL y calidad de datos
 RelatedUrl: http://www.kimballgroup.com/2015/01/design-tip-171-unclogging-fact-table-surrogate-key-pipeline/
-IsDraft: true
+IsDraft: false
 
 ---
 Definimos el sistema ETL como una actividad “back room” que los usuarios nunca verán o tocarán. De todas maneras, el sistema ETL debe diseñarse según los requisitos del usuario. En este "consejo de diseño" miramos el diseño de una pieza de la ETL desde la perspectiva de las necesidades del usuario de negocio.

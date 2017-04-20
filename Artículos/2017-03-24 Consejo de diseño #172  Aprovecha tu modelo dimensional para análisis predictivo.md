@@ -2,14 +2,14 @@
 UniqueId: TiFhWAlHbn
 Title: "Consejo de diseño #172: Aprovecha tu modelo dimensional para análisis predictivo"
 Url: 2015/kimball-sobre-analisis-predictivo.html
-Date: 2016-12-24T01:33:09.3568412+01:00
+Date: 2017-03-24T01:33:09.3568412+01:00
 SecondaryDate: 2015-02-02T00:00:00.0000000
 Description: "Análisis predictivo es el nombre que recibe una amplia gama de técnicas usadas para hacer predicciones sobre comportamientos futuros. Calificación de crédito, análisis de riesgo, y selección de promoción están entre las muchas  aplicaciones que han probado ser útiles para generar ingresos y beneficios."
 Image: 2015-kimball-sobre-analisis-predictivo.jpg
 Author: Ralph Kimball
 Category: Fundamentos Business Intelligence
 RelatedUrl: http://www.kimballgroup.com/2015/02/design-tip-172-leverage-dimensional-model-predictive-analytics/
-IsDraft: true
+IsDraft: false
 
 ---
 Análisis predictivo es el nombre que recibe una amplia gama de técnicas usadas para hacer predicciones sobre comportamientos futuros. Calificación de crédito, análisis de riesgo, y selección de promoción están entre las muchas  aplicaciones que han probado ser útiles para generar ingresos y beneficios. Vale la pena echar un vistazo a la sección “[análisis predictivo][1]” de la Wikipedia para apreciar el amplio alcance de estas técnicas.
