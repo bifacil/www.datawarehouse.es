@@ -2,6 +2,7 @@
 UniqueId: vtAMGsvmaQ
 Title: "Consejo de diseño  #177: La colaboración entre negocio e  IT"
 Url: 2015/design-tip-177-colaboracion.html
+Image: 2015-design-tip-177-colaboracion.jpg
 Date: 2017-01-06T00:58:16.5920000+01:00
 SecondaryDate: 2015-09-01T00:59:00.0000000
 Description: "El enfoque Kimball disuade la mentalidad cliente-vendedor donde el negocio proporciona al IT una orden que este intenta realizar. Nuestro enfoque siempre defiende la asociación entre IT y las partes interesadas del negocio. La colaboración va más allá de programar una reunión con las partes interesadas; colaborar significa trabajar diferente, involucrar a ambas partes en tomar decisiones."

@@ -2,6 +2,7 @@
 UniqueId: BtrVMUvMvT
 Title: "Consejo de diseño #179: Principios clave del método Kimball"
 Url: 2015/claves-metodo-kimball.html
+Image: 2015-claves-metodo-kimball.jpg
 Date: 2017-01-06T02:34:16.0160000+01:00
 SecondaryDate: 2015-11-05T00:00:00.0000000
 Description: "Me apasionan varios principios del método Kimball. En este consejo de diseño enumero las cosas que repito una y otra vez, tanto a las audiencias experimentadas como a las nuevas."

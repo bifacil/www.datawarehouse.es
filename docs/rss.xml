@@ -193,7 +193,7 @@
       <pubDate>Fri, 06 Jan 2017 02:34:16 GMT</pubDate>
       <atom:updated>2017-01-06T02:34:16Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2015-claves-metodo-kimball.jpg&quot; /&gt;
 	  &lt;p&gt;La mayor parte de la gu&#237;a del m&#233;todo Kimball para el dise&#241;o, desarrollo e  implementaci&#243;n de un sistema DW/BI es simplemente eso: una gu&#237;a. Existen cientos o miles de reglas en los numerosos libros de Kimball Group y confieso haber quebrantado muchas de esas reglas durante d&#233;cadas, cuando afrontaba objetivos conflictivos o realidades pol&#237;ticas desagradables.&lt;/p&gt;
 &lt;p&gt;Me apasionan varios principios del m&#233;todo Kimball. En este consejo de dise&#241;o enumero las cosas que repito una y otra vez, tanto a las audiencias experimentadas como a las nuevas. Cualquier lector que haya asistido a una de mis clases, o me haya contratado como consultor, habr&#225; o&#237;do mi discurso sobre la mayor&#237;a o todos los puntos de esta lista.&lt;/p&gt;
 &lt;h3&gt;1. El modelo dimensional es el activo clave.&lt;/h3&gt;
@@ -237,7 +237,7 @@
       <pubDate>Fri, 06 Jan 2017 02:15:23 GMT</pubDate>
       <atom:updated>2017-01-06T02:15:23Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2015-conceptos-probados-y-ciertos.jpg&quot; /&gt;
 	  &lt;p&gt;El tiempo pasa y pronto llegar&#225; la jubilaci&#243;n colectiva del Kimball Group. A finales de 2015 nos jubilaremos. En mi &#250;ltimo &amp;quot;Consejo de dise&#241;o&amp;quot; me gustar&#237;a compartir la perspectiva para el &#233;xito del DW/BI que he alcanzado durante mis 26 a&#241;os en el negocio del data warehouse/business intelligence.&lt;/p&gt;
 &lt;p&gt;Mientras que el data warehousing existe desde hace mucho, contin&#250;an habiendo oportunidades importantes de aprovechar la informaci&#243;n para una toma de decisiones m&#225;s efectiva. Constantemente surgen nuevas tecnolog&#237;as que crean y nos permiten recopilar cada vez m&#225;s datos granulados del mundo que nos rodea. Los datos y las anal&#237;ticas que los rodean son tan interesantes e importantes como siempre – quiz&#225;s incluso m&#225;s. Nuevas y mejoradas soluciones DW/BI continuar&#225;n para ser implementadas. No habr&#225; futuro con carencia de oportunidades para aplicar las lecciones aprendidas sobre c&#243;mo crear un entorno DW/BI de &#233;xito.&lt;/p&gt;
 &lt;p&gt;Reconocemos que el data warehousing es una industria que ha madurado. Hemos pasado la etapa embrionaria de la evoluci&#243;n del DW/BI. Estamos trabajando con hardware probado y capacitado y con tecnolog&#237;as de software nuevas y m&#225;s potentes que evolucionan continuamente. Como industria, hemos estado implementando data warehouses y sistemas de Business Intelligence durante mucho tiempo (d&#233;cadas, de hecho). Hemos aprendido lecciones, mejorado tecnolog&#237;as, perfilado t&#233;cnicas y madurado metodolog&#237;as. Numerosos individuos han sido entrenados, bautizados con el fuego de la experiencia, y han demostrado ser capaces de construir soluciones DW/BI de &#233;xito. Claramente, siempre habr&#225; novatos que entrenar, de los que ser mentores y a los que haya que profesionalizar. Sin embargo, como industria, sabemos lo que cuesta tener &#233;xito. No hay excusas para fallar.&lt;/p&gt;
@@ -266,7 +266,7 @@
       <pubDate>Fri, 06 Jan 2017 00:58:16 GMT</pubDate>
       <atom:updated>2017-01-06T00:58:16Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2015-design-tip-177-colaboracion.jpg&quot; /&gt;
 	  &lt;p&gt;En el &#250;ltimo &amp;quot;consejo de dise&#241;o&amp;quot;, vuelvo a un tema fundamental que no es ninguna cosa compleja pero es ignorada con demasiada frecuencia: &lt;strong&gt;La colaboraci&#243;n entre negocio e  IT&lt;/strong&gt;. Si aceptas la proposici&#243;n de que la verdadera medida del &#233;xito del DW/BI es el uso del sistema por parte del usuario negocio, entonces aceptar la importancia de la colaboraci&#243;n deber&#237;a ser f&#225;cil. Lograr la aceptaci&#243;n empresarial es una utop&#237;a si el equipo de IT no colabora con su contraparte empresarial. Del mismo modo, Negocio necesita estar deseando colaborar con el IT.&lt;/p&gt;
 &lt;p&gt;Los equipos colaborativos multidisciplinares crean sistemas DW/BI de &#233;xito. Cada cuesti&#243;n importante del enfoque &amp;quot;Kimball Lifecycle&amp;quot; se presta a actividades conjuntas que refuerzan la alineaci&#243;n negocios-IT:&lt;/p&gt;
 &lt;ul&gt;
@@ -341,7 +341,7 @@
       <pubDate>Thu, 03 Nov 2016 00:00:00 GMT</pubDate>
       <atom:updated>2016-11-03T00:00:00Z</atom:updated>
       <description>
-	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/&quot; /&gt;
+	  &lt;div style=&quot;width:700px&quot;&gt;&lt;img class=&quot;w100p&quot; src=&quot;https://datawarehouse.es/blog/images/2011-recomendaciones-testing-datawarehouse.jpg&quot; /&gt;
 	  &lt;p&gt;La validaci&#243;n de un entorno datawarehouse/BI es un gran reto. La metodolog&#237;a de validaci&#243;n est&#225;ndar valida s&#243;lo una peque&#241;a cosa a la vez. Sin embargo, la naturaleza de un sistema DW/BI versa sobre integraciones complejas, sin mencionar el elevado volumen de datos. Aqu&#237; est&#225;n mis 5 recomendaciones principales para construir y ejecutar un test en el entorno de tu proyecto DW/BI.&lt;/p&gt;
 &lt;h2&gt;1. Crea un peque&#241;o test est&#225;tico de la base de datos, derivado de los datos reales.&lt;/h2&gt;
 &lt;p&gt;Necesitas que sea peque&#241;o para que el test se realice r&#225;pidamente. Necesitas que sea est&#225;tico para conocer de antemano los resultados esperados. Y necesitas que derive de datos reales porque no hay nada como los datos reales para ofrecer una combinaci&#243;n realista de escenarios buenos y malos. Necesitar&#225;s a&#241;adir filas en el test de la base de datos para probar que cada una de las instrucciones de tu c&#243;digo ETL cubre un escenario no incluido en el test de datos original.&lt;/p&gt;

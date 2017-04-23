@@ -2,6 +2,7 @@
 UniqueId: JpjtNSvDiZ
 Title: "Consejo de diseño #178: Conceptos probados y ciertos para el éxito del DW-BI"
 Url: 2015/conceptos-probados-y-ciertos-datawarehouse-businessintelligence.html
+Image: 2015-conceptos-probados-y-ciertos.jpg
 Date: 2017-01-06T02:15:23.8710000+01:00
 SecondaryDate: 2015-10-01T00:00:00.0000000
 Description: "Mi recomendación para el éxito continuado es mantener tus ojos bien abiertos y centrarse constantemente en lo básico. Abraza estos conceptos probados y ciertos que años de experiencia han revelado como certeros."
